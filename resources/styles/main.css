@@ -1,0 +1,43 @@
+@font-face {
+  font-family: DellaRespira;
+  src: url('/resources/fonts/DellaRespira-Regular.ttf');
+}
+
+@font-face {
+  font-family: StokeRegular;
+  src: url('/resources/fonts/Stoke-Regular.ttf');
+}
+
+@font-face {
+  font-family: StokeLight;
+  src: url('/resources/fonts/Stoke-Light.ttf');
+}
+
+body, html {
+  background-image: url('/resources/images/darkblack.jpg');
+  background-repeat: repeat;
+}
+
+div.title {
+  font-family: StokeLight;
+  color: #cccccc;
+  text-shadow: 1px 1px #474747;
+  text-align: center;
+
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba(0, 0, 0, 1)),
+    color-stop(0%, rgba(0, 0, 0, 0.6)),
+    to(rgba(1, 1, 1, 1)));
+}
+
+div.title-main {
+  font-size: 48px;
+}
+
+div.middle {
+  line-height: 600px;
+  vertical-align: middle;
+}
