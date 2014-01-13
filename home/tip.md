@@ -20,7 +20,7 @@ Here is the selected tip of the day:
   </div>
 </div>
 </div>
-<script src="/resources/js/settip.js"></script>
+<script src="/resources/js/settip.js">_</script>
 
 <br/>
 <br/>
