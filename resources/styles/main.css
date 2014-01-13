@@ -168,6 +168,7 @@ ul.horizmenu li a:hover {
   -webkit-border-image:url('/resources/images/border.png') 3 repeat; /* Safari 5 */
   -o-border-image:url('/resources/images/border.png') 3 repeat; /* Opera */
   border-image:url('/resources/images/border.png') 3 repeat;
+  min-height: 600px;
 }
 
 #footer {
@@ -235,7 +236,6 @@ img.footer {
   background: #f8f8f8;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  margin: 20px;
   padding: 20px;
 }
 
