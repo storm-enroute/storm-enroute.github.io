@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: mainpage
 title: Storm-Enroute
 ---
 

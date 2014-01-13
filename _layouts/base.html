@@ -3,15 +3,54 @@
 
 <head>
   <meta charset=utf-8 />
-  <link rel="icon" type="image/png" href="/favicon.ico"/>
-  <link rel="stylesheet" href="resources/styles/main.css"/>
+  <link rel="icon" type="image/png" href="/favicon.ico?v=2"/>
+  <link rel="stylesheet" href="/resources/styles/main.css"/>
+  <link rel="stylesheet" href="/resources/styles/960.css" />
+  <script src="/resources/js/quotes.js"></script>
 </head>
 
 <body>
 
-  <div class="title">
-    <div class="title-main middle">
-      Storm-Enroute
+  <div id="wrap">
+
+    <div id="top">
+      <div class="container_12">
+        <div class="grid_12">
+          <ul class="horizmenu">
+            <li><a href="https://ci.storm-enroute.com:8080/">CI Server</a></li>
+            <li><a href="/home/docs">Documentation</a></li>
+            <li><a href="https://github.com/storm-enroute">Source Code</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="darkdivider"></div>
+    <div class="greydivider"></div>
+    <div class="topshadow"></div>
+
+    {{ content }}
+
+  </div>
+
+  <div id="footer">
+    <div class="darkdivider"></div>
+    <div class="lightdivider"></div>
+  
+    <div id="footercontent" class="container_16">
+      <div class="grid_2 footer">
+        <a href="/home/tip/">Tip of the day.</a>
+      </div>
+      <div class="grid_14 footer quote" id="quotebox">
+
+        <script>
+        var quotebox = document.getElementById("quotebox");
+        var quote = fetchQuote();
+        quotebox.appendChild(document.createTextNode(quote.text));
+        quotebox.appendChild(document.createElement("br"));
+        quotebox.appendChild(document.createTextNode(quote.author));
+        </script>
+      </div>
     </div>
   </div>
 

@@ -1,0 +1,8 @@
+[
+  {
+    "text": "Always merge to dev and never to master -- EVE will merge into master for you automatically.",
+    "author": "",
+    "description": "It is never a good idea to merge into master in any of the Storm Enroute projects. Instead, you should always merge or submit pull requests to the dev branch. If a project builds successfully, the EVE bot will automatically do the merge to master. This way the master branch almost always builds correctly and other projects can depend on it."
+  }
+]
+
