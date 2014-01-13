@@ -49,5 +49,25 @@ Every source file should have the following structure:
 - 3 empty lines
 - a sequence of top level object separated with 2 empty lines
 
+This is a typical file containing a class declaration:
+
+    /* Optional preamble
+     */
+    
+    package org.styleguide
+    
+    
+    
+    import guidelines._
+    
+    
+    
+    class Example {
+    }
+    
+    
+    object Example {
+      def apply() = new Example
+    }
 
 
