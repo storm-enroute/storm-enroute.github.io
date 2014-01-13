@@ -7,7 +7,7 @@
   {
     "text": "Create topic/XXX branches to implement new features.",
     "author": "",
-    "description": "Once you are done working on the new feature in your `topic/XXX` branch you can merge it into the `dev` branch. From there on it will be tested and merged further."
+    "description": "Once you are done working on the new feature in your `topic/XXX` branch you can merge it into the `dev` branch. From there on it will be tested and merged further by the bot automatically."
   }
 ]
 
