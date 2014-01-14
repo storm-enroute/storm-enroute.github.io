@@ -87,7 +87,23 @@ If the argument list cannot fit on the same line, it should be placed in the nex
 
 Type ascriptions consist of a colon `:` followed by a space and the type:
 
-    val id: T => T = x => x
+    def id[T]: T => T = x => x
+
+Operators in expressions should be delimited with a space.
+This is bad: `1+1`,
+but the following is good: `1 + 1`.
+Keywords that are followed by a condition enclosed in parenthesis like `if` and `while` should be delimited with a space.
+By contrast, method calls should not.
+Avoid putting blocks of code into a new line.
+
+Here are some examples:
+
+    var x: Int = 1
+    val y = x + 1
+    while (x < y) {
+      println(x)
+      x += 1
+    }
 
 
 ## ScalaDoc comments
