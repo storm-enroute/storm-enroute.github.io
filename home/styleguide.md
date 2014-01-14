@@ -82,6 +82,9 @@ If the argument list cannot fit on the same line, it should be placed in the nex
       (f: T => S, logger: Logger, errorHandler: Exception => S)
     extends MapperBase
 
+Members of a template (class, trait or object) are usually delimited with a blank line.
+The first and the last member does not have to have a blank line after the class declaration or before the final brace.
+
 
 ### Miscellaneous
 
