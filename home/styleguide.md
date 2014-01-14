@@ -95,14 +95,18 @@ but the following is good: `1 + 1`.
 Keywords that are followed by a condition enclosed in parenthesis like `if` and `while` should be delimited with a space.
 By contrast, method calls should not.
 Avoid putting blocks of code or method bodies into a new line.
+One liner methods are allowed
 
 Here are some examples:
 
     var x: Int = 1
     val y = x + 1
-    while (x < y) {
-      println(x)
+    def loop() = while (x != y) {
+      println(times2(x))
       x += 1
+    }
+    def times2(x: Int) = {
+      x * 2
     }
 
 
