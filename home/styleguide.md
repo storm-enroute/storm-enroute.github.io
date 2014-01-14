@@ -13,7 +13,7 @@ This document is a comprehensive Scala coding styleguide for Storm Enroute proje
 This section describes the preferred style for naming files and directories, contents and layout of the files.
 
 
-### Naming rules
+### File naming rules
 
 Every source file can contain symbols of a single package `x.y.z`, and must be placed into a source code subdirectory `x/y/z`.
 
