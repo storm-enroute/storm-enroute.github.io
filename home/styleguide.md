@@ -71,3 +71,34 @@ This is a typical file containing a class declaration:
     }
 
 
+### ScalaDoc comments
+
+They begin with `/**` and end with `*/`.
+In the case they are multiline, each line should start with a `*`.
+First line of text should start with the first line of comment, to save vertical space.
+The following descriptive lines should be separate by one blank line.
+Parameter, type parameter and return annotations go in separate lines,
+and their descriptions are aligned horizontally.
+Multiline parameter descriptions are also aligned.
+Descriptions start with an uppercase letter and end with a dot `.`.
+Inline code and code segments have to be in standard markdown syntax.
+Here is an example.
+
+    /** This method is very important.
+     *
+     *  The long description in this line will not be
+     *  shown in the ScalaDoc unless the user clicks on it.
+     *
+     *  Example:
+     *
+     *      mapForMe[Int, Int](x => x + 1)(11)
+     *
+     *  @tparam T           A type parameter that we need.
+     *  @tparam S           Another type parameter that is hard
+     *                      to understand and needs a long explanation.
+     *  @param f            A function parameter.
+     *  @param elem         This one is hard to explain. The element
+     *                      will be used and applied in `f`.
+     *  @return             Whatever the function returns.
+     */
+    def mapForMe[T, S](f: T => S)(elem: T): S = f(elem)
