@@ -94,7 +94,7 @@ This is bad: `1+1`,
 but the following is good: `1 + 1`.
 Keywords that are followed by a condition enclosed in parenthesis like `if` and `while` should be delimited with a space.
 By contrast, method calls should not.
-Avoid putting blocks of code into a new line.
+Avoid putting blocks of code or method bodies into a new line.
 
 Here are some examples:
 
