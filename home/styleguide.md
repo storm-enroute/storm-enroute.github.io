@@ -8,12 +8,7 @@ permalink: /styleguide/index.html
 This document is a comprehensive Scala coding styleguide for Storm Enroute projects.
 
 
-## Code structure
-
-This section describes the preferred style for naming files and directories, contents and layout of the files.
-
-
-### File naming rules
+## File naming guidelines
 
 Every source file can contain symbols of a single package `x.y.z`, and must be placed into a source code subdirectory `x/y/z`.
 
@@ -38,7 +33,7 @@ A package object file may additionally declare a package statement for declarati
 In specific occasions, a file may declare a different subpackage within its body, but this is to be avoided.
 
 
-### Spacing rules
+## Spacing guidelines
 
 Every source file should have the following structure:
 
@@ -71,7 +66,24 @@ This is a typical file containing a class declaration:
     }
 
 
-### ScalaDoc comments
+### Class declarations
+
+A class declaration keyword and class name should go in one line.
+They should be followed by the type parameters, early initialization list, list of arguments, list of superclasses and the class body.
+If the superclasses cannot fit in the same line, they are placed in the next line:
+
+    class MyMapper[T, S](f: T => S)
+    extends LongNamedSuperClass
+    with VeryLongNamedMixingTrait
+
+If the argument list cannot fit on the same line, it should be placed in the next line and indented:
+
+    class MyMapper[T, S]
+      (f: T => S, logger: Logger, errorHandler: Exception => S)
+    extends MapperBase
+
+
+## ScalaDoc comments
 
 They begin with `/**` and end with `*/`.
 In the case they are multiline, each line should start with a `*`.
@@ -102,3 +114,6 @@ Here is an example.
      *  @return             Whatever the function returns.
      */
     def mapForMe[T, S](f: T => S)(elem: T): S = f(elem)
+
+
+
