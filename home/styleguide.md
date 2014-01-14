@@ -33,7 +33,7 @@ A package object file may additionally declare a package statement for declarati
 In specific occasions, a file may declare a different subpackage within its body, but this is to be avoided.
 
 
-## Spacing guidelines
+## Spacing and indentation guidelines
 
 Every source file should have the following structure:
 
@@ -81,6 +81,13 @@ If the argument list cannot fit on the same line, it should be placed in the nex
     class MyMapper[T, S]
       (f: T => S, logger: Logger, errorHandler: Exception => S)
     extends MapperBase
+
+
+### Miscellaneous
+
+Type ascriptions consist of a colon `:` followed by a space and the type:
+
+    val id: T => T = x => x
 
 
 ## ScalaDoc comments
