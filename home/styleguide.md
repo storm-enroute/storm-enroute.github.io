@@ -145,5 +145,12 @@ Here is an example.
      */
     def mapForMe[T, S](f: T => S)(elem: T): S = f(elem)
 
+One line comments are also allowed:
+
+    /** This is a very short comment. */
+    def println2(msg: AnyRef) {
+      println(msg)
+      println("")
+    }
 
 
