@@ -43,6 +43,7 @@ Every source file should have the following structure:
 - imports
 - 3 empty lines
 - a sequence of top level object separated with 2 empty lines
+- each indentation level is comprised of 2 spaces
 
 This is a typical file containing a class declaration:
 
@@ -154,3 +155,7 @@ One line comments are also allowed:
     }
 
 
+## Final words
+
+This document addresses some of the typical guidelines when writing Scala code.
+When in doubt, use best judgement or consult the official Scala styleguide.
