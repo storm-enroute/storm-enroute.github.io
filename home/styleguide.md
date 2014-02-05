@@ -114,6 +114,58 @@ Here are some examples:
     }
 
 
+## Code organization guidelines
+
+This section contains guidelines on how to code organization conventions within files and class hierarchies, and lists preferred patterns.
+
+
+### Package statements
+
+A package statement should be on one line.
+If the compilation unit makes an extensive use of functionality in its superpackages, than there can be several `package` statements one after another after the preamble -- this is preferred to an `import`.
+Both of the following is ok:
+
+    package x.y.z
+    
+    package x.y
+    package z
+
+Avoid having `package` statements that are not at the beginning of the file unless absolutely necessary (typically as a hack).
+
+
+### Import statements
+
+An import statement should always have the complete package name -- avoid:
+
+    import collection._
+    
+In favour of:
+
+    import scala.collection._
+    
+The only exception is when you import packages or modules from within subpackages or singleton objects/classes within the same package.
+
+Import statements should be sorted in the order:
+- JDK packages
+- Scala standard library packages
+- Packages from Java library dependencies
+- Packages from Scala library dependencies
+- Packages from the current project
+
+Above, packages with the same name should be grouped together, and preferably in alphabetical order.
+
+Import statements can be in a class or a method if the imported functionality is really restricted to that scope:
+
+    class Foo {
+      import Foo._
+      val b = new Bar
+    }
+    
+    object Foo {
+      class Bar
+    }
+
+
 ## ScalaDoc comments
 
 They begin with `/**` and end with `*/`.
