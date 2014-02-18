@@ -146,6 +146,7 @@ In favour of:
 The only exception is when you import packages or modules from within subpackages or singleton objects/classes within the same package.
 
 Import statements should be sorted in the order:
+- Scala language imports
 - JDK packages
 - Scala standard library packages
 - Packages from Java library dependencies
