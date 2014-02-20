@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: devdefault
 title: Tip of the Day
 permalink: /tip/index.html
 ---
@@ -9,10 +9,15 @@ permalink: /tip/index.html
 <br/>
 <br/>
 
-
-Here is the selected quote of the day:
-
+<p>
+<img src="/resources/images/evebot.png" width="64px" class="image-avatar"></img>
 <br/>
+<br/>
+&nbsp; Here's what storm-enroute-bot has to say today:
+<br/>
+<br/>
+</p>
+
 
 <div id="afterbigquotebox">
 <div class="bigquote">

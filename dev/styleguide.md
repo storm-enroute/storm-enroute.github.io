@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: devdefault
 title: Styleguide
 permalink: /styleguide/index.html
 ---

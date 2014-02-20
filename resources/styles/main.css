@@ -234,10 +234,37 @@ img.footer {
 .bigquote {
   border: 1px solid #c0c0c0;
   background: #f8f8f8;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
   padding: 20px;
 }
 
 
+.image-avatar {
+  border: 1px solid #c0c0c0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  float: left;
+}
+
+img.image-project {
+  margin: 20px;
+}
+
+a img.image-project {
+  -webkit-filter: saturate(0.1);
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -o-transition: .3s;
+  -ms-transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+a:hover img.image-project {
+  -webkit-filter: saturate(1.0);
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
 
