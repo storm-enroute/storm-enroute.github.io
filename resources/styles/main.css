@@ -247,14 +247,36 @@ img.footer {
   float: left;
 }
 
-img.image-project {
-  margin: 20px;
+div.button {
+  padding: 7px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background: #bbb;
+  border: 1px solid #999;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
-a img.image-project {
+div:hover.button {
+  background: #cacaca;
+  border: 1px solid #aaa;
+}
+
+div:active.button {
+  background: #aaa;
+  border: 1px solid #999;
+}
+
+div.button img {
   -webkit-filter: saturate(0.1);
-  opacity: 0.6;
-  filter: alpha(opacity=60);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
   -o-transition: .3s;
   -ms-transition: .3s;
   -moz-transition: .3s;
@@ -262,7 +284,7 @@ a img.image-project {
   transition: .3s;
 }
 
-a:hover img.image-project {
+div:hover.button img {
   -webkit-filter: saturate(1.0);
   opacity: 1.0;
   filter: alpha(opacity=100);
