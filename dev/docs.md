@@ -7,12 +7,13 @@ permalink: /docs/index.html
 
 Documentation is available for the following projects:
 
-<a href="/dev/reactress/"><div class="button"><img src="/resources/images/reactress-title-96.png" height="36px"/></div></a>
+<a href="/dev/reactress/"><span class="button"><img src="/resources/images/reactress-title-96.png" height="42px"/></span></a>
 
-<a href="/dev/macrogl/"><div class="button"><img src="/resources/images/macrogl-title-96.png" height="42px"/></div></a>
+<a href="/dev/macrogl/"><span class="button"><img src="/resources/images/macrogl-title-96.png" height="42px"/></span></a>
 
-<a href="/dev/bundleboy/"><div class="button"><img src="/resources/images/bundleboy-title-96.png" height="32px"/></div></a>
+<a href="/dev/bundleboy/"><span class="button"><img src="/resources/images/bundleboy-title-96.png" height="42px"/></span></a>
 
+<br/>
 <br/>
 
 
