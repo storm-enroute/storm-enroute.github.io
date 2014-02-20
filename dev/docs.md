@@ -9,11 +9,7 @@ Documentation is available for the following projects:
 
 <a href="/dev/reactress/"><img class="image-project" src="/resources/images/reactress-title-96.png" height="36px"/></a>
 
-<br/>
-
 <a href="/dev/macrogl/"><img class="image-project" src="/resources/images/macrogl-title-96.png" height="36px"/></a>
-
-<br/>
 
 <a href="/dev/bundleboy/"><img class="image-project" src="/resources/images/bundleboy-title-96.png" height="36px"/></a>
 
