@@ -5,4 +5,17 @@ permalink: /index.html
 ---
 
 
-Coming soon!
+![MacroGL](/resources/images/macrogl-96.png)
+
+Source code: [GitHub](https://github.com/storm-enroute/macrogl)
+
+Build status: [![Build Status](https://ci.storm-enroute.com:8080/buildStatus/icon?job=public-macrogl)](https://ci.storm-enroute.com:8080/job/public-macrogl/)
+
+Latest release: `"com.storm-enroute" % "macrogl_2.10" % "0.2"`
+
+Snapshot release: `"com.storm-enroute" % "macrogl_2.10" % "0.3-SNAPSHOT"`
+
+
+## Documentation
+
+Documentation coming soon!
