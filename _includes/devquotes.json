@@ -1,8 +1,8 @@
 [
   {
-    "text": "Always submit the pull requests to master -- EVE will do deploy automatically.",
+    "text": "Always submit the pull requests to master -- EVE deploys snapshots from it automatically.",
     "author": "",
-    "description": "You should always merge or submit pull requests to the `master` branch. If a project builds successfully, the EVE bot will perform tests and deploy a snapshot. This way the `master` branch almost always builds correctly and other projects can depend on it."
+    "description": "You should always merge or submit pull requests to the `master` branch. Once a project builds successfully and passes reviews, the EVE bot will perform tests and deploy a snapshot. This way the `master` branch almost always builds correctly and other projects can depend on it."
   },
   {
     "text": "Create topic/XXX branches to implement new features.",
