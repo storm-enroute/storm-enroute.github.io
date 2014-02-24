@@ -15,6 +15,8 @@ Latest release: `"com.storm-enroute" % "macrogl_2.10" % "0.2"`
 
 Snapshot release: `"com.storm-enroute" % "macrogl_2.10" % "0.3-SNAPSHOT"`
 
+Mailing list: [MacroGL mailing list](https://groups.google.com/forum/#!forum/macrogl)
+
 
 ## Documentation
 
