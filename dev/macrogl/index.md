@@ -20,4 +20,9 @@ Mailing list: [MacroGL mailing list](https://groups.google.com/forum/#!forum/mac
 
 ## Documentation
 
-Documentation coming soon!
+Documentation under construction!
+
+
+### Examples
+
+- [Simple triangle example](/dev/macrogl/triangle) - shows how to render a simple multicolored triangle using MacroGL and OpenGL 3.3 functionality
