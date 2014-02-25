@@ -179,6 +179,13 @@ ul.horizmenu li a:hover {
   text-shadow: 1px 1px #9a9a9a;
 }
 
+.subtitlebar {
+  /*font-family: DejaVuSansMono;*/
+  font-size: 20px;
+  color: #2a2a2a;
+  text-shadow: 1px 1px #bababa;
+}
+
 #content {
   padding: 10px;
   padding-bottom: 64px;
