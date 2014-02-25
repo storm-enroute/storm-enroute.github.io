@@ -1,5 +1,6 @@
 ---
-layout: devdefault
+layout: devproject
+project: MacroGL
 title: Simple triangle example
 permalink: /triangle/index.html
 ---
