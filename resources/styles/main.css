@@ -177,6 +177,7 @@ ul.horizmenu li a:hover {
   font-size: 24px;
   color: #2a2a2a;
   text-shadow: 1px 1px #9a9a9a;
+  margin-bottom: 6px;
 }
 
 .subtitlebar {
