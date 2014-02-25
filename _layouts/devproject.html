@@ -6,7 +6,8 @@ layout: devbase
 
   <div class="container_16 paper">
 
-    <div class="grid_16 titlebar">{{ page.project }} -- {% if page.title %} {{ page.title }} {% endif %} </div>
+    <div class="grid_16 titlebar">{{ page.project }}</div>
+    <div class="grid_16 subtitlebar">{% if page.title %} {{ page.title }} {% endif %}</div>
     <div id="content">
       <div class="grid_15">
         {{ content }}
