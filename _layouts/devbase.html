@@ -6,13 +6,22 @@
   <link rel="icon" type="image/png" href="/favicon.ico?v=2"/>
   <link rel="stylesheet" href="/resources/styles/main.css"/>
   <link rel="stylesheet" href="/resources/styles/960.css" />
-  <link rel="stylesheet" href="/resources/js/styles/zenburn2.css">
-  <script src="/resources/js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+  <link rel="stylesheet" href="/resources/js/prettify/prettify.css">
+  <!-- <link rel="stylesheet" href="/resources/js/styles/zenburn2.css"> -->
+  <!--<script src="/resources/js/highlight.pack.js"></script>-->
+  <!--<script>hljs.initHighlightingOnLoad();</script>-->
+  <script src="/resources/js/jquery-1.11.0.min.js"></script>
+  <script type='text/javascript'>
+  $(function() {
+      $('pre').addClass('prettyprint linenums');
+  })
+  </script>
+  <script src="/resources/js/prettify/prettify.js"></script>
+  <script src="/resources/js/prettify/lang-scala.js"></script>
   <script src="/resources/js/devquotes.js"></script>
 </head>
 
-<body>
+<body onload="prettyPrint()">
 
   <div id="wrap">
 
@@ -21,9 +30,10 @@
         <div class="grid_12">
           <ul class="horizmenu">
             <li><a href="/">Home</a></li>
+            <li><a href="/home/downloads/">Downloads</a></li>
             <li><a href="/dev/">Development</a></li>
             <li><a href="https://ci.storm-enroute.com:8080/">CI Server</a></li>
-            <li><a href="/dev/docs">Documentation</a></li>
+            <li><a href="/dev/contribute">Contribute</a></li>
             <li><a href="https://github.com/storm-enroute">Source Code</a></li>
           </ul>
         </div>

@@ -5,14 +5,37 @@ permalink: /index.html
 ---
 
 
-![Bundleboy](/resources/images/bundleboy-96.png)
 
-Source code: [GitHub](https://github.com/storm-enroute/bundleboy)
+<table><tr>
 
-Build status: [![Build Status](https://ci.storm-enroute.com:8080/buildStatus/icon?job=public-bundleboy)](https://ci.storm-enroute.com:8080/job/public-bundleboy/)
+<td><img src="/resources/images/bundleboy-96.png"/></td>
 
-Snapshot release: `"com.storm-enroute" % "bundleboy_2.10" % "0.2-SNAPSHOT"`
+<td><table class="summary">
+<tr>
+  <td>Home Page</td>
+  <td><a href=".">Bundleboy Home Page</a></td>
+</tr>
+<tr>
+  <td>Source Code</td>
+  <td><a href="https://github.com/storm-enroute/bundleboy">https://github.com/storm-enroute/bundleboy</a></td>
+</tr>
+<tr>
+  <td>Build Status</td>
+  <td><a href="https://ci.storm-enroute.com:8080/job/public-bundleboy/"><img src="https://ci.storm-enroute.com:8080/buildStatus/icon?job=public-bundleboy"/></a></td>
+</tr>
+<tr>
+  <td>Last PR Status</td>
+  <td><a href="https://travis-ci.org/storm-enroute/bundleboy"><img src="https://travis-ci.org/storm-enroute/bundleboy.svg?branch=master"></a></td>
+</tr>
+<tr>
+  <td>Snapshot Release</td>
+  <td><code>"com.storm-enroute" % "bundleboy_2.10" % "0.2-SNAPSHOT"</code></td>
+</tr>
+</table></td>
 
-## Documentation
+</tr></table>
 
-Documentation coming soon!
+Bundleboy is resource bundling framework for Scala.
+It features an API for dynamically loading classes and resources from different types of resource bundles,
+as well as composing multiple bundles together.
+It is ideal for applications that need a pluginable infrastructure.

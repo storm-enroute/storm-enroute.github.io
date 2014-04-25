@@ -4,7 +4,6 @@ title: Styleguide
 permalink: /styleguide/index.html
 ---
 
-
 This document is a comprehensive Scala coding styleguide for Storm Enroute projects.
 
 
@@ -12,16 +11,17 @@ This document is a comprehensive Scala coding styleguide for Storm Enroute proje
 
 Every source file can contain symbols of a single package `x.y.z`, and must be placed into a source code subdirectory `x/y/z`.
 
-If the file is named with a upper case initial letter, then it may only contain a class and its companion object with the same name.
+- If the file is named with a upper case initial letter, then it may only contain a class and its companion object with the same name.
+- If the file is named with a lower case initial letter, then it may contain any number of related classes.
+- If the file is named `package.scala`, then it may only contain the package object for the related package `x.y.z`:
 
-If the file is named with a lower case initial letter, then it may contain any number of related classes.
-
-If the file is named `package.scala`, then it may only contain the package object for the related package `x.y.z`:
+For example:
 
     package x.y
     
     package object z {
     }
+
 
 A package object file may additionally declare a package statement for declarations that must be outside an object, for compiler-specific reasons.
 
@@ -151,6 +151,7 @@ Import statements should be sorted in the order:
 - Scala standard library packages
 - Packages from Java library dependencies
 - Packages from Scala library dependencies
+- Packages from projects that the current project depends on
 - Packages from the current project
 
 Above, packages with the same name should be grouped together, and preferably in alphabetical order.

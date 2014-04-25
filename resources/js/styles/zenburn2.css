@@ -7,15 +7,18 @@ based on dark.css by Ivan Sagalaev
 
 pre code {
   display: block; padding: 0.5em;
-  background: #2f2f2f;
+  background: #2a2a2a;
   color: #dcdcdc;
 }
 
 code {
-  background: #6f6f6f;
-  border: 1px solid #a0a0a0;
+  font-family: Andale Mono, Courier New;
+  font-size: 13px;
+  background: #3f3f3f;
+  border: 1px solid #c0c0c0;
   color: #dcdcdc;
   margin: 2px;
+  padding: 1px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
 }
