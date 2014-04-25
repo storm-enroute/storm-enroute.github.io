@@ -54,9 +54,8 @@ div.title-text {
 
 div.title-text-light {
   font-family: StokeLight;
-  color: #efefef;
-  text-shadow: 1px 1px 10px black;
-
+  color: #333;
+  text-shadow: 1px 1px 20px black;
 }
 
 div.title-main {
@@ -85,6 +84,7 @@ div.middle {
   padding: 30px;
   vertical-align: middle;
   display: inline-block;
+  background: transparent;
 }
 
 a {
@@ -119,11 +119,15 @@ h1 {
 }
 
 h2 {
+  margin-top: 50px;
+  padding-bottom: 5px;
   font-size: 24px;
   text-shadow: 1px 1px 1px #bababa;
+  border-bottom: 1px solid #ccc;
 }
 
 h3 {
+  margin-top: 35px;
   font-size: 18px;
   text-shadow: 1px 1px 1px #bababa;
 }

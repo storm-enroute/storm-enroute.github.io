@@ -14,13 +14,15 @@ pre code {
   padding: 0.5em;
   background: #2a2a2a;
   background-color: transparent;
+  border: hidden;
 }
 
 code {
   font-family: Andale Mono, Courier New;
   font-size: 13px;
-  background: #3f3f3f;
-  color: #dcdcdc;
+  background: #eee;
+  color: #4c4c4c;
+  border: 1px solid #bbb;
   margin: 2px;
   padding: 2px;
   -moz-border-radius: 3px;
