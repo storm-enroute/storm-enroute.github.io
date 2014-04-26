@@ -1,7 +1,7 @@
 ---
 layout: devdefault
 title: Reactress
-permalink: /index.html
+permalink: /reactress/index.html
 ---
 
 

@@ -125,7 +125,8 @@ a:visited {
 }
 
 h1 {
-  font-size: 32px;
+  margin-top: 50px;
+  font-size: 28px;
   text-shadow: 1px 1px 1px #bababa;
 }
 
@@ -230,7 +231,7 @@ ul.horizmenu li {
 
 ul.horizmenu li span.logotext {
   font-family: PlayRegular;
-  font-size: 26px;
+  font-size: 28px;
   text-shadow: 1px 1px 1px #000;
   vertical-align: top;
   padding-right: 12px;

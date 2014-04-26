@@ -1,7 +1,7 @@
 ---
 layout: devdefault
 title: MacroGL
-permalink: /index.html
+permalink: /macrogl/index.html
 ---
 
 
@@ -49,13 +49,3 @@ a ScalaJS backend is under development and an Android backend is planned.
 
 
 
-## Documentation
-
-Documentation under construction!
-
-
-### Examples
-
-- [Simple triangle example](/dev/macrogl/triangle) - shows how to render a simple multicolored triangle using MacroGL and OpenGL 3.3 functionality
-
-- [2D texture example](/dev/macrogl/texture2d) - shows how to render a texture using MacroGL

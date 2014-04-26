@@ -1,6 +1,8 @@
 ---
-layout: devprojectpage
-project: MacroGL
+layout: projdefault
+projectname: MacroGL
+projectpath: macrogl
+logoname: macrogl-mini-logo.png
 title: 2D Texture Example
 permalink: /texture2d/index.html
 ---

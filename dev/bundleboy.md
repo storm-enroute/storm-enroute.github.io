@@ -1,7 +1,7 @@
 ---
 layout: devdefault
 title: Bundleboy
-permalink: /index.html
+permalink: /bundleboy/index.html
 ---
 
 

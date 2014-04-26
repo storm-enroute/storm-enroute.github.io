@@ -1,6 +1,8 @@
 ---
-layout: devprojectpage
-project: MacroGL
+layout: projdefault
+projectname: MacroGL
+projectpath: macrogl
+logoname: macrogl-mini-logo.png
 title: Simple Triangle Example
 permalink: /triangle/index.html
 ---
