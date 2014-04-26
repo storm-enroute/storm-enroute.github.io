@@ -1,8 +1,8 @@
 ---
 layout: projmainpage
-projectname: Reactress
-logoname: reactress-mini-logo.png
-title: Reactress
+projectname: MacroGL
+logoname: macrogl-mini-logo.png
+title: MacroGL
 permalink: /index.html
 ---
 

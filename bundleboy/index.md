@@ -1,8 +1,8 @@
 ---
 layout: projmainpage
-projectname: Reactress
-logoname: reactress-mini-logo.png
-title: Reactress
+projectname: Bundleboy
+logoname: bundleboy-mini-logo.png
+title: Bundleboy
 permalink: /index.html
 ---
 

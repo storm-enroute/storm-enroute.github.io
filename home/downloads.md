@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: homedefault
 title: Downloads
 permalink: /downloads/index.html
 ---

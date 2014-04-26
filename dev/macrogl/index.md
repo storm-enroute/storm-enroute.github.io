@@ -12,7 +12,7 @@ permalink: /index.html
 <td><table class="summary">
 <tr>
   <td>Home Page</td>
-  <td><a href=".">MacroGL Home Page</a></td>
+  <td><a href="/macrogl/">MacroGL Home Page</a></td>
 </tr>
 <tr>
   <td>Source Code</td>

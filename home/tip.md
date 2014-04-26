@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: homedefault
 title: Tip of the Day
 permalink: /tip/index.html
 ---
