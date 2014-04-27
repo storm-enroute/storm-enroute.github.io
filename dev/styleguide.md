@@ -188,9 +188,9 @@ Here is an example.
      *
      *  Example:
      *
-     *  {{{
+     *  { { {
      *  mapForMe[Int, Int](x => x + 1)(11)
-     *  }}}
+     *  } } }
      *
      *  @tparam T           A type parameter that we need.
      *  @tparam S           Another type parameter that is hard
