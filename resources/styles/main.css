@@ -248,6 +248,7 @@ ul.horizmenu li a:hover {
   background-image: url('/resources/images/content.png');
   border-left: solid 3px #a0a0a0;
   border-right: solid 3px #a0a0a0;
+  border-bottom: solid 3px #a0a0a0;
   -webkit-border-image:url('/resources/images/border.png') 3 repeat; /* Safari 5 */
   -o-border-image:url('/resources/images/border.png') 3 repeat; /* Opera */
   border-image:url('/resources/images/border.png') 3 repeat;
