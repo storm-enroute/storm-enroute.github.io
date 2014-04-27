@@ -1,5 +1,5 @@
 ---
-layout: projmainpage
+layout: projdefault
 projectname: Reactress
 projectpath: reactress
 logoname: reactress-mini-logo.png

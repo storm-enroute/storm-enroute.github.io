@@ -169,7 +169,7 @@ form.horizsearch {
 
 form.horizsearch input {
   display: block;
-  border: 0px solid #999;
+  border: 1px groove #222;
   background: #777;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
