@@ -27,16 +27,6 @@ Available [here](https://raw.githubusercontent.com/storm-enroute/reactress/maste
 
 <span id="licensebox"></span>
 
-<script>
-var licensebox = document.getElementById("licensebox");
-$.get("https://api.github.com/repos/storm-enroute/reactress/contents/LICENSE", function(data) {
-  var icon = document.createElement('IMG');
-  icon.setAttribute("src", "/resources/images/{{ page.logoname }}");
-  icon.setAttribute("width", 32);
-  var ltxt = window.atob(data.content);
-  ltxt = ltxt.replace(/\t/g, '    ').replace(/  /g, '&nbsp; ').replace(/  /g, ' &nbsp;').replace(/\r\n|\n|\r/g, '<br />');
-  licensebox.appendChild(icon);
-  licensebox.innerHTML = licensebox.innerHTML + '<br/>' + ltxt;
-});
-</script>
+<script src="/resources/js/setlicense.js">_</script>
+<script src="/resources/js/setlicense-reactress.js">_</script>
 
