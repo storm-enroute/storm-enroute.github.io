@@ -1,5 +1,5 @@
 ---
-layout: projmainpage
+layout: projdefault
 projectname: Bundleboy
 projectpath: bundleboy
 logoname: bundleboy-mini-logo.png
