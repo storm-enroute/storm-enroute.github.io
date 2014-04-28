@@ -5,7 +5,7 @@ function setLicense(url, logoname) {
   $.get(url, function(data) {
     var icon = document.createElement('IMG');
     icon.setAttribute("src", "/resources/images/" + logoname);
-    icon.setAttribute("width", 32);
+    icon.setAttribute("height", 36);
     var ltxt = window.atob(data.content);
     ltxt = ltxt.replace(/\t/g, '    ').replace(/  /g, '&nbsp; ').replace(/  /g, ' &nbsp;').replace(/\r\n|\n|\r/g, '<br />');
     licensebox.appendChild(icon);
