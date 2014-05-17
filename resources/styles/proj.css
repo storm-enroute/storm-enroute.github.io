@@ -63,13 +63,13 @@ div.title {
 div.title-text {
   font-family: StokeLight;
   color: #cccccc;
-  text-shadow: 1px 1px 3px #0f0f0f;
+  /*text-shadow: 1px 1px 3px #0f0f0f;*/
 }
 
 div.title-text-light {
   font-family: StokeLight;
   color: #333;
-  text-shadow: 1px 1px 20px black;
+  /*text-shadow: 1px 1px 20px black;*/
 }
 
 div.title-main {
@@ -78,27 +78,6 @@ div.title-main {
 
 div.title-main-sub {
   font-size: 36px;
-}
-
-div.menu-middle {
-  margin-top: 150px;
-  padding: 30px;
-  vertical-align: middle;
-  display: inline-block;
-  background-image: url('/resources/images/content.png');
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  border: 1px solid #909090;
-  box-shadow: 1px 1px 5px #202020;
-}
-
-div.middle {
-  margin-top: 150px;
-  padding: 30px;
-  vertical-align: middle;
-  display: inline-block;
-  background: transparent;
 }
 
 a {
@@ -156,8 +135,9 @@ h3 {
 #top {
   background-repeat: repeat-x;
   height: 42px;
-  box-shadow: 0px 4px 8px #000;
-  background-image: url('/resources/images/header-modern.png');
+  /*box-shadow: 0px 4px 8px #000;*/
+  /*background-image: url('/resources/images/header-modern.png');*/
+  background-color: #d5d5d5;
 }
 
 form.horizsearch {
@@ -172,8 +152,8 @@ form.horizsearch {
 
 form.horizsearch input {
   display: block;
-  border: 1px groove #222;
-  background: #777;
+  border: 0px groove #999;
+  background-color: #eee;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -183,15 +163,16 @@ form.horizsearch input {
 }
 
 form.horizsearch input:focus {
-  background-color: #ddd;
+  background-color: #eee;
+  outline: 0;
 }
 
 form.horizsearch input {
-  color: #eee;
+  color: #ccc;
 }
 
 form.horizsearch input:focus {
-  color: #333;
+  color: #777;
 }
 
 ul.topmenu {
@@ -199,17 +180,21 @@ ul.topmenu {
 }
 
 li.topelement {
-  height: 38px;
+  height: 42px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 li.topelement a {
   line-height: 36px;
+  margin-top: 4px;
 }
 
 li.topdivider {
-  border-left: 1px solid #252525;
-  border-right: 1px solid #343434;
+  border-left: 1px solid #eee;
   overflow: hidden;
+  margin-left: -4px;
+  margin-right: -4px;
 }
 
 ul.horizmenu {
@@ -222,15 +207,30 @@ ul.horizmenu {
 ul.horizmenu li {
   display: inline-block;
   vertical-align: top;
-  padding-top: 4px;
-  color: #a0a0a0;
-  text-shadow: 0px -1px 0px #000;
+  padding-top: 0px;
+  color: #888;
+  /*text-shadow: 0px -1px 0px #000;*/
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+ul.horizmenu li:hover {
+  background-color: #eee;
+  /*text-shadow: 0px -1px 0px #000;*/
+}
+
+ul.horizmenu li.logo {
+  background-color: #d5d5d5;
+  /*text-shadow: 0px -1px 0px #000;*/
 }
 
 ul.horizmenu li span.logotext {
   font-family: PlayRegular;
   font-size: 31px;
-  text-shadow: 1px 1px 1px #000;
+  /*text-shadow: 1px 1px 1px #000;*/
   vertical-align: top;
   padding-right: 12px;
 }
@@ -242,25 +242,25 @@ ul.horizmenu li a i.icon {
 
 ul.horizmenu li a:link {
   text-decoration: none;
-  color: #a0a0a0;
+  color: #888;
   display: block;
-  padding-left: 12px;
-  padding-right: 12px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 ul.horizmenu li a:visited {
   text-decoration: none;
-  color: #a0a0a0;
+  color: #888;
 }
 
 ul.horizmenu li a:active {
   text-decoration: none;
-  color: white;
+  color: #bbb;
 }
 
 ul.horizmenu li a:hover {
   text-decoration: none;
-  color: white;
+  color: #bbb;
 }
 
 .lightdivider {
@@ -308,7 +308,7 @@ ul.horizmenu li a:hover {
 .titlebar {
   /*font-family: DejaVuSansMono;*/
   font-size: 24px;
-  color: #2a2a2a;
+  color: #555;
   text-shadow: 1px 1px 1px #7a7a7a;
   margin-bottom: 6px;
 }
@@ -316,7 +316,7 @@ ul.horizmenu li a:hover {
 .subtitlebar {
   /*font-family: DejaVuSansMono;*/
   font-size: 18px;
-  color: #2a2a2a;
+  color: #555;
   text-shadow: 1px 1px 1px #bababa;
 }
 
@@ -325,12 +325,13 @@ ul.horizmenu li a:hover {
   padding-bottom: 40px;
   overflow: auto;
   font-size: 13px;
-  color: #3f3f3f;
+  color: #555;
 }
 
 #footer {
-  box-shadow: 0px 0px 15px #000;
-  background-image: url('/resources/images/footer-modern.png');
+  /*box-shadow: 0px 0px 15px #000;*/
+  /*background-image: url('/resources/images/footer-modern.png');*/
+  background-color: #c5c5c5;
   background-repeat: repeat-x;
   height: 32px;
   margin-top: -32px;
@@ -347,21 +348,19 @@ ul.footermenu {
 }
 
 .footerelement {
-  height: 28px;
-}
-
-.footerelement {
+  height: 32px;
   line-height: 28px;
 }
 
 li.footerdivider {
-  border-left: 1px solid #111;
-  border-right: 1px solid #242424;
+  border-left: 1px solid #eee;
   overflow: hidden;
+  margin-left: -4px;
+  margin-right: -4px;
 }
 
 ul.horizmenu li.footerelement {
-  padding-top: 0px;
+  padding-top: 2px;
   margin-top: 0px;
 }
 
@@ -382,12 +381,12 @@ hr.footer {
 
 div.footer a:link {
   text-decoration: none;
-  color: #a0a0a0;
+  color: #888;
 }
 
 div.footer a:visited {
   text-decoration: none;
-  color: #a0a0a0;
+  color: #888;
 }
 
 div.footer a:active {
@@ -410,12 +409,13 @@ img.footer {
 }
 
 .footer {
-  color: #a0a0a0;
+  color: #888;
   font-size: 12px;
 }
 
 .copyright {
   float: right;
+  padding-top: 2px;
 }
 
 .quote {
@@ -423,7 +423,6 @@ img.footer {
 }
 
 .quote-label {
-  fon
 }
 
 .bigquote {
@@ -485,7 +484,7 @@ span.button {
   line-height:50px;
   text-decoration:none;
   text-align:center;
-  text-shadow: 1px 1px 3px #1a1a1a;
+  /*text-shadow: 1px 1px 3px #1a1a1a;*/
 }
 
 span:hover.button {
