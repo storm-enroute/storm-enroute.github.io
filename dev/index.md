@@ -1,7 +1,7 @@
 ---
 layout: devmainpage
 title: Development
-permalink: /index.html
+permalink: /dev/index.html
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: devdefault
 title: Tip of the Day
-permalink: /tip/index.html
+permalink: /dev/tip/index.html
 ---
 
 

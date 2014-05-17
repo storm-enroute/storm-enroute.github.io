@@ -1,7 +1,7 @@
 ---
 layout: devdefault
 title: Styleguide
-permalink: /styleguide/index.html
+permalink: /dev/styleguide/index.html
 ---
 
 This document is a comprehensive Scala coding styleguide for Storm Enroute projects.

@@ -4,7 +4,7 @@ projectname: MacroGL
 projectpath: macrogl
 logoname: macrogl-mini-logo.png
 title: Learn
-permalink: /learn/index.html
+permalink: /macrogl/learn/index.html
 ---
 
 

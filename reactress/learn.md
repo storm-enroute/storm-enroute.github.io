@@ -4,7 +4,7 @@ projectname: Reactress
 projectpath: reactress
 logoname: reactress-mini-logo.png
 title: Learn
-permalink: /learn/index.html
+permalink: /reactress/learn/index.html
 ---
 
 

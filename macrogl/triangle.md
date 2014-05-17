@@ -4,7 +4,7 @@ projectname: MacroGL
 projectpath: macrogl
 logoname: macrogl-mini-logo.png
 title: Simple Triangle Example
-permalink: /triangle/index.html
+permalink: /macrogl/triangle/index.html
 ---
 
 

@@ -4,7 +4,7 @@ projectname: Reactress
 projectpath: reactress
 logoname: reactress-mini-logo.png
 title: Contributing
-permalink: /contribute/index.html
+permalink: /reactress/contribute/index.html
 ---
 
 

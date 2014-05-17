@@ -43,6 +43,9 @@ body, html {
   padding: 0;
   height: 100%;
   color: #2a2a2a;
+  font-smooth: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 
 div.title {
@@ -152,7 +155,7 @@ h3 {
 
 #top {
   background-repeat: repeat-x;
-  height: 40px;
+  height: 42px;
   box-shadow: 0px 4px 8px #000;
   background-image: url('/resources/images/header-modern.png');
 }
@@ -181,11 +184,6 @@ form.horizsearch input {
 
 form.horizsearch input:focus {
   background-color: #ddd;
-  -webkit-transition: color .05s linear;
-  -moz-transition: color .05s linear;
-  -o-transition: color .05s linear;
-  -ms-transition: color .05s linear;
-  transition: color .05s linear;
 }
 
 form.horizsearch input {
@@ -197,11 +195,11 @@ form.horizsearch input:focus {
 }
 
 ul.topmenu {
-  height: 40px;
+  height: 42px;
 }
 
 li.topelement {
-  height: 36px;
+  height: 38px;
 }
 
 li.topelement a {
@@ -231,7 +229,7 @@ ul.horizmenu li {
 
 ul.horizmenu li span.logotext {
   font-family: PlayRegular;
-  font-size: 28px;
+  font-size: 31px;
   text-shadow: 1px 1px 1px #000;
   vertical-align: top;
   padding-right: 12px;

@@ -1,7 +1,7 @@
 ---
 layout: devdefault
 title: Reactress
-permalink: /reactress/index.html
+permalink: /dev/reactress/index.html
 ---
 
 

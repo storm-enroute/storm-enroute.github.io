@@ -1,7 +1,7 @@
 ---
 layout: homedefault
 title: Downloads
-permalink: /downloads/index.html
+permalink: /home/downloads/index.html
 ---
 
 

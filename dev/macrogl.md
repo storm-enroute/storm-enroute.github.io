@@ -1,7 +1,7 @@
 ---
 layout: devdefault
 title: MacroGL
-permalink: /macrogl/index.html
+permalink: /dev/macrogl/index.html
 ---
 
 

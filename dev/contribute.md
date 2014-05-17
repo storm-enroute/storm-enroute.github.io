@@ -1,7 +1,7 @@
 ---
 layout: devdefault
 title: Contributor's guide
-permalink: /contribute/index.html
+permalink: /dev/contribute/index.html
 ---
 
 Thanks for deciding to contribute and help open source technologies!

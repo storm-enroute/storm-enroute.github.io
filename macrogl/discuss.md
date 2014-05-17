@@ -4,7 +4,7 @@ projectname: MacroGL
 projectpath: macrogl
 logoname: macrogl-mini-logo.png
 title: Discuss
-permalink: /discuss/index.html
+permalink: /macrogl/discuss/index.html
 ---
 
 
