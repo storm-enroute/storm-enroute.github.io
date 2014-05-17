@@ -5,6 +5,7 @@ projectpath: macrogl
 logoname: macrogl-mini-logo.png
 title: Contribute
 permalink: /macrogl/contribute/index.html
+logostyle: "color: #5f5f5f;"
 ---
 
 

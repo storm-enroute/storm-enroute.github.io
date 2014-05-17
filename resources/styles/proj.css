@@ -45,7 +45,7 @@ body, html {
   color: #2a2a2a;
   font-smooth: antialiased;
   -webkit-font-smoothing: antialiased;
-  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+  /*text-shadow: rgba(0,0,0,.01) 0 0 1px;*/
 }
 
 div.title {
@@ -137,7 +137,7 @@ h3 {
   height: 42px;
   /*box-shadow: 0px 4px 8px #000;*/
   /*background-image: url('/resources/images/header-modern.png');*/
-  background-color: #d5d5d5;
+  background-color: #ddd;
 }
 
 form.horizsearch {
@@ -183,11 +183,18 @@ li.topelement {
   height: 42px;
   margin-right: 0px;
   margin-left: 0px;
+  padding: 0px;
 }
 
 li.topelement a {
-  line-height: 36px;
-  margin-top: 4px;
+  line-height: 42px;
+  margin: 0px;
+  padding: 0px;
+  margin-right: 12px;
+}
+
+li.topelement a i {
+  margin-left: 12px;
 }
 
 li.topdivider {
@@ -208,7 +215,7 @@ ul.horizmenu li {
   display: inline-block;
   vertical-align: top;
   padding-top: 0px;
-  color: #888;
+  color: #58c;
   /*text-shadow: 0px -1px 0px #000;*/
   -o-transition: .2s;
   -ms-transition: .2s;
@@ -223,7 +230,7 @@ ul.horizmenu li:hover {
 }
 
 ul.horizmenu li.logo {
-  background-color: #d5d5d5;
+  background-color: #ddd;
   /*text-shadow: 0px -1px 0px #000;*/
 }
 
@@ -232,7 +239,12 @@ ul.horizmenu li span.logotext {
   font-size: 31px;
   /*text-shadow: 1px 1px 1px #000;*/
   vertical-align: top;
+  padding-left: 6px;
   padding-right: 12px;
+}
+
+ul.horizmenu li a {
+  width: 100%;
 }
 
 ul.horizmenu li a i.icon {
@@ -244,8 +256,6 @@ ul.horizmenu li a:link {
   text-decoration: none;
   color: #888;
   display: block;
-  margin-left: 16px;
-  margin-right: 16px;
 }
 
 ul.horizmenu li a:visited {
@@ -255,12 +265,12 @@ ul.horizmenu li a:visited {
 
 ul.horizmenu li a:active {
   text-decoration: none;
-  color: #bbb;
+  color: #58c;
 }
 
 ul.horizmenu li a:hover {
   text-decoration: none;
-  color: #bbb;
+  color: #58c;
 }
 
 .lightdivider {
@@ -331,7 +341,8 @@ ul.horizmenu li a:hover {
 #footer {
   /*box-shadow: 0px 0px 15px #000;*/
   /*background-image: url('/resources/images/footer-modern.png');*/
-  background-color: #c5c5c5;
+  color: #555;
+  background-color: #ccc;
   background-repeat: repeat-x;
   height: 32px;
   margin-top: -32px;
@@ -349,7 +360,7 @@ ul.footermenu {
 
 .footerelement {
   height: 32px;
-  line-height: 28px;
+  line-height: 32px;
 }
 
 li.footerdivider {
@@ -360,43 +371,48 @@ li.footerdivider {
 }
 
 ul.horizmenu li.footerelement {
-  padding-top: 2px;
   margin-top: 0px;
 }
 
-
-h2.footer {
-  font-family: Helvetica;
-  margin-top: 4px;
-  margin-bottom: 2px;
+ul.horizmenu li.footerelement a {
+  margin: 0px;
+  margin-right: 10px;
 }
 
-hr.footer {
-  background-color: #6a4040;
-  height: 1px;
-  border: none;
-  margin-top: 6px;
-  margin-bottom: 6px;
+ul.horizmenu li.footerelement a i {
+  padding-left: 10px;
+}
+
+ul.horizmenu li.footerelement a:link {
+  color: #555;
+}
+
+ul.horizmenu li.footerelement a:visited {
+  color: #555;
+}
+
+ul.horizmenu li.footerelement a:hover {
+  color: #58c;
 }
 
 div.footer a:link {
   text-decoration: none;
-  color: #888;
+  color: #333;
 }
 
 div.footer a:visited {
   text-decoration: none;
-  color: #888;
+  color: #333;
 }
 
 div.footer a:active {
   text-decoration: none;
-  color: #fff;
+  color: #58c;
 }
 
 div.footer a:hover {
   text-decoration: none;
-  color: #fff;
+  color: #58c;
 }
 
 div.footer i.icon {
@@ -409,7 +425,6 @@ img.footer {
 }
 
 .footer {
-  color: #888;
   font-size: 12px;
 }
 

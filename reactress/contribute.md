@@ -2,7 +2,7 @@
 layout: projdefault
 projectname: Reactress
 projectpath: reactress
-logoname: reactress-mini-logo.png
+logoname: reactress-mini-logo-flat.png
 title: Contributing
 permalink: /reactress/contribute/index.html
 ---
