@@ -35,7 +35,7 @@
 }
 
 body, html {
-  background-color: #eee;
+  background-color: #f5f5f5;
   background-repeat: repeat;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -137,7 +137,7 @@ h3 {
   height: 42px;
   /*box-shadow: 0px 4px 8px #000;*/
   /*background-image: url('/resources/images/header-modern.png');*/
-  background-color: #ddd;
+  background-color: #e5e5e5;
 }
 
 form.horizsearch {
@@ -153,7 +153,7 @@ form.horizsearch {
 form.horizsearch input {
   display: block;
   border: 0px groove #999;
-  background-color: #eee;
+  background-color: #f5f5f5;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -163,7 +163,7 @@ form.horizsearch input {
 }
 
 form.horizsearch input:focus {
-  background-color: #eee;
+  background-color: #fff;
   outline: 0;
 }
 
@@ -198,7 +198,7 @@ li.topelement a i {
 }
 
 li.topdivider {
-  border-left: 1px solid #eee;
+  border-left: 1px solid #f5f5f5;
   overflow: hidden;
   margin-left: -4px;
   margin-right: -4px;
@@ -209,6 +209,7 @@ ul.horizmenu {
   font-size: 12px;
   margin-top: 0px;
   float: left;
+  margin-bottom: 0px
 }
 
 ul.horizmenu li {
@@ -225,12 +226,12 @@ ul.horizmenu li {
 }
 
 ul.horizmenu li:hover {
-  background-color: #eee;
+  background-color: #f5f5f5;
   /*text-shadow: 0px -1px 0px #000;*/
 }
 
 ul.horizmenu li.logo {
-  background-color: #ddd;
+  background-color: #e5e5e5;
   /*text-shadow: 0px -1px 0px #000;*/
 }
 
@@ -309,6 +310,181 @@ ul.horizmenu li a:hover {
   z-index: 5;
 }
 
+div.banner {
+  background-color: #f5f5f5;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+div.banner img {
+  display: block;
+  margin: 0 auto;
+}
+
+div.bannerdivider {
+  background-color: #e5e5e5;
+  min-height: 16px;
+  margin: 0px;
+  padding: 0px;
+}
+
+div.bannerlogoholder {
+  position: absolute;
+  left: 50%;
+  height: 10px;
+}
+
+div.bannerlogo {
+  z-index: 10;
+  background-image: url('/resources/images/reactress-sil.png');
+  background-repeat: no-repeat;
+  padding-left: 27px;
+  padding-top: 18px;
+  padding-right: 27px;
+  position: relative;
+  left: -50%;
+  top: -80px;
+}
+
+div.bannerlogo img {
+  height: 200px;
+}
+
+div.bl {
+  background-color: #e5e5e5;
+  line-height: 30px;
+  color: #888;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+div.bl:hover {
+  background-color: #f5f5f5;
+}
+
+div.bl a {
+  color: #888;
+  display:block;
+  height: 100%;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+div.bl a:hover {
+  color: #59c;
+}
+
+div.bl a img.buildstatus {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+div.bl a:hover img.buildstatus {
+  opacity: 0.9;
+  filter: alpha(opacity=90); /* For IE8 and earlier */
+}
+
+div.bl div.right-edge {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #e5e5e5;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+div.bl:hover div.right-edge {
+  border-top: 30px solid #f5f5f5;
+}
+
+div.bl div.left-edge {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-top: 30px solid #e5e5e5;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+div.bl:hover div.left-edge {
+  border-top: 30px solid #f5f5f5;
+}
+
+div.bl-download {
+  position: relative;
+  top: -210px;
+  left: 66px;
+  width: 200px;
+  padding-left: 30px;
+}
+
+div.bl-download div.right-edge {
+  left: 230px;
+  top: 0px;
+}
+
+div.bl-build-status {
+  position: relative;
+  top: -200px;
+  left: 90px;
+  width: 140px;
+  padding-left: 30px;
+}
+
+div.bl-build-status div.right-edge {
+  left: 170px;
+  top: 0px;
+}
+
+div.bl-tutorial {
+  position: relative;
+  top: -270px;
+  left: -298px;
+  width: 200px;
+  padding-right: 30px;
+  text-align: right;
+}
+
+div.bl-tutorial div.left-edge {
+  left: -30px;
+  top: 0px;
+}
+
+div.bl-docs {
+  position: relative;
+  top: -260px;
+  left: -261px;
+  width: 140px;
+  padding-right: 30px;
+  text-align: right;
+}
+
+div.bl-docs div.left-edge {
+  left: -30px;
+  top: 0px;
+}
+
 #header {
   /*background-image: url('/resources/images/header3.png');
   background-repeat: repeat-x;*/
@@ -331,11 +507,11 @@ ul.horizmenu li a:hover {
 }
 
 #content {
-  padding: 10px;
-  padding-bottom: 40px;
   overflow: auto;
   font-size: 13px;
   color: #555;
+  padding: 10px;
+  padding-bottom: 40px;
 }
 
 #footer {
@@ -375,8 +551,7 @@ ul.horizmenu li.footerelement {
 }
 
 ul.horizmenu li.footerelement a {
-  margin: 0px;
-  margin-right: 10px;
+  margin-right: 16px;
 }
 
 ul.horizmenu li.footerelement a i {
