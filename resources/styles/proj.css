@@ -216,7 +216,7 @@ ul.horizmenu li {
   display: inline-block;
   vertical-align: top;
   padding-top: 0px;
-  color: #58c;
+  color: #69c;
   /*text-shadow: 0px -1px 0px #000;*/
   -o-transition: .2s;
   -ms-transition: .2s;
@@ -318,9 +318,32 @@ div.banner {
   border: 0px;
 }
 
-div.banner img {
+div.banner img.bannerimage {
   display: block;
   margin: 0 auto;
+}
+
+div.banner div.bannerlinks {
+  position: absolute;
+  right: 200px;
+  top: 60px;
+}
+
+div.banner div.bannerlinks a img {
+  height: 40px;
+  opacity: 0.6;
+  filter: alpha(opacity = 60); /* For IE8 and earlier */
+  -o-transition: .25s;
+  -ms-transition: .25s;
+  -moz-transition: .25s;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+div.banner div.bannerlinks a:hover img {
+  height: 40px;
+  opacity: 1.0;
+  filter: alpha(opacity = 100); /* For IE8 and earlier */
 }
 
 div.bannerdivider {

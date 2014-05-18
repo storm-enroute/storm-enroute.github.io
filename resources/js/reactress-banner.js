@@ -18,7 +18,14 @@ var images = [
 	"event13",
 	"event14",
 	"event15",
-	"event16"
+	"event16",
+	"event16",
+	"event17",
+	"event18",
+	"event19",
+	"event20",
+	"event21",
+	"event22"
 ];
 
 function createEvent() {
@@ -40,9 +47,10 @@ function createEvent() {
 
 	function onComplete() {
 		setInterval(Math.floor(3000 + 3000 * Math.random()), createEvent());
+		document.body.removeChild(ev);
 	}
 
-	var time = 800 + 1200 * Math.random();
+	var time = 800 + 800 * Math.random();
 
 	createjs.Tween.get(ev)
       .to({top: pathtop + 0.5 * length, opacity: 0.8}, time, createjs.Ease.quadIn)
