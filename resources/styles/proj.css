@@ -382,9 +382,13 @@ div.bl a:hover {
   color: #59c;
 }
 
+div.bl a img {
+  margin-top: 2px;
+}
+
 div.bl a img.buildstatus {
   opacity: 0.5;
-  filter: alpha(opacity=50); /* For IE8 and earlier */
+  filter: alpha(opacity = 50); /* For IE8 and earlier */
   -o-transition: .2s;
   -ms-transition: .2s;
   -moz-transition: .2s;
