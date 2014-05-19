@@ -45,6 +45,7 @@ body, html {
   color: #2a2a2a;
   font-smooth: antialiased;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
   /*text-shadow: rgba(0,0,0,.01) 0 0 1px;*/
 }
 
@@ -316,20 +317,28 @@ div.banner {
   margin: 0px;
   padding: 0px;
   border: 0px;
+  height: 234px;
 }
 
-div.banner img.bannerimage {
-  display: block;
-  margin: 0 auto;
-}
-
-div.banner div.bannerlinks {
+div.banner div.bannercenter {
   position: absolute;
-  right: 200px;
-  top: 60px;
+  left: 50%;
+  width: 10px;
 }
 
-div.banner div.bannerlinks a img {
+div.banner div.bannercenter img {
+  position: relative;
+  left: -707px;
+}
+
+div.banner div.bannercenter div.bannerlinks {
+  position: relative;
+  left: 1100px;
+  top: -210px;
+  width: 200px;
+}
+
+div.banner div.bannercenter div.bannerlinks a img {
   height: 40px;
   opacity: 0.6;
   filter: alpha(opacity = 60); /* For IE8 and earlier */
@@ -340,7 +349,7 @@ div.banner div.bannerlinks a img {
   transition: .25s;
 }
 
-div.banner div.bannerlinks a:hover img {
+div.banner div.bannercenter div.bannerlinks a:hover img {
   height: 40px;
   opacity: 1.0;
   filter: alpha(opacity = 100); /* For IE8 and earlier */
@@ -632,7 +641,6 @@ img.footer {
 
 .copyright {
   float: right;
-  padding-top: 2px;
 }
 
 .quote {
