@@ -34,6 +34,11 @@
   src: url('/resources/fonts/Play-Regular.ttf');
 }
 
+@font-face {
+  font-family: PlayBold;
+  src: url('/resources/fonts/Play-Bold.ttf');
+}
+
 body, html {
   background-color: #f5f5f5;
   background-repeat: repeat;
@@ -187,6 +192,10 @@ li.topelement {
   padding: 0px;
 }
 
+li.topzero {
+  width: 1px;
+}
+
 li.topelement a {
   line-height: 42px;
   margin: 0px;
@@ -275,7 +284,7 @@ ul.horizmenu {
   font-size: 12px;
   margin-top: 0px;
   float: left;
-  margin-bottom: 0px
+  margin-bottom: 0px;
 }
 
 ul.horizmenu li {
