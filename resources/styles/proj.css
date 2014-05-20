@@ -363,17 +363,6 @@ ul.horizmenu li a:hover {
   height: 1px;
 }
 
-.topshadow {
-  background-image: url('/resources/images/topshadow3.png');
-  background-repeat: repeat-x;
-  width: 100%;
-  height: 16px;
-  position: absolute;
-  left: 0px;
-  top: 40px;
-  z-index: 5;
-}
-
 div.banner {
   background-color: #f5f5f5;
   text-align: center;
@@ -384,14 +373,14 @@ div.banner {
 }
 
 div.banner div.bannercenter {
-  position: absolute;
-  left: 50%;
-  width: 10px;
+  position: relative;
+  margin: auto;
+  width: 960px;
 }
 
 div.banner div.bannercenter img {
   position: relative;
-  left: -707px;
+  left: -240px;
 }
 
 div.banner div.bannercenter div.bannerlinks {
@@ -426,7 +415,7 @@ div.bannerdivider {
 }
 
 div.bannerlogoholder {
-  position: absolute;
+  position: relative;
   left: 50%;
   height: 10px;
 }
@@ -435,16 +424,16 @@ div.bannerlogo {
   z-index: 10;
   background-image: url('/resources/images/reactress-sil.png');
   background-repeat: no-repeat;
-  padding-left: 27px;
   padding-top: 18px;
-  padding-right: 27px;
   position: relative;
-  left: -50%;
+  left: -130px;
   top: -80px;
+  width: 247px;
 }
 
 div.bannerlogo img {
   height: 200px;
+  margin-left: 27px;
 }
 
 div.bl {
@@ -497,7 +486,7 @@ div.bl a:hover img.buildstatus {
 }
 
 div.bl div.right-edge {
-  position: absolute;
+  position: relative;
   width: 0;
   height: 0;
   border-right: 30px solid transparent;
@@ -514,7 +503,7 @@ div.bl:hover div.right-edge {
 }
 
 div.bl div.left-edge {
-  position: absolute;
+  position: relative;
   width: 0;
   height: 0;
   border-left: 30px solid transparent;
@@ -535,12 +524,13 @@ div.bl-download {
   top: -210px;
   left: 66px;
   width: 200px;
-  padding-left: 30px;
+  height: 30px;
+  padding-left: 40px;
 }
 
 div.bl-download div.right-edge {
-  left: 230px;
-  top: 0px;
+  left: 200px;
+  top: -30px;
 }
 
 div.bl-build-status {
@@ -548,40 +538,43 @@ div.bl-build-status {
   top: -200px;
   left: 90px;
   width: 140px;
-  padding-left: 30px;
+  height: 30px;
+  padding-left: 35px;
 }
 
 div.bl-build-status div.right-edge {
-  left: 170px;
-  top: 0px;
+  left: 140px;
+  top: -30px;
 }
 
 div.bl-tutorial {
   position: relative;
   top: -270px;
   left: -298px;
-  width: 200px;
-  padding-right: 30px;
+  width: 185px;
+  height: 30px;
+  padding-right: 45px;
   text-align: right;
 }
 
 div.bl-tutorial div.left-edge {
   left: -30px;
-  top: 0px;
+  top: -30px;
 }
 
 div.bl-docs {
   position: relative;
   top: -260px;
   left: -261px;
-  width: 140px;
-  padding-right: 30px;
+  width: 125px;
+  height: 30px;
+  padding-right: 45px;
   text-align: right;
 }
 
 div.bl-docs div.left-edge {
   left: -30px;
-  top: 0px;
+  top: -30px;
 }
 
 #header {
