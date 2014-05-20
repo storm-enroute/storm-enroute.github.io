@@ -137,7 +137,7 @@ h3 {
   height: 42px;
   /*box-shadow: 0px 4px 8px #000;*/
   /*background-image: url('/resources/images/header-modern.png');*/
-  background-color: #e5e5e5;
+  background-color: #dcdcdc;
 }
 
 form.horizsearch {
@@ -204,6 +204,69 @@ li.topdivider {
   margin-right: -4px;
 }
 
+#main {
+  color: #555;
+}
+
+div.main-description {
+  padding-top: 170px;
+  padding-bottom: 60px;
+}
+
+ul.main-items {
+  list-style: none;
+  display: block;
+}
+
+ul.main-items li {
+  display: inline-block;
+  width: 240px;
+  text-align: center;
+  padding: 25px;
+}
+
+ul.main-items li h2 {
+  margin-top: 10px;
+  border-bottom: 0px solid transparent;
+}
+
+ul.main-items li div {
+  display: inline-block;
+  width: 46px;
+  height: 36px;
+  padding-top: 10px;
+  border: 1px solid #aaa;
+  visibility: visible;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+ul.main-items li div:hover {
+  border: 1px solid #707070;
+}
+
+ul.main-items li div img {
+  height: 26px;
+  opacity: 0.4;
+  filter: alpha(opacity = 40); /* For IE8 and earlier */
+  -o-transition: .2s;
+  -ms-transition: .2s;
+  -moz-transition: .2s;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+ul.main-items li div:hover img {
+  opacity: 0.7;
+  filter: alpha(opacity = 70); /* For IE8 and earlier */
+}
+
 ul.horizmenu {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
@@ -231,7 +294,7 @@ ul.horizmenu li:hover {
 }
 
 ul.horizmenu li.logo {
-  background-color: #e5e5e5;
+  background-color: #dcdcdc;
   /*text-shadow: 0px -1px 0px #000;*/
 }
 
@@ -347,7 +410,7 @@ div.banner div.bannerlinks a:hover img {
 }
 
 div.bannerdivider {
-  background-color: #e5e5e5;
+  background-color: #dcdcdc;
   min-height: 16px;
   margin: 0px;
   padding: 0px;
@@ -376,7 +439,7 @@ div.bannerlogo img {
 }
 
 div.bl {
-  background-color: #e5e5e5;
+  background-color: #dcdcdc;
   line-height: 30px;
   color: #888;
   -o-transition: .2s;
@@ -429,7 +492,7 @@ div.bl div.right-edge {
   width: 0;
   height: 0;
   border-right: 30px solid transparent;
-  border-top: 30px solid #e5e5e5;
+  border-top: 30px solid #dcdcdc;
   -o-transition: .2s;
   -ms-transition: .2s;
   -moz-transition: .2s;
@@ -446,7 +509,7 @@ div.bl div.left-edge {
   width: 0;
   height: 0;
   border-left: 30px solid transparent;
-  border-top: 30px solid #e5e5e5;
+  border-top: 30px solid #dcdcdc;
   -o-transition: .2s;
   -ms-transition: .2s;
   -moz-transition: .2s;
