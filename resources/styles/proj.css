@@ -313,7 +313,8 @@ ul.horizmenu li.logo {
 ul.horizmenu li span.logotext {
   font-family: PlayRegular;
   font-size: 31px;
-  /*text-shadow: 1px 1px 1px #000;*/
+  text-shadow: 1px 1px 1px #999;
+  color: #58c;
   vertical-align: top;
   padding-left: 6px;
   padding-right: 12px;
@@ -347,31 +348,6 @@ ul.horizmenu li a:active {
 ul.horizmenu li a:hover {
   text-decoration: none;
   color: #58c;
-}
-
-.lightdivider {
-  background: #333;
-  height: 1px;
-}
-
-.verylightdivider {
-  background: #cecece;
-  height: 1px;
-}
-
-.lightbluedivider {
-  background: #405570;
-  height: 1px;
-}
-
-.greydivider {
-  background: #333;
-  height: 1px;
-}
-
-.darkdivider {
-  background: #222;
-  height: 1px;
 }
 
 div.banner {

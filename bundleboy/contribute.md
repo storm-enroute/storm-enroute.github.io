@@ -5,7 +5,7 @@ projectpath: bundleboy
 logoname: bundleboy-mini-logo.png
 title: Contribute
 permalink: /bundleboy/contribute/index.html
-logostyle: "color: #888;"
+logostyle: "color: #777;"
 ---
 
 
