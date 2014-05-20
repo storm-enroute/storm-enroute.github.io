@@ -47,7 +47,7 @@ function createEvent() {
 	bannercenter.appendChild(ev);
 
 	function onComplete() {
-		setTimeout(createEvent, Math.floor(2000 + 3000 * Math.random()));
+		setTimeout(createEvent, Math.floor(1000 + 3000 * Math.random()));
 		bannercenter.removeChild(ev);
 	}
 
