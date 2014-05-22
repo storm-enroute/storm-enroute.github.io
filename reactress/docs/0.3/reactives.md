@@ -8,7 +8,13 @@ permalink: /reactress/docs/0.3/reactives/index.html
 reactressversion: 0.3
 section: General
 pagenum: 1
-pagetot: 3
+pagetot: 10
 ---
 
+
+
+
+
+
+    trait Reactive[+T]
 
