@@ -62,7 +62,7 @@ The `on` method executes a block of code when an event arrives --
 it is most appropriate for reactives of type `Reactive[Unit]`.
 Finally, the `onUnreact` method executes a block of code when the reactive unreacts.
 
-    def onEvent(reactor: T => Unit): Subscription
-    def onCase(reactor: PartialFunction[T, Unit]): Subscription
-    def on(reactor: =>Unit): Subscription
-    def onUnreact(reactor: =>Unit): Subscription
+    def onEvent(reactor: T => Unit): Reactive.Subscription
+    def onCase(reactor: PartialFunction[T, Unit]): Reactive.Subscription
+    def on(reactor: =>Unit): Reactive.Subscription
+    def onUnreact(reactor: =>Unit): Reactive.Subscription

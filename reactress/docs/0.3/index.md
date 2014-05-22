@@ -3,7 +3,7 @@ layout: projdefault
 projectname: Reactress
 projectpath: reactress
 logoname: reactress-mini-logo-flat.png
-title: Reactress Documentation
+title: Reactress 0.3 Documentation
 permalink: /reactress/docs/0.3/index.html
 reactressversion: 0.3
 ---

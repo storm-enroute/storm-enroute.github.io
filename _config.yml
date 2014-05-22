@@ -4,3 +4,5 @@ description: Docs and resources for Storm Enroute and related projects
 url: http://storm-enroute.com
 baseUrl: http://storm-enroute.com
 relative_permalinks: false
+reactress_version: 0.3
+reactress_snapshot_version: 0.4-SNAPSHOT
