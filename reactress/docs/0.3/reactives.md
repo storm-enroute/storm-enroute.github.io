@@ -16,8 +16,8 @@ pagetot: 10
 
 
 The basic data-type that drives most computations in Reactress is called
-a *reactive value*, represented by the type `Reactive[T]`.
-A reactive value, or simply -- a *reactive*, represents an entity
+a **reactive value**, represented by the type `Reactive[T]`.
+A reactive value, or simply -- a **reactive**, represents an entity
 that can occasionally produce values of type `T`.
 These values are called *events*.
 
@@ -45,7 +45,7 @@ The `Reactive[T]` type is represented with the following trait:
     }
 
 To react to events produced by the reactive value,
-we need to *subscribe* to it.
+we need to **subscribe** to it.
 One way to do this is to use the `onReaction` method of the `Reactive[T]` trait:
 
     def onReaction(reactor: Reactor[T]): Reactive.Subscription
@@ -64,7 +64,7 @@ to the reactive value with `onReaction`,
 are notified -- their `react` method is invoked with the `value` of the event.
 
 Every reactive value can at some point decide to stop emitting events.
-We say that the reactive value *unreacts*.
+We say that the reactive value **unreacts**.
 At this point, the `unreact` value is called on all its reactors.
 
 The `Subscription` object returned by `onReaction`
@@ -96,7 +96,7 @@ There are several basic concrete reactive values:
 
 ## Reactive emitters
 
-A *reactive emitter* is a concrete reactive value.
+A **reactive emitter** is a concrete reactive value.
 We create it as follows:
 
     val emitter = new Reactive.Emitter[Int]
@@ -104,20 +104,82 @@ We create it as follows:
 The reactive emitter produces an events each time an event is added to it by the `+=` method.
 The following example prints `"Hello world!"` to the standard output.
 
-    def printer(r: Reactive[String]) = r onEvent println
-
-    printer(emitter)
+    val printSubscription = emitter onEvent println
     emitter += "Hello world!"
 
 After calling `close` on the emitter, the emitter unreacts.
 Subsequent invocations of `+=` are ignored.
 
-    emitter onUnreact {
+    val unreactSubscription = emitter onUnreact {
       println("done for today.")
     }
     emitter.close()
 
 
+## Subscriptions
+
+A subscription is an object used to unsubscribe from a reaction.
+In most cases this means that the corresponding entity will no longer receive events.
+We unsubscribe by calling the `unsubscribe` method:
+
+    val printSubscription = emitter onEvent println
+    emitter += "Hi!"
+    printSubscription.unsubscribe()
+    emitter += "You can't hear me!"
+
+Note that we always store the `Subscription` object returned by the `onX` methods.
+Without keeping a reference to the `Subscription` there is no way to unsubscribe from the callback,
+so the callback could react forever, leading to effects called **memory leaks** and **time leaks**.
+For this reason, when Reactress detects that the program no longer has a reference to the `Subscription`,
+it automatically unsubscribes.
+This automatic unsubscription usually happens during the first subsequent GC cycle.
+
+    emitter onEvent println
+    System.gc()
+    emitter += "Chances are you won't hear me anymore."
+
+This behaviour is by design.
+Consider the following method `sumOfSquares` that uses an
+emitter `squares` to compute a sum of squares of first `n` integers.
+It subscribes to `squares` to update its `sum` and
+uses an auxiliary method `emitSquare` to emit `n` squares:
+
+    val squares = new Reactive.Emitter[Int]
+
+    def emitSquare(x: Int) = squares += x * x
+
+    def sumOfSquares(n: Int): Int = {
+      var sum = 0
+      
+      squares.onEvent(sum += _)
+      for (i <- 1 until n) emitSquare(i)
+
+      sum
+    }
+
+The scope in which the callback that updates `sum` is useful
+is only the method `sumOfSquares`.
+Once the method completes, this callback is not only useful,
+but also dangerous.
+It occupies a region of memory that cannot be freed and
+captures the lifted version of the `sum` variable --
+it leads to memory leaks.
+Furthermore, whenever some other part of the program
+emits an event on `squares`, the callback that updates
+the `sum` must be executed and wastes computational resources --
+in FRP, this is known as a time leak.
+
+For these reasons, Reactress subscribes to the
+"If you didn't save it, you don't need it." philosophy.
+
+<table class="docs-tip">
+<td><img src="/resources/images/reactress-warning.png"/></td>
+<td>
+Always store a reference to the subscription of the callback
+that is important in the program.
+Otherwise, the callback is eventually automatically unsubscribed.
+</td>
+</table>
 
 
 ## Functional Composition on Reactives

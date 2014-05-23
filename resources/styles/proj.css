@@ -813,3 +813,20 @@ table.summary tr td {
 }
 
 
+table.docs-tip {
+  border: 1px solid #ababab;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin: 20px;
+  padding: 4px;
+  vertical-align: middle;
+}
+
+table.docs-tip td {
+  padding: 4px;
+}
+
+table.docs-tip img {
+  height: 32px;
+}
