@@ -124,8 +124,8 @@ Subsequent invocations of `+=` are ignored.
 
 Reactives represent event sources and reactors are very similar to *observers*.
 However, using only the `onX` family of methods on reactives soon
-results in a *callback hell* -- a larger program composed of a large number
-of `onX` methods becomes so.
+results in a *callback hell* -- in a program composed of a large number
+of unstructured `onX` method calls understandibility becomes a problem.
 
 To overcome this problem, we use *functional composition* on reactive values --
 a programming pattern in which more complex values are created by declaratively
