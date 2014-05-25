@@ -192,3 +192,21 @@ of unstructured `onX` method calls understandibility becomes a problem.
 To overcome this problem, we use *functional composition* on reactive values --
 a programming pattern in which more complex values are created by declaratively
 composing simpler ones.
+
+Let's rewrite the method `sumOfSquares` from before.
+This time we do not use a callback and a mutable variable.
+Instead, we use the `map` and `scanPast` combinators.
+The `map` combinator transforms events in one reactive into events for a derived reactive --
+we use it to map each number into its square.
+The `scanPast` combinator combines the last and the current event to produce a new event for the derived reactive --
+we use it to add the previous value of the sum to the current one.
+
+    def sumOfSquares(n: Int): Int = {
+      val emitter = new Reactive.Emitter[Int]
+      val sum = emitter.map(x => x * x).scanPast(0)(_ + _)
+      for (i <- 0 until n) emitter += n
+      sum()
+    }
+
+
+
