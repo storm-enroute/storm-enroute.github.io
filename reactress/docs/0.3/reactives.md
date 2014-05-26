@@ -208,5 +208,7 @@ we use it to add the previous value of the sum to the current one.
       sum()
     }
 
-
+The `Reactive[T]` trait comes with a large number of predefined combinators.
+Same as with callbacks, you must always store the return value of the combinator.
+Omitting to do so will eventually result in an automatic unsubscription.
 
