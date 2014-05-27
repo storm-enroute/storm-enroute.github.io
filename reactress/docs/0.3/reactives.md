@@ -212,3 +212,15 @@ The `Reactive[T]` trait comes with a large number of predefined combinators.
 Same as with callbacks, you must always store the return value of the combinator.
 Not doing so eventually results in an automatic unsubscription.
 
+A bunch of reactive values composed using functional combinators
+forms a **dataflow graph**.
+Emitters are source nodes in this graph, reactives obtained by various combinators are inner nodes
+and callback methods like `onEvent` form sink nodes.
+Some combinators like `union` take several input reactives.
+Such reactives correspond to nodes with multiple input edges in the dataflow graph.
+
+    val numbers = new Reactive.Emitter[Int]
+    val even = numbers.filter(_ % 2 == 0)
+    val odd = numbers.filter(_ % 2 == 1)
+    val numbersAgain = even union odd
+
