@@ -224,3 +224,13 @@ Such reactives correspond to nodes with multiple input edges in the dataflow gra
     val odd = numbers.filter(_ % 2 == 1)
     val numbersAgain = even union odd
 
+
+## Higher-order Reactive Values
+
+In some cases reactive values produce events that are themselves reactive values --
+we call them **higher-order reactive values**.
+A higher-order reactive can have a type like:
+
+    Reactive[Reactive[T]]
+
+
