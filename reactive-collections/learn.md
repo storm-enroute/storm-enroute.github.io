@@ -12,10 +12,10 @@ permalink: /reactive-collections/learn/index.html
 ## Releases
 
 
-### Reactive Collections 0.3
+### Reactive Collections 0.4
 
-- Reactive Collections Documentation -- [HTML](/reactive-collections/docs/0.3/)
-- API Documentation -- [ScalaDoc](http://storm-enroute.com/apidocs/final/reactive-collections/0.3/api)
+- Reactive Collections Documentation -- [HTML](/reactive-collections/docs/0.4/)
+- API Documentation -- [ScalaDoc](http://storm-enroute.com/apidocs/final/reactive-collections/0.4/api)
 
 
 ## Snapshot Version
