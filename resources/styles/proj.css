@@ -226,7 +226,7 @@ li.topdivider {
 }
 
 #main {
-  color: #555;
+  color: #444;
 }
 
 div.main-description {
@@ -342,13 +342,13 @@ ul.horizmenu li a i.icon {
 
 ul.horizmenu li a:link {
   text-decoration: none;
-  color: #888;
+  color: #777;
   display: block;
 }
 
 ul.horizmenu li a:visited {
   text-decoration: none;
-  color: #888;
+  color: #777;
 }
 
 ul.horizmenu li a:active {
@@ -437,7 +437,7 @@ div.bannerlogo img {
 div.bl {
   background-color: #dcdcdc;
   line-height: 30px;
-  color: #888;
+  color: #777;
   -o-transition: .2s;
   -ms-transition: .2s;
   -moz-transition: .2s;
@@ -450,7 +450,7 @@ div.bl:hover {
 }
 
 div.bl a {
-  color: #888;
+  color: #777;
   display:block;
   height: 100%;
   -o-transition: .2s;
@@ -584,7 +584,7 @@ div.bl-docs div.left-edge {
 .titlebar {
   /*font-family: DejaVuSansMono;*/
   font-size: 24px;
-  color: #555;
+  color: #444;
   text-shadow: 1px 1px 1px #7a7a7a;
   margin-bottom: 6px;
 }
@@ -592,14 +592,14 @@ div.bl-docs div.left-edge {
 .subtitlebar {
   /*font-family: DejaVuSansMono;*/
   font-size: 18px;
-  color: #555;
+  color: #444;
   text-shadow: 1px 1px 1px #bababa;
 }
 
 #content {
   overflow: auto;
   font-size: 13px;
-  color: #555;
+  color: #444;
   padding: 10px;
   padding-bottom: 40px;
 }
