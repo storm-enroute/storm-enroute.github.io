@@ -192,3 +192,45 @@ of unstructured `onX` method calls understandibility becomes a problem.
 To overcome this problem, we use *functional composition* on reactive values --
 a programming pattern in which more complex values are created by declaratively
 composing simpler ones.
+
+Let's rewrite the method `sumOfSquares` from before.
+This time we do not use a callback and a mutable variable.
+Instead, we use the `map` and `scanPast` combinators.
+The `map` combinator transforms events in one reactive into events for a derived reactive --
+we use it to map each number into its square.
+The `scanPast` combinator combines the last and the current event to produce a new event for the derived reactive --
+we use it to add the previous value of the sum to the current one.
+
+    def sumOfSquares(n: Int): Int = {
+      val emitter = new Reactive.Emitter[Int]
+      val sum = emitter.map(x => x * x).scanPast(0)(_ + _)
+      for (i <- 0 until n) emitter += n
+      sum()
+    }
+
+The `Reactive[T]` trait comes with a large number of predefined combinators.
+Same as with callbacks, you must always store the return value of the combinator.
+Not doing so eventually results in an automatic unsubscription.
+
+A bunch of reactive values composed using functional combinators
+forms a **dataflow graph**.
+Emitters are source nodes in this graph, reactives obtained by various combinators are inner nodes
+and callback methods like `onEvent` form sink nodes.
+Some combinators like `union` take several input reactives.
+Such reactives correspond to nodes with multiple input edges in the dataflow graph.
+
+    val numbers = new Reactive.Emitter[Int]
+    val even = numbers.filter(_ % 2 == 0)
+    val odd = numbers.filter(_ % 2 == 1)
+    val numbersAgain = even union odd
+
+
+## Higher-order Reactive Values
+
+In some cases reactive values produce events that are themselves reactive values --
+we call them **higher-order reactive values**.
+A higher-order reactive can have a type like:
+
+    Reactive[Reactive[T]]
+
+
