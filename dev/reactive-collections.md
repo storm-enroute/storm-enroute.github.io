@@ -1,7 +1,7 @@
 ---
 layout: devdefault
-title: Reactress
-permalink: /dev/reactress/index.html
+title: Reactive Collections
+permalink: /dev/reactive-collections/index.html
 ---
 
 
