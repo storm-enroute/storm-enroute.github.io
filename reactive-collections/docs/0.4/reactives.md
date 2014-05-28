@@ -5,7 +5,7 @@ projectpath: reactive-collections
 logoname: reactress-mini-logo-flat.png
 title: Reactive Values
 permalink: /reactive-collections/docs/0.3/reactives/index.html
-reactressversion: 0.3
+reactressversion: 0.4
 section: General
 pagenum: 1
 pagetot: 10
