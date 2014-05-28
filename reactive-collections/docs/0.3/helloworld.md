@@ -1,10 +1,10 @@
 ---
 layout: projdefault
-projectname: Reactress
-projectpath: reactress
+projectname: Reactive Collections
+projectpath: reactive-collections
 logoname: reactress-mini-logo-flat.png
 title: Hello World Example
-permalink: /reactress/docs/0.3/helloworld/index.html
+permalink: /reactive-collections/docs/0.3/helloworld/index.html
 reactressversion: 0.3
 section: Examples
 pagenum: 1

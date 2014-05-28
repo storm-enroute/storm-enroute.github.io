@@ -163,7 +163,7 @@ form.horizsearch {
   margin-top: 10px;
   text-decoration: none;
   background: transparent;
-  width: 220px;
+  width: 160px;
   padding-left: 6px;
 }
 
@@ -194,6 +194,7 @@ form.horizsearch input:focus {
 
 ul.topmenu {
   height: 42px;
+  padding-left: 0px;
 }
 
 li.topelement {
