@@ -15,7 +15,7 @@ pagetot: 10
 
 
 
-The basic data-type that drives most computations in Reactress is called
+The basic data-type that drives most computations in Reactive Collections is called
 a **reactive value**, represented by the type `Reactive[T]`.
 A reactive value, or simply -- a **reactive**, represents an entity
 that can occasionally produce values of type `T`.
@@ -74,7 +74,7 @@ If the `unsubscribe` method is invoked,
 events are no longer passed to the corresponding reactor
 and its `unreact` method is never called.
 
-Reactress offers several more Scala-idiomatic ways to subscribe to events.
+Reactive Collections offer several more Scala-idiomatic ways to subscribe to events.
 The `onEvent` method is used to subscribe to events, but ignore unreactions.
 The `onCase` method is similar, but takes a partial function --
 only the events for which the partial function is defined are considered.
@@ -130,7 +130,7 @@ We unsubscribe by calling the `unsubscribe` method:
 Note that we always store the `Subscription` object returned by the `onX` methods.
 Without keeping a reference to the `Subscription` there is no way to unsubscribe from the callback,
 so the callback could react forever, leading to effects called **memory leaks** and **time leaks**.
-For this reason, when Reactress detects that the program no longer has a reference to the `Subscription`,
+For this reason, when Reactive Collections detect that the program no longer has a reference to the `Subscription`,
 it automatically unsubscribes.
 This automatic unsubscription usually happens during the first subsequent GC cycle.
 
@@ -169,7 +169,7 @@ emits an event on `squares`, the callback that updates
 the `sum` must be executed and wastes computational resources --
 in FRP, this is known as a time leak.
 
-For these reasons, Reactress subscribes to the
+For these reasons, Reactive Collections subscribe to the
 "If you didn't save it, you don't need it." philosophy.
 
 <table class="docs-tip">
