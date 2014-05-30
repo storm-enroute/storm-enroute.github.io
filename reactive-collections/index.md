@@ -1,5 +1,5 @@
 ---
-layout: projreactivecollections
+layout: redirect-reactive-collections
 projectname: Reactive Collections
 projectpath: reactive-collections
 logoname: reactress-mini-logo-flat.png
