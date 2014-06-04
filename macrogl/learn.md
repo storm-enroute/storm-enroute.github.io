@@ -12,13 +12,8 @@ logostyle: "color: #5f5f5f;"
 
 ## Documentation
 
-Documentation under construction!
+### MacroGL 0.4
 
-
-### Examples
-
-- [Simple triangle example](/macrogl/triangle) - shows how to render a simple multicolored triangle using MacroGL and OpenGL 3.3 functionality
-
-- [2D texture example](/macrogl/texture2d) - shows how to render a texture using MacroGL
-
+- [Documentation](/macrogl/docs/0.4/)
+- [API](TODO)
 

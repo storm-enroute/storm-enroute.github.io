@@ -61,8 +61,8 @@ body, html {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url('/resources/images/loader.gif') 50% 50% no-repeat rgb(249,249,249);
-  background-size: 64px 64px;
+  background: url('/resources/images/loader2.gif') 50% 50% no-repeat rgb(249,249,249);
+  background-size: 32px 32px;
 }
 
 div.title {
@@ -421,18 +421,19 @@ div.bannerlogoholder {
 
 div.bannerlogo {
   z-index: 10;
-  background-image: url('/resources/images/reactress-sil.png');
+  background-image: url('/resources/images/macrogl-sil.png');
   background-repeat: no-repeat;
   padding-top: 18px;
   position: relative;
-  left: -130px;
-  top: -80px;
+  left: -135px;
+  top: -50px;
   width: 247px;
 }
 
 div.bannerlogo img {
-  height: 200px;
-  margin-left: 27px;
+  height: 190px;
+  margin-top: 10px;
+  margin-left: 37px;
 }
 
 div.bl {

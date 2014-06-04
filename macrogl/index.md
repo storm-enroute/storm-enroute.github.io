@@ -1,5 +1,5 @@
 ---
-layout: projmainpage
+layout: projmacrogl
 projectname: MacroGL
 projectpath: macrogl
 logoname: macrogl-mini-logo.png

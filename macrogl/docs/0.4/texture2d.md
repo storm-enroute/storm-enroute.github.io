@@ -4,7 +4,7 @@ projectname: MacroGL
 projectpath: macrogl
 logoname: macrogl-mini-logo.png
 title: 2D Texture Example
-permalink: /macrogl/texture2d/index.html
+permalink: /macrogl/docs/0.4/texture2d/index.html
 logostyle: "color: #5f5f5f;"
 ---
 
