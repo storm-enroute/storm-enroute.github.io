@@ -4,11 +4,11 @@ layout: projbase
 
 
 
-<div class="loader"></div>
+<div class="loader-macrogl"></div>
 
 <script type="text/javascript">
   $(window).load(function() {
-    $(".loader").fadeOut("slow");
+    $(".loader-macrogl").fadeOut("slow");
   })
 </script>
 
@@ -42,7 +42,7 @@ layout: projbase
     <div class="bl bl-build-status">
       <a href='https://ci.storm-enroute.com:8080/job/public-macrogl/'>
         <img src='/resources/images/icons/cogs3-gray.png' height='14px'/>
-        <img class="buildstatus" src='https://ci.storm-enroute.com:8080/buildStatus/icon?job=public-macrogl' />
+        <img class="buildstatus" src='https://ci.storm-enroute.com:8080/buildStatus/icon?job=public-macrogl' onError="this.src='/resources/images/build-status-passing.png';" />
       </a>
       <div class="right-edge"></div>
     </div>
