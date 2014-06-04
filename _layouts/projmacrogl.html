@@ -7,9 +7,17 @@ layout: projbase
 <div class="loader-macrogl"></div>
 
 <script type="text/javascript">
-  $(window).load(function() {
-    $(".loader-macrogl").fadeOut("slow");
-  })
+  var faded = false;
+
+  var startFadeOut = function() {
+    if (!faded) {
+      faded = true;
+      $(".loader-macrogl").fadeOut("slow");
+    }
+  };
+
+  $(window).load(startFadeOut);
+  setTimeout(startFadeOut, 5000);
 </script>
 
 <div>
