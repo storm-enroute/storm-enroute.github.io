@@ -86,6 +86,10 @@ If the argument list cannot fit on the same line, it should be placed in the nex
 Members of a template (class, trait or object) are usually delimited with a blank line.
 The first and the last member does not have to have a blank line after the class declaration or before the final brace.
 
+In classes and traits, fields come at the beginning of the class,
+and methods follow.
+Implicit members come before non-implicit members.
+
 
 ### Miscellaneous
 
