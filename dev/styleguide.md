@@ -4,16 +4,24 @@ title: Styleguide
 permalink: /dev/styleguide/index.html
 ---
 
-This document is a comprehensive Scala coding styleguide for Storm Enroute projects.
+This document is a comprehensive Scala coding styleguide for Storm Enroute
+projects.
+We ask contributors to comply to these rules.
+Repeated offenders will be asked to write Lint checkers for the rules that they
+have a habit of breaking.
 
 
 ## File naming guidelines
 
-Every source file can contain symbols of a single package `x.y.z`, and must be placed into a source code subdirectory `x/y/z`.
+Every source file can contain symbols of a single package `x.y.z`,
+and must be placed into a source code subdirectory `x/y/z`.
 
-- If the file is named with a upper case initial letter, then it may only contain a class and its companion object with the same name.
-- If the file is named with a lower case initial letter, then it may contain any number of related classes.
-- If the file is named `package.scala`, then it may only contain the package object for the related package `x.y.z`:
+- If the file is named with a upper case initial letter,
+  then it may only contain a class and its companion object with the same name.
+- If the file is named with a lower case initial letter,
+  then it may contain any number of related classes.
+- If the file is named `package.scala`,
+  then it may only contain the package object for the related package `x.y.z`.
 
 For example:
 
@@ -23,21 +31,31 @@ For example:
     }
 
 
-A package object file may additionally declare a package statement for declarations that must be outside an object, for compiler-specific reasons.
+A package object file may additionally declare a package statement for
+declarations that must be outside an object, for compiler-specific reasons.
 
     package z {
       class Z
       extends MustBeOutsideSingletonObject
     }
 
-In specific occasions, a file may declare a different subpackage within its body, but this is to be avoided.
+In specific occasions, a file may declare a different subpackage within its
+body, but this is to be avoided.
+
+
+## Line length
+
+Line length should be 80 characters or less.
+This way, most laptop screens can display 2 screens at a reasonable font size.
+Note that legacy code might not comply to this rule, but all new code must.
 
 
 ## Spacing and indentation guidelines
 
 Every source file should have the following structure:
 
-- start with an optional preamble with a license or the project banner and 1 empty line after it
+- start with an optional preamble with a license or the project banner
+  and 1 empty line after it
 - package name, unless in root package
 - 3 empty lines
 - imports
@@ -70,21 +88,26 @@ This is a typical file containing a class declaration:
 ### Class declarations
 
 A class declaration keyword and class name should go in one line.
-They should be followed by the type parameters, early initialization list, list of arguments, list of superclasses and the class body.
-If the superclasses cannot fit in the same line, they are placed in the next line:
+They should be followed by the type parameters, early initialization list,
+list of arguments, list of superclasses and the class body.
+If the superclasses cannot fit in the same line, they are placed in the next
+line:
 
     class MyMapper[T, S](f: T => S)
     extends LongNamedSuperClass
     with VeryLongNamedMixingTrait
 
-If the argument list cannot fit on the same line, it should be placed in the next line and indented:
+If the argument list cannot fit on the same line,
+it should be placed in the next line and indented:
 
     class MyMapper[T, S]
       (f: T => S, logger: Logger, errorHandler: Exception => S)
     extends MapperBase
 
-Members of a template (class, trait or object) are usually delimited with a blank line.
-The first and the last member does not have to have a blank line after the class declaration or before the final brace.
+Members of a template (class, trait or object) are usually delimited with a
+blank line.
+The first and the last member does not have to have a blank line after the class
+declaration or before the final brace.
 
 In classes and traits, fields come at the beginning of the class,
 and methods follow.
@@ -100,7 +123,8 @@ Type ascriptions consist of a colon `:` followed by a space and the type:
 Operators in expressions should be delimited with a space.
 This is bad: `1+1`,
 but the following is good: `1 + 1`.
-Keywords that are followed by a condition enclosed in parenthesis like `if` and `while` should be delimited with a space.
+Keywords that are followed by a condition enclosed in parenthesis like `if` and
+`while` should be delimited with a space.
 By contrast, method calls should not.
 Avoid putting blocks of code or method bodies into a new line.
 One liner methods are allowed
@@ -120,13 +144,16 @@ Here are some examples:
 
 ## Code organization guidelines
 
-This section contains guidelines on how to code organization conventions within files and class hierarchies, and lists preferred patterns.
+This section contains guidelines on how to code organization conventions within
+files and class hierarchies, and lists preferred patterns.
 
 
 ### Package statements
 
 A package statement should be on one line.
-If the compilation unit makes an extensive use of functionality in its superpackages, than there can be several `package` statements one after another after the preamble -- this is preferred to an `import`.
+If the compilation unit makes an extensive use of functionality in its
+superpackages, than there can be several `package` statements one after another
+after the preamble -- this is preferred to an `import`.
 Both of the following is ok:
 
     package x.y.z
@@ -134,7 +161,8 @@ Both of the following is ok:
     package x.y
     package z
 
-Avoid having `package` statements that are not at the beginning of the file unless absolutely necessary (typically as a hack).
+Avoid having `package` statements that are not at the beginning of the file
+unless absolutely necessary (typically as a hack).
 
 
 ### Import statements
@@ -147,7 +175,8 @@ In favour of:
 
     import scala.collection._
     
-The only exception is when you import packages or modules from within subpackages or singleton objects/classes within the same package.
+The only exception is when you import packages or modules from within
+subpackages or singleton objects/classes within the same package.
 
 Import statements should be sorted in the order:
 - Scala language imports
@@ -158,9 +187,11 @@ Import statements should be sorted in the order:
 - Packages from projects that the current project depends on
 - Packages from the current project
 
-Above, packages with the same name should be grouped together, and preferably in alphabetical order.
+Above, packages with the same name should be grouped together, and preferably in
+alphabetical order.
 
-Import statements can be in a class or a method if the imported functionality is really restricted to that scope:
+Import statements can be in a class or a method if the imported functionality is
+really restricted to that scope:
 
     class Foo {
       import Foo._
@@ -176,7 +207,8 @@ Import statements can be in a class or a method if the imported functionality is
 
 They begin with `/**` and end with `*/`.
 In the case they are multiline, each line should start with a `*`.
-First line of text should start with the first line of comment, to save vertical space.
+First line of text should start with the first line of comment, to save vertical
+space.
 The following descriptive lines should be separate by one blank line.
 Parameter, type parameter and return annotations go in separate lines,
 and their descriptions are aligned horizontally.
