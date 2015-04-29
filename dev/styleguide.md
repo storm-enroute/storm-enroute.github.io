@@ -20,6 +20,7 @@ and must be placed into a source code subdirectory `x/y/z`.
   then it may only contain a class and its companion object with the same name.
 - If the file is named with a lower case initial letter,
   then it may contain any number of related classes.
+  In this case, the words in the file name are delimited with dashes (`-`).
 - If the file is named `package.scala`,
   then it may only contain the package object for the related package `x.y.z`.
 
@@ -45,7 +46,7 @@ body, but this is to be avoided.
 
 ## Line length
 
-Line length should be 80 characters or less.
+Line length should be 88 characters or less.
 This way, most laptop screens can display 2 screens at a reasonable font size.
 Note that legacy code might not comply to this rule, but all new code must.
 
