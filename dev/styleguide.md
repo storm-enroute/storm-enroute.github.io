@@ -176,20 +176,7 @@ In favour of:
 
     import scala.collection._
     
-The only exception is when you import packages or modules from within
-subpackages or singleton objects/classes within the same package.
-
-Import statements should be sorted in the order:
-- Scala language imports
-- JDK packages
-- Scala standard library packages
-- Packages from Java library dependencies
-- Packages from Scala library dependencies
-- Packages from projects that the current project depends on
-- Packages from the current project
-
-Above, packages with the same name should be grouped together, and preferably in
-alphabetical order.
+Import statements should be sorted in alphabetical order.
 
 Import statements can be in a class or a method if the imported functionality is
 really restricted to that scope:
