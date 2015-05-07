@@ -31,7 +31,6 @@ For example:
     package object z {
     }
 
-
 A package object file may additionally declare a package statement for
 declarations that must be outside an object, for compiler-specific reasons.
 
@@ -63,6 +62,7 @@ Every source file should have the following structure:
 - 3 empty lines
 - a sequence of top level object separated with 2 empty lines
 - each indentation level is comprised of 2 spaces
+- never use tabs
 
 This is a typical file containing a class declaration:
 
