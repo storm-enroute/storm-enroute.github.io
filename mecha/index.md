@@ -8,7 +8,7 @@ permalink: /mecha/index.html
 logostyle: "color: #5f5f5f;"
 ---
 
-<span class="contentbox" id="readmebox"></span>
+<span id="readmebox"></span>
 
 <script src="/resources/js/markdown.min.js"></script>
 <script src="/resources/js/setlicense.js"></script>
