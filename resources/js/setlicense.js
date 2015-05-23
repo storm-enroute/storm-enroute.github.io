@@ -19,6 +19,7 @@ function setContent(contentboxname, url, logoname, contenttype) {
     $(function() {
         $('pre').addClass('prettyprint linenums');
     })
+    prettyPrint();
   });
 }
 
