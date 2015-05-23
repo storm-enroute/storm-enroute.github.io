@@ -155,10 +155,12 @@ A package statement should be on one line.
 If the compilation unit makes an extensive use of functionality in its
 superpackages, than there can be several `package` statements one after another
 after the preamble -- this is preferred to an `import`.
-Both of the following is ok:
+Both this:
 
     package x.y.z
-    
+
+And this is ok:
+
     package x.y
     package z
 
