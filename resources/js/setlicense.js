@@ -12,7 +12,7 @@ function setContent(contentboxname, url, logoname, contenttype) {
     if (contenttype == "txt") {
       ltxt = ltxt.replace(/\t/g, '    ').replace(/  /g, '&nbsp; ').replace(/  /g, ' &nbsp;').replace(/\r\n|\n|\r/g, '<br />');
       contentbox.innerHTML = contentbox.innerHTML + '<br/>' + ltxt;
-    } else {
+    } else if (contenttype == "md") {
       contentbox.innerHTML = markdown.toHTML(ltxt);
     }
   });
