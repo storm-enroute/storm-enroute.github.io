@@ -10,6 +10,8 @@ logostyle: "color: #5f5f5f;"
 
 ![ ](/resources/images/mecha-logo-256-soft.png)
 
+[README.md on GitHub](https://github.com/storm-enroute/mecha/blob/master/README.md)
+
 <span id="readmebox"></span>
 
 <script src="/resources/js/markdown.min.js"></script>
