@@ -15,6 +15,10 @@ function setContent(contentboxname, url, logoname, contenttype) {
     } else if (contenttype == "md") {
       contentbox.innerHTML = markdown.toHTML(ltxt);
     }
+    // restore highlighting
+    $(function() {
+        $('pre').addClass('prettyprint linenums');
+    })
   });
 }
 

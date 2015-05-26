@@ -20,7 +20,4 @@ logostyle: "color: #5f5f5f;"
     "https://api.github.com/repos/storm-enroute/mecha/contents/README.md",
     null,
     "md")
-  $(function() {
-      $('pre').addClass('prettyprint linenums');
-  })
 </script>
