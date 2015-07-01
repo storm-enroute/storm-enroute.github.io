@@ -192,6 +192,9 @@ really restricted to that scope:
       class Bar
     }
 
+Do not import the classes or singleton objects from the same compilation unit at the top-level --
+instead, move them to the scope where they are required.
+
 
 ## ScalaDoc comments
 
