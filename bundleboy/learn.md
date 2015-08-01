@@ -9,5 +9,4 @@ logostyle: "color: #777;"
 ---
 
 
-Under construction.
-
+See [unit tests for example usage](https://github.com/storm-enroute/bundleboy/tree/master/src/test/scala/org/stormenroute/bundleboy).

@@ -9,5 +9,4 @@ logostyle: "color: #5f5f5f;"
 ---
 
 
-BundleBoy is a minimalistic library for packaging code and resource bundles,
-and loading the dynamically.
+MacroGL is an experimental library for graphics development.
