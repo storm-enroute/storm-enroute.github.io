@@ -9,5 +9,5 @@ logostyle: "color: #777;"
 ---
 
 
-Under construction.
+Mailing list [here](https://groups.google.com/forum/#!forum/storm-enroute-dev).
 
