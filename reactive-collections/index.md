@@ -7,9 +7,4 @@ title: Reactive Collections
 permalink: /reactive-collections/index.html
 ---
 
-
-
-
-
-  
-
+Redirecting to [project homepage](http://reactive-collections.com/).
