@@ -174,7 +174,7 @@ An import statement should always have the complete package name -- avoid:
 
     import collection._
     
-In favour of:
+In favor of:
 
     import scala.collection._
     
