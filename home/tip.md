@@ -1,6 +1,6 @@
 ---
 layout: homedefault
-title: Tip of the Day
+title: Quote of the Day
 permalink: /home/tip/index.html
 ---
 
