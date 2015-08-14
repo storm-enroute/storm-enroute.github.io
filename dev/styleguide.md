@@ -4,6 +4,7 @@ title: Styleguide
 permalink: /dev/styleguide/index.html
 ---
 
+
 This document is a comprehensive Scala coding styleguide for Storm Enroute
 projects.
 We ask contributors to comply to these rules.
@@ -48,6 +49,28 @@ body, but this is to be avoided.
 Line length should be 88 characters or less.
 This way, most laptop screens can display 2 screens at a reasonable font size.
 Note that legacy code might not comply to this rule, but all new code must.
+
+
+### Line folding
+
+Lines exceeding 88 characters in length should be folded into the next line, with a
+2 space indentation. Prefer breaking the expression so that it remains readable:
+
+    val x = (1 * 5 + 2) +
+      7 / 3
+
+In some cases, more aggressive folding increases readability:
+
+    def veryLongMethodNameWithLongSignature[A: ContextBound, B <: AnyRef, CC[X]]
+      (foo: Int, bar: A, baz: CC[B]): String
+
+This is better:
+
+    def veryLongMethodNameWithLongSignature
+      [A: ContextBound, B <: AnyRef, CC[X]]
+      (foo: Int, bar: A, baz: CC[B]): String
+
+When argument types are long, consider folding each argument to its own line.
 
 
 ## Spacing and indentation guidelines
@@ -188,6 +211,7 @@ really restricted to that scope:
       val b = new Bar
     }
     
+
     object Foo {
       class Bar
     }
