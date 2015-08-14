@@ -24,4 +24,3 @@ Here is the selected quote of the day:
 
 <br/>
 <br/>
-
