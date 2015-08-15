@@ -54,23 +54,27 @@ Note that legacy code might not comply to this rule, but all new code must.
 ### Line folding
 
 Lines exceeding 88 characters in length should be folded into the next line, with a
-2 space indentation. Prefer breaking the expression so that it remains readable:
+2 space indentation. Prefer breaking the expression in way in which it remains readable.
+Here is an example:
 
     val x = (1 * 5 + 2) +
       7 / 3
 
-In some cases, more aggressive folding increases readability:
+In some cases, more aggressive folding increases readability.
+It is ok to fold the line like this:
 
     def veryLongMethodNameWithLongSignature[A: ContextBound, B <: AnyRef, CC[X]]
       (foo: Int, bar: A, baz: CC[B]): String
 
-This is better:
+But this is better:
 
     def veryLongMethodNameWithLongSignature
       [A: ContextBound, B <: AnyRef, CC[X]]
       (foo: Int, bar: A, baz: CC[B]): String
 
-When argument types are long, consider folding each argument to its own line.
+When type parameters and/or arguments are really long,
+consider folding each argument to its own line.
+This improves readability and allows easier access to each type parameter or argument.
 
 
 ## Spacing and indentation guidelines
