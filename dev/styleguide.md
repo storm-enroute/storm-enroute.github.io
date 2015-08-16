@@ -215,13 +215,24 @@ really restricted to that scope:
       val b = new Bar
     }
     
-
+    
     object Foo {
       class Bar
     }
 
 Do not import the classes or singleton objects from the same compilation unit at the top-level --
 instead, move them to the scope where they are required.
+
+
+## Language features
+
+Please avoid using the stackable modifications pattern.
+Instead, prefer composition with combinator methods.
+
+Also, avoid the cake pattern, as it increases compilation time,
+and causes serialization problems.
+Instead, prefer using (implicit) *context* objects to refer to components
+of the complete system.
 
 
 ## ScalaDoc comments
