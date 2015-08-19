@@ -16,4 +16,3 @@ logostyle: "color: #5f5f5f;"
 
 - [Documentation](/macrogl/docs/0.4/)
 - [API](http://storm-enroute.com/apidocs/macrogl/0.4-SNAPSHOT/api/)
-

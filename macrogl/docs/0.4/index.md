@@ -17,8 +17,10 @@ Under construction.
 
 ### Misc Examples
 
-- [Simple triangle example](/macrogl/docs/0.4/triangle) - shows how to render a simple multicolored triangle using MacroGL and OpenGL 3.3 functionality
+- [Simple triangle example](/macrogl/docs/0.4/triangle) -- shows how to render a simple
+  multicolored triangle using MacroGL and OpenGL 3.3 functionality.
 
-- [2D texture example](/macrogl/docs/0.4/texture2d) - shows how to render a texture using MacroGL
+- [2D texture example](/macrogl/docs/0.4/texture2d) -- shows how to render a texture
+  using MacroGL.
 
 
