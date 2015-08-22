@@ -10,5 +10,5 @@ logostyle: "color: #777;"
 
 
 BundleBoy is a minimalistic library for packaging code and resource bundles,
-and loading the dynamically.
+and loading them dynamically.
 
