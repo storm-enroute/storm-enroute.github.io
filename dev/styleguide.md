@@ -231,8 +231,8 @@ Instead, prefer composition with combinator methods.
 
 Also, avoid the cake pattern, as it increases compilation time,
 and causes serialization problems.
-Instead, prefer using (implicit) *context* objects to refer to components
-of the complete system.
+Instead, prefer using (implicit) *context* objects to refer to other components
+in the system.
 
 
 ## ScalaDoc comments
