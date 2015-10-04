@@ -17,10 +17,12 @@ Under construction.
 
 ### Misc Examples
 
-- [Simple triangle example](/macrogl/docs/0.4/triangle) -- shows how to render a simple
-  multicolored triangle using MacroGL and OpenGL 3.3 functionality.
-
-- [2D texture example](/macrogl/docs/0.4/texture2d) -- shows how to render a texture
-  using MacroGL.
+- [Basic triangle example](/macrogl/docs/0.4/triangle) -- shows how to render a simple
+  triangle using MacroGL and OpenGL 3.3 functionality.
 
 
+### Build Outputs
+
+MacroGL build pipeline produces example programs, used to validate code changes.
+The list of all builds can be found here
+[here](https://github.com/storm-enroute/builds/tree/gh-pages/macrogl).
