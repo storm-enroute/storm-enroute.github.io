@@ -51,7 +51,7 @@ $.get(
   "https://api.github.com/repos/storm-enroute/builds/contents/macrogl?ref=gh-pages",
   function(data) {
     var buildList = $("#build-list");
-    alert(getKeys(data));
+    alert(data[0]);
     var buildDirs = JSON.parse(data.content);
     for (var i = 0; i < buildDirs.length; i++) {
       var dir = buildDirs[i]["name"];
