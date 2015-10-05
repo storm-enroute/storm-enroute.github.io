@@ -9,4 +9,4 @@ logostyle: "color: #5f5f5f;"
 ---
 
 
-MacroGL is an graphics library for scala, based on experimental scala macros. It's made to bring OpenGL development to higher, modern level. 
+MacroGL is a graphics library for scala, based on experimental scala macros. It's made to bring OpenGL development to higher, modern level. 
