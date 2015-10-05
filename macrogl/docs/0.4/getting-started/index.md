@@ -88,8 +88,7 @@ At that point, the display context gets destroyed,
 and the MacroGL program can end.
 The complete program is shown here:
 
-<pre class="prettyprint linenums">
-  <code id="examplebox-1"></code>
+<pre class="prettyprint linenums lang-scala" id="examplebox-1">
 </pre>
 <script>
   setContent(
