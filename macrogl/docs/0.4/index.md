@@ -55,7 +55,7 @@ $.get(
     for (var i = 0; i < buildDirs.length; i++) {
       var dir = buildDirs[i]["name"];
       buildList.append("<li><a href='http://storm-enroute.com/builds/macrogl/" +
-        dir + "/index-fastopt.html'>" + dir + "</a></li>");
+        dir + "/backend-examples-webgl/index-fastopt.html'>" + dir + "</a></li>");
     }
   }
 )
