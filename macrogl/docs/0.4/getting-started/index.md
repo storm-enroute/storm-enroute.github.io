@@ -86,7 +86,18 @@ At that point, the display context gets destroyed,
 and the MacroGL program can end.
 The complete program is shown here:
 
-    TODO
+<pre class="prettyprint linenums prettyprinted" id="examplebox-1"></pre>
+<script>
+  setContent(
+    "examplebox-1",
+    "https://api.github.com/repos/storm-enroute/macrogl/contents/src/test/scala/org/macrogl/examples/EmptyExample.scala",
+    null,
+    "md")
+</script>
+
+You can find this example in the MacroGL source code repository
+[here](https://github.com/storm-enroute/macrogl/blob/master/src/backend-examples/common/scala/org/macrogl/examples/backend/common/EmptyExample.scala).
+The example can be run with the following command.
 
 This example was minimal, but it was not very interesting.
 In the next part, we examine a more exciting MacroGL program.

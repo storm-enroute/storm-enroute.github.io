@@ -14,8 +14,6 @@ logostyle: "color: #5f5f5f;"
 
 <span id="readmebox"></span>
 
-<script src="/resources/js/markdown.min.js"></script>
-<script src="/resources/js/setlicense.js"></script>
 <script>
   setContent(
     "readmebox",
