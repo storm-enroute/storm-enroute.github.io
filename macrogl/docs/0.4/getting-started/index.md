@@ -43,8 +43,10 @@ when we get there, we will show how to use the alternative backend.
 
 In this paragraph,
 we take a look at a minimal example code needed to run a MacroGL program.
-First of all, we need to import the `org.macrogl` package:
+First of all, we need to add the following imports,
+which ensure that we have basic LWJGL and MacroGL functionality available:
 
+    import org.lwjgl.opengl._
     import org.macrogl._
 
 We start the program by creating a rendering context and set its attributes.
