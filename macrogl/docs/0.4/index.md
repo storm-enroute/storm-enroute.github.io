@@ -33,7 +33,7 @@ MacroGL build pipeline produces example programs, used to validate code changes.
 The list of all builds can be found in the builds directory
 [on GitHub](https://github.com/storm-enroute/builds/tree/gh-pages/macrogl).
 
-#### Build links
+#### Recent build output links
 
 <ul id="build-list">
 </ul>
