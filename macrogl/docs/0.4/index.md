@@ -30,5 +30,24 @@ focusing on different MacroGL features:
 ### Build Outputs
 
 MacroGL build pipeline produces example programs, used to validate code changes.
-The list of all builds can be found here
-[here](https://github.com/storm-enroute/builds/tree/gh-pages/macrogl).
+The list of all builds can be found in the builds directory
+[on GitHub](https://github.com/storm-enroute/builds/tree/gh-pages/macrogl).
+
+Build links:
+
+<ul id="build-list">
+</ul>
+<script>
+$.get(
+  "https://api.github.com/repos/storm-enroute/builds/contents/macrogl?ref=gh-pages",
+  function(data) {
+    var buildList = $("#build-list");
+    var buildDirs = eval(data.content);
+    for (var i = 0; i < buildDirs.length; i++) {
+      var dir = buildDirs[i]["name"];
+      buildList.append("<li><a href='http://storm-enroute.com/builds/macrogl/" +
+        dir + "/index-fastopt.html'></a></li>");
+    }
+  }
+)
+</script>
