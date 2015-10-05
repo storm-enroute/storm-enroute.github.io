@@ -33,7 +33,7 @@ MacroGL build pipeline produces example programs, used to validate code changes.
 The list of all builds can be found in the builds directory
 [on GitHub](https://github.com/storm-enroute/builds/tree/gh-pages/macrogl).
 
-Build links:
+#### Build links
 
 <ul id="build-list">
 </ul>
@@ -42,6 +42,7 @@ $.get(
   "https://api.github.com/repos/storm-enroute/builds/contents/macrogl?ref=gh-pages",
   function(data) {
     var buildList = $("#build-list");
+    alert(data.content);
     var buildDirs = JSON.parse(data.content);
     for (var i = 0; i < buildDirs.length; i++) {
       var dir = buildDirs[i]["name"];
