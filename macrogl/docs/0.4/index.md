@@ -38,15 +38,6 @@ The list of all builds can be found in the builds directory
 <ul id="build-list">
 </ul>
 <script>
-function getKeys(obj) {
-    var r = []
-    for (var k in obj) {
-        if (!obj.hasOwnProperty(k)) 
-            continue
-        r.push(k)
-    }
-    return r
-}
 $.get(
   "https://api.github.com/repos/storm-enroute/builds/contents/macrogl?ref=gh-pages",
   function(data) {
