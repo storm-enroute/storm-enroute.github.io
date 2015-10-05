@@ -20,7 +20,7 @@ function setContent(contentboxname, url, logoname, contenttype) {
     // restore highlighting
     $(function() {
       contentbox.removeClass('prettyprinted');
-        $('pre').addClass('prettyprint linenums');
+      $('pre').addClass('prettyprint linenums');
     })
     prettyPrint();
   });
