@@ -24,6 +24,25 @@ In example if we want to use OpenGL 3.2 with core profile and forward compatibil
 val contextAttributes = new ContextAttribs(3, 2).withForwardCompatible(true).withProfileCore(true)
 ```
 
+After that, we can create window with specified properties:
+
+```
+Display.setDisplayMode(new DisplayMode(800, 600))
+Display.create(new PixelFormat, contextAttributes)
+```
+
+With code provided above, a window of size 800px wide and 600px high should show up. Now we can use OpenGL till invocation of Display.destroy method. Typical application would probably look like that:
+
+```
+while(!Display.isCloseRequested()){ //iterate until user presses 'X' in the window corner
+    // do your gl stuff here
+    Display.update() //swap buffers and poll events
+} 
+```
+
+And that's all! Just remember to call Display.destroy after exitting loop. 
+
+
 ### Misc Examples
 
 - [Basic triangle example](/macrogl/docs/0.4/triangle) -- shows how to render a simple
