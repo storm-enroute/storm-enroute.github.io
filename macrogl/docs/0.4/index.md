@@ -12,7 +12,12 @@ logostyle: "color: #5f5f5f;"
 
 ### Getting Started Guide
 
-Under construction.
+First, we need to create attributes of our rendering context. It can be done with following code:
+
+```
+val contextAttributes = new ContextAttribs(3, 2)
+      .withForwardCompatible(true).withProfileCore(true)
+```
 
 
 ### Misc Examples
