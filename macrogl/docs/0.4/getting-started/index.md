@@ -88,7 +88,9 @@ At that point, the display context gets destroyed,
 and the MacroGL program can end.
 The complete program is shown here:
 
-<pre class="prettyprint linenums" id="examplebox-1"></pre>
+<pre class="prettyprint linenums">
+  <code id="examplebox-1"></code>
+</pre>
 <script>
   setContent(
     "examplebox-1",
@@ -99,7 +101,12 @@ The complete program is shown here:
 
 You can find this example in the MacroGL source code repository
 [here](https://github.com/storm-enroute/macrogl/blob/master/src/backend-examples/common/scala/org/macrogl/examples/backend/common/EmptyExample.scala).
-The example can be run with the following command.
+You can clone the MacroGL repository,
+and run the example from SBT with the following command:
 
-This example was minimal, but it was not very interesting.
-In the next part, we examine a more exciting MacroGL program.
+    > test:runMain org.macrogl.examples.EmptyExample
+
+This program was simple and minimal, but it was not very interesting.
+In fact, this program only used raw LWJGL functionality,
+and no MacroGL features at all.
+In the next part, we will examine a more exciting MacroGL program.
