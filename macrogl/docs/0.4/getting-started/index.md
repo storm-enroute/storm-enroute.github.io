@@ -94,7 +94,7 @@ The complete program is shown here:
     "examplebox-1",
     "https://api.github.com/repos/storm-enroute/macrogl/contents/src/test/scala/org/macrogl/examples/EmptyExample.scala",
     null,
-    "md")
+    "txt")
   prettyPrint();
 </script>
 
