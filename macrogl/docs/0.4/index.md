@@ -12,38 +12,16 @@ logostyle: "color: #5f5f5f;"
 
 ### Getting Started Guide
 
-First, we need to create attributes of our rendering context. It can be done with following code:
-
-```
-val contextAttributes = new ContextAttribs(major, minor)
-```
-
-In example if we want to use OpenGL 3.2 with core profile and forward compatibility, we can use attributes like these:
-
-```
-val contextAttributes = new ContextAttribs(3, 2).withForwardCompatible(true).withProfileCore(true)
-```
-
-After that, we can create window with specified properties:
-
-```
-Display.setDisplayMode(new DisplayMode(800, 600))
-Display.create(new PixelFormat, contextAttributes)
-```
-
-With code provided above, a window of size 800px wide and 600px high should show up. Now we can use OpenGL till invocation of Display.destroy method. Typical application would probably look like that:
-
-```
-while(!Display.isCloseRequested()){ //iterate until user presses 'X' in the window corner
-    // do your gl stuff here
-    Display.update() //swap buffers and poll events
-} 
-```
-
-And that's all! Just remember to call Display.destroy after exitting loop. 
+[Detailed guide](/macrogl/docs/0.4/getting-started/index.html)
+on using MacroGL.
+This is the ideal starting point if this is your first encounter with MacroGL,
+or OpenGL in general.
 
 
 ### Misc Examples
+
+Here is a list of various short self-contained MacroGL programs,
+focusing on different MacroGL features:
 
 - [Basic triangle example](/macrogl/docs/0.4/triangle) -- shows how to render a simple
   triangle using MacroGL and OpenGL 3.3 functionality.
