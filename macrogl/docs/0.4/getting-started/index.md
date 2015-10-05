@@ -99,7 +99,7 @@ The complete program is shown here:
 </script>
 
 You can find this example in the MacroGL source code repository
-[here](https://github.com/storm-enroute/macrogl/blob/master/src/backend-examples/common/scala/org/macrogl/examples/backend/common/EmptyExample.scala).
+[here](https://github.com/storm-enroute/macrogl/blob/master/src/test/scala/org/macrogl/examples/EmptyExample.scala).
 You can clone the MacroGL repository,
 and run the example from SBT with the following command:
 
