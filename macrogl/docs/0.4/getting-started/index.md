@@ -88,13 +88,14 @@ At that point, the display context gets destroyed,
 and the MacroGL program can end.
 The complete program is shown here:
 
-<pre class="prettyprint linenums prettyprinted" id="examplebox-1"></pre>
+<pre class="prettyprint linenums" id="examplebox-1"></pre>
 <script>
   setContent(
     "examplebox-1",
     "https://api.github.com/repos/storm-enroute/macrogl/contents/src/test/scala/org/macrogl/examples/EmptyExample.scala",
     null,
     "md")
+  prettyPrint();
 </script>
 
 You can find this example in the MacroGL source code repository
