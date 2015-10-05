@@ -14,6 +14,8 @@ function setContent(contentboxname, url, logoname, contenttype) {
       contentbox.innerHTML = contentbox.innerHTML + '<br/>' + ltxt;
     } else if (contenttype == "md") {
       contentbox.innerHTML = markdown.toHTML(ltxt);
+    } else if (contenttype == "raw") {
+      contentbox.innerHTML = ltxt
     }
     // restore highlighting
     $(function() {
