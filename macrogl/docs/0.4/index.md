@@ -15,10 +15,14 @@ logostyle: "color: #5f5f5f;"
 First, we need to create attributes of our rendering context. It can be done with following code:
 
 ```
-val contextAttributes = new ContextAttribs(3, 2)
-      .withForwardCompatible(true).withProfileCore(true)
+val contextAttributes = new ContextAttribs(major, minor)
 ```
 
+In example if we want to use OpenGL 3.2 with core profile and forward compatibility, we can use attributes like these:
+
+```
+val contextAttributes = new ContextAttribs(3, 2).withForwardCompatible(true).withProfileCore(true)
+```
 
 ### Misc Examples
 
