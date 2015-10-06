@@ -24,7 +24,16 @@ layout: projbase
   <script src="/resources/js/macrogl-banner.js"></script>
   <div class="banner">
     <div id="bannercenter" class="bannercenter">
-      <img src="/resources/images/macrogl-banner.jpg"/>
+      <!-- <img src="/resources/images/macrogl-banner.jpg"/> -->
+      <canvas id="canvas-main-banner" height="500px" width="1400px">
+      </canvas>
+      <script
+        type="text/javascript"
+        src="http://storm-enroute.com/builds/macrogl/latest/backend-examples-webgl/target/scala-2.11/backend-examples-webgl-opt.js">
+      </script>
+      <script type="text/javascript">
+        WebglExamples().mainBanner("canvas-main-banner");
+      </script>
       <div class="bannerlinks">
         <a href="https://github.com/storm-enroute/macrogl"><img class="bannerlink" id="link-github" src="/resources/images/icons/github7-gray.png"/></a>
         <a href="https://groups.google.com/forum/#!forum/macrogl"><img class="bannerlink" id="link-groups" src="/resources/images/icons/mail8-gray.png"/></a>
