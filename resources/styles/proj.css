@@ -393,6 +393,11 @@ div.banner div.bannercenter img {
   left: -240px;
 }
 
+div.banner div.bannercenter canvas {
+  position: relative;
+  left: -240px;
+}
+
 div.banner div.bannercenter div.bannerlinks {
   position: relative;
   left: 1150px;
