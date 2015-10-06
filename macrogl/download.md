@@ -9,7 +9,15 @@ logostyle: "color: #5f5f5f;"
 ---
 
 
-Snapshot released regularly on Sonatype:
+## SBT
+
+We recommend that you use SBT for your projects.
+In this case, you can include MacroGL as a dependency as follows:
+
+    libraryDependencies ++= Seq(
+      "com.storm-enroute" % "macrogl_2.10" % "0.3")
+
+The snapshot is released regularly on Sonatype:
 
     resolvers ++= Seq(
       "Sonatype OSS Snapshots" at
