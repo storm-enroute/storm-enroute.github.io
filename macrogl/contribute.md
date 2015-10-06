@@ -33,4 +33,9 @@ Available [here](https://raw.githubusercontent.com/storm-enroute/macrogl/master/
 <script src="/resources/js/setlicense-macrogl.js">_</script>
 
 
+### Recent build outputs
 
+<ul id="build-list"></ul>
+<script>
+  setMacroGLBuilds("#build-list")
+</script>
