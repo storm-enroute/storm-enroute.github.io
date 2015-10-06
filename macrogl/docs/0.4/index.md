@@ -35,19 +35,7 @@ The list of all builds can be found in the builds directory
 
 #### Recent build output links
 
-<ul id="build-list">
-</ul>
+<ul id="build-list"></ul>
 <script>
-$.get(
-  "https://api.github.com/repos/storm-enroute/builds/contents/macrogl?ref=gh-pages",
-  function(data) {
-    var buildList = $("#build-list");
-    var buildDirs = data;
-    for (var i = 0; i < buildDirs.length; i++) {
-      var dir = buildDirs[i]["name"];
-      buildList.append("<li><a href='http://storm-enroute.com/builds/macrogl/" +
-        dir + "/backend-examples-webgl/index-fastopt.html'>" + dir + "</a></li>");
-    }
-  }
-)
+  setMacroGLBuilds("#build-list")
 </script>
