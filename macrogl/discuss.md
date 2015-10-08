@@ -12,7 +12,7 @@ logostyle: "color: #5f5f5f;"
 ## Mailing list
 
 We encourage you to ask questions,
-discuss feature requests, improvements and PRs,
+discuss feature requests, suggest improvements and send PRs,
 and care about user feedback.
 Join the discussion on
 [Google Groups](https://groups.google.com/forum/#!forum/macrogl).
