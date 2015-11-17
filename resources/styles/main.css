@@ -254,6 +254,7 @@ ul.horizmenu li a:hover {
   font-family: Helvetica, sans-serif;
   font-size: 13px;
   color: #3f3f3f;
+  overflow: hidden;
 }
 
 .paper {
