@@ -817,30 +817,6 @@ a:focus, a:active {
   outline: none;
 }
 
-table.summary {
-  margin: 20px;
-  margin-left: 30px;
-  background: #f3f3f3;
-  border: 1px solid #dedede;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-}
-
-table.summary tr td {
-  padding: 5px;
-}
-
-table.projects {
-}
-
-table.projects tr.title-row td {
-  font-weight: bold;
-}
-
-table.projects tr td {
-  padding: 10px;
-}
-
 table.docs-tip {
   background-color: #eee;
   border: 1px solid #9ab8ef;
