@@ -4,7 +4,7 @@ title: Continuous Integration
 permalink: /dev/ci/index.html
 ---
 
-<table>
+<table class="projects">
 <tr class="title-row">
   <td>
   </td>

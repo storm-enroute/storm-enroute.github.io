@@ -830,8 +830,15 @@ table.summary tr td {
   padding: 5px;
 }
 
-table tr.title-row {
-  font-weight: 200;
+table.projects {
+}
+
+table.projects tr.title-row {
+  font-weight: bold;
+}
+
+table.projects tr td {
+  padding: 10px;
 }
 
 table.docs-tip {
