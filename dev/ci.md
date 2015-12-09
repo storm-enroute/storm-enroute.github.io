@@ -4,6 +4,17 @@ title: Continuous Integration
 permalink: /dev/ci/index.html
 ---
 
+# CI services
+
+
+| Service | URL |
+| ------- | --- |
+| Drone   | [Link](http://ci.storm-enroute.com:443)      |
+| Travis  | [Link](https://travis-ci.org/storm-enroute/) |
+
+
+# Projects
+
 <table class="projects">
 <tr class="projects-title-row">
   <td>
@@ -72,7 +83,7 @@ permalink: /dev/ci/index.html
 
 <tr>
   <td>
-    <img src="/resources/images/macrogl.ico" height="48" />
+    <img src="/resources/images/macrogl-96.png" height="48" />
   </td>
   <td class="projects-name">
     MacroGL
