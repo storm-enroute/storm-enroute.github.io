@@ -450,6 +450,8 @@ table.summary tr td {
 }
 
 table.projects {
+  background: #ddd;
+  border: 1px solid #aaa;
 }
 
 table.projects tr {
