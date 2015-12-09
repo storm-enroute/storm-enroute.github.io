@@ -5,7 +5,7 @@ permalink: /dev/ci/index.html
 ---
 
 <table class="projects">
-<tr class="projects.title-row">
+<tr class="projects-title-row">
   <td>
   </td>
   <td>
