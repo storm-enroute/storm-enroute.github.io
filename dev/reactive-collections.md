@@ -30,10 +30,6 @@ permalink: /dev/reactive-collections/index.html
 
 </tr></table>
 
-Project     | Travis | Drone | Maven
------------ | ------ | ----- | -----
-Bundleboy   | [![Build Status](https://travis-ci.org/storm-enroute/bundleboy.svg)](https://travis-ci.org/storm-enroute/bundleboy) | [![Build Status](http://ci.storm-enroute.com:443/api/badges/storm-enroute/bundleboy/status.svg)](http://ci.storm-enroute.com:443/storm-enroute/bundleboy) | 
-
 Reactive Collections is a concurrent reactive programming framework for Scala, based on the concepts of reactive values and reactive isolates.
 Software that is reactive in nature, such as UIs, game engines or web servers, can be concisely expressed with Reactive Collections.
 Scala Specialization and mutable reactive values ensure that it is particularly friendly to GC -- Reactive Collections is well suited for building soft real-time systems.
