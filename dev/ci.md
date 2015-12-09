@@ -4,33 +4,53 @@ title: Continuous Integration
 permalink: /dev/ci/index.html
 ---
 
-# CI services
+## CI services
 
-
-| Service | URL |
-| ------- | --- |
-| Drone   | [Link](http://ci.storm-enroute.com:443)      |
-| Travis  | [Link](https://travis-ci.org/storm-enroute/) |
-
-
-# Projects
 
 <table class="projects">
 <tr class="projects-title-row">
   <td>
   </td>
+  <td>Service</td>
+  <td>Location</td>
+</tr>
+<tr>
   <td>
-    Project
+    <img src="/resources/images/travis.png" height="48" />
   </td>
   <td>
-    Travis
+    Travis CI
+  </td>
+  <td>
+    <a href="https://travis-ci.org/storm-enroute">Link</a>
+  </td>
+</tr>
+
+<tr>
+  <td>
+    <img src="/resources/images/drone.png" height="48" />
   </td>
   <td>
     Drone
   </td>
   <td>
-    Maven
+    <a href="http://ci.storm-enroute.com:443">Link</a>
   </td>
+</tr>
+</table>
+
+
+## Projects
+
+<table class="projects">
+<tr class="projects-title-row">
+  <td>
+  </td>
+  <td>Project</td>
+  <td>Travis</td>
+  <td>Drone</td>
+  <td>AppVeyor</td>
+  <td>Maven</td>
 </tr>
 
 <tr>
@@ -49,6 +69,8 @@ permalink: /dev/ci/index.html
     <a href="http://ci.storm-enroute.com:443/storm-enroute/bundleboy">
       <img src="http://ci.storm-enroute.com:443/api/badges/storm-enroute/bundleboy/status.svg" />
     </a>
+  </td>
+  <td>
   </td>
   <td>
     <a href="http://mvnrepository.com/artifact/com.storm-enroute/bundleboy_2.11">
@@ -75,6 +97,8 @@ permalink: /dev/ci/index.html
     </a>
   </td>
   <td>
+  </td>
+  <td>
     <a href="http://mvnrepository.com/artifact/com.storm-enroute/coroutines_2.11">
       <img src="https://img.shields.io/maven-central/v/com.storm-enroute/coroutines_2.11.svg" />
     </a>
@@ -97,6 +121,8 @@ permalink: /dev/ci/index.html
     <a href="http://ci.storm-enroute.com:443/storm-enroute/macrogl">
       <img src="http://ci.storm-enroute.com:443/api/badges/storm-enroute/macrogl/status.svg" />
     </a>
+  </td>
+  <td>
   </td>
   <td>
     <a href="http://mvnrepository.com/artifact/com.storm-enroute/macrogl_2.10">
@@ -123,6 +149,8 @@ permalink: /dev/ci/index.html
     </a>
   </td>
   <td>
+  </td>
+  <td>
     <a href="http://mvnrepository.com/artifact/com.storm-enroute/mecha">
       <img src="https://img.shields.io/maven-central/v/com.storm-enroute/mecha.svg" />
     </a>
@@ -147,6 +175,8 @@ permalink: /dev/ci/index.html
     </a>
   </td>
   <td>
+  </td>
+  <td>
     <a href="http://mvnrepository.com/artifact/com.storm-enroute/reactors_2.11">
       <img src="https://img.shields.io/maven-central/v/com.storm-enroute/reactors_2.11.svg" />
     </a>
@@ -168,6 +198,11 @@ permalink: /dev/ci/index.html
   <td>
     <a href="http://ci.storm-enroute.com:443/scalameter/scalameter">
       <img src="http://ci.storm-enroute.com:443/api/badges/scalameter/scalameter/status.svg" />
+    </a>
+  </td>
+  <td>
+    <a href="https://ci.appveyor.com/project/storm-enroute-bot/scalameter/branch/master">
+      <img src="https://ci.appveyor.com/api/projects/status/08hfljfae46wj9hc/branch/master?svg=true" />
     </a>
   </td>
   <td>
