@@ -4,10 +4,26 @@ title: Continuous Integration
 permalink: /dev/ci/index.html
 ---
 
-<table class="summary">
+<table>
+<tr class="title-row">
+  <td>
+  </td>
+  <td>
+    Project
+  </td>
+  <td>
+    Travis
+  </td>
+  <td>
+    Drone
+  </td>
+  <td>
+    Maven
+  </td>
+</tr>
 <tr>
   <td>
-    <img src="/resources/images/bundleboy-mini-logo.png" />
+    <img src="/resources/images/bundleboy-mini-logo.png" height="48" />
   </td>
   <td>
     Bundleboy

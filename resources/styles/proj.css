@@ -830,6 +830,9 @@ table.summary tr td {
   padding: 5px;
 }
 
+table tr.title-row {
+  font-weight: 200;
+}
 
 table.docs-tip {
   background-color: #eee;
