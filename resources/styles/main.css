@@ -450,17 +450,14 @@ table.summary tr td {
 }
 
 table.projects {
-  background: #ddd;
+  background: #eee;
   border: 1px solid #aaa;
-}
-
-table.projects tr {
-  border: 1px solid #ababab;
 }
 
 table.projects tr.projects-title-row td {
   font-weight: bold;
   text-align: center;
+  font-family: DellaRespira;
 }
 
 table.projects tr td {
