@@ -463,5 +463,6 @@ table.projects tr td {
 }
 
 table.projects tr td.projects-name {
-  font-size: 12;
+  font-size: 14;
+  font-family: StokeLight;
 }
