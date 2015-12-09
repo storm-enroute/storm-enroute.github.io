@@ -461,7 +461,11 @@ table.projects tr.projects-title-row td {
 
 table.projects tr td {
   padding: 5px;
-  text-align: left;
+  text-align: center;
+}
+
+table.projects tr:nth-child(2) {
+  background: #e8e8e8;
 }
 
 table.projects tr td.projects-name {
