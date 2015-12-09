@@ -21,9 +21,9 @@ permalink: /dev/ci/index.html
   <td>
     Travis CI
   </td>
-  <a href="https://travis-ci.org/storm-enroute"><td>
-    Link
-  </td></a>
+  <td>
+    <a href="https://travis-ci.org/storm-enroute">Link</a>
+  </td>
 </tr>
 
 <tr>
@@ -33,9 +33,9 @@ permalink: /dev/ci/index.html
   <td>
     Drone
   </td>
-  <a href="http://ci.storm-enroute.com:443"><td>
-    Link
-  </td></a>
+  <td>
+    <a href="http://ci.storm-enroute.com:443">Link</a>
+  </td>
 </tr>
 
 <tr>
@@ -45,9 +45,9 @@ permalink: /dev/ci/index.html
   <td>
     AppVeyor
   </td>
-  <a href="https://ci.appveyor.com/projects"><td>
-    Link
-  </td></a>
+  <td>
+    <a href="https://ci.appveyor.com/projects">Link</a>
+  </td>
 </tr>
 </table>
 
