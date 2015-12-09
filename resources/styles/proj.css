@@ -833,7 +833,7 @@ table.summary tr td {
 table.projects {
 }
 
-table.projects tr.title-row {
+table.projects tr.title-row td {
   font-weight: bold;
 }
 
