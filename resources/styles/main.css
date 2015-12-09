@@ -464,7 +464,7 @@ table.projects tr td {
   text-align: center;
 }
 
-table.projects tr:nth-child(2) {
+table.projects tr:nth-child(even) {
   background: #e8e8e8;
 }
 
