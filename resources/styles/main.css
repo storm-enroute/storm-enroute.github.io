@@ -457,7 +457,6 @@ table.projects {
 table.projects tr.projects-title-row td {
   font-weight: bold;
   text-align: center;
-  font-family: DellaRespira;
 }
 
 table.projects tr td {
@@ -466,8 +465,7 @@ table.projects tr td {
 }
 
 table.projects tr td.projects-name {
-  font-size: 16;
-  font-family: DellaRespira;
+  vertical-align: middle;
 }
 
 
