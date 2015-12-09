@@ -37,6 +37,18 @@ permalink: /dev/ci/index.html
     <a href="http://ci.storm-enroute.com:443">Link</a>
   </td>
 </tr>
+
+<tr>
+  <td>
+    <img src="/resources/images/appveyor.png" height="48" />
+  </td>
+  <td>
+    AppVeyor
+  </td>
+  <td>
+    <a href="https://ci.appveyor.com/projects">Link</a>
+  </td>
+</tr>
 </table>
 
 
