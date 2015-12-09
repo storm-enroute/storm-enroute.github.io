@@ -99,8 +99,8 @@ permalink: /dev/ci/index.html
     </a>
   </td>
   <td>
-    <a href="http://mvnrepository.com/artifact/com.storm-enroute/macrogl_2.11">
-      <img src="https://img.shields.io/maven-central/v/com.storm-enroute/macrogl_2.11.svg" />
+    <a href="http://mvnrepository.com/artifact/com.storm-enroute/macrogl_2.10">
+      <img src="https://img.shields.io/maven-central/v/com.storm-enroute/macrogl_2.10.svg" />
     </a>
   </td>
 </tr>
