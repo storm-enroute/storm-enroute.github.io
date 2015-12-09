@@ -452,7 +452,7 @@ table.summary tr td {
 table.projects {
 }
 
-table.projects tr.title-row td {
+table.projects tr.projects-title-row td {
   font-weight: bold;
   text-align: center;
 }
@@ -462,4 +462,6 @@ table.projects tr td {
   text-align: left;
 }
 
-
+table.projects tr td.projects-name {
+  font-size: 12;
+}

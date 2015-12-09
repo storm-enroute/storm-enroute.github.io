@@ -5,7 +5,7 @@ permalink: /dev/ci/index.html
 ---
 
 <table class="projects">
-<tr class="title-row">
+<tr class="projects.title-row">
   <td>
   </td>
   <td>
@@ -25,7 +25,7 @@ permalink: /dev/ci/index.html
   <td>
     <img src="/resources/images/bundleboy-mini-logo.png" height="48" />
   </td>
-  <td>
+  <td class="projects-name">
     Bundleboy
   </td>
   <td>
