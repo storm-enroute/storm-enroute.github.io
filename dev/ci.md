@@ -175,7 +175,31 @@ permalink: /dev/ci/index.html
       <img src="https://img.shields.io/maven-central/v/com.storm-enroute/scalameter_2.11.svg" />
     </a>
   </td>
-</tr></table>
+</tr>
+
+<tr>
+  <td>
+    <img src="/resources/images/code-repo.png" height="48" />
+  </td>
+  <td class="projects-name">
+    Code Examples
+  </td>
+  <td>
+    <a href="https://travis-ci.org/scalameter/scalameter">
+      <img src="https://travis-ci.org/scalameter/scalameter.svg?branch=master" />
+    </a>
+  </td>
+  <td>
+    <a href="http://ci.storm-enroute.com:443/storm-enroute/examples">
+      <img src="http://ci.storm-enroute.com:443/api/badges/storm-enroute/examples/status.svg" />
+    </a>
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+</tr>
+</table>
 
 
 ## CI services
