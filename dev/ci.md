@@ -185,8 +185,8 @@ permalink: /dev/ci/index.html
     Code Examples
   </td>
   <td>
-    <a href="https://travis-ci.org/scalameter/scalameter">
-      <img src="https://travis-ci.org/scalameter/scalameter.svg?branch=master" />
+    <a href="https://travis-ci.org/storm-enroute/examples">
+      <img src="https://travis-ci.org/storm-enroute/examples.svg?branch=master" />
     </a>
   </td>
   <td>
