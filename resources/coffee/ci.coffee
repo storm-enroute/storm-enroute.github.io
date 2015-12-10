@@ -127,6 +127,16 @@ projects =
     null,
     null)
 
+  scalameter_examples: new Project(
+    "ScalaMeter Examples",
+    "/resources/images/code-repo.png",
+    new LiveService(
+      "https://travis-ci.org/scalameter/scalameter-examples",
+      "https://travis-ci.org/scalameter/scalameter-examples.svg?branch=master"),
+    null,
+    null,
+    null)
+
 
 setupCi = () ->
   table = document.getElementById("projects-table")
