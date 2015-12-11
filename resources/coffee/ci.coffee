@@ -118,9 +118,7 @@ projects =
   code_examples: new Project(
     "Code Examples",
     "/resources/images/code-repo.png",
-    new LiveService(
-      "https://travis-ci.org/storm-enroute/examples",
-      "https://travis-ci.org/storm-enroute/examples.svg?branch=master"),
+    null,
     new LiveService(
       "http://ci.storm-enroute.com:443/storm-enroute/examples",
       "http://ci.storm-enroute.com:443/api/badges/storm-enroute/examples/status.svg"),
