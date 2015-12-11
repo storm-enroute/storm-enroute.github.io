@@ -144,6 +144,8 @@ setupCi = () ->
     tr.appendChild td
     if service != null
       service.appendContent(td)
+    else
+      td.appendChild(document.createTextNode("N/A"))
 
   addServices = () ->
     for name, project of projects
