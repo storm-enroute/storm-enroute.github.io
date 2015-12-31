@@ -2,7 +2,7 @@
 layout: projmainpage
 projectname: Scala Coroutines
 projectpath: coroutines
-logoname: coroutines-128-xmas-pale.png
+logoname: coroutines-64-xmas-pale.png
 title: Download
 permalink: /coroutines/download/index.html
 logostyle: "color: #5f5f5f;"
