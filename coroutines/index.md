@@ -30,6 +30,10 @@ Coroutines have a number of use cases, including but not limited to:
 - continuations
 - AI agents such as behavior trees
 
+To learn how to use coroutines, please see the Scala Coroutines Guide
+in the [documentation section](/coroutines/learn).
+
+
 CI service         | Status | Description
 -------------------|--------|------------
 Travis             | [![Build Status](https://travis-ci.org/storm-enroute/coroutines.png?branch=master)](https://travis-ci.org/storm-enroute/coroutines) | Testing only

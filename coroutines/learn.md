@@ -13,5 +13,5 @@ logostyle: "color: #5f5f5f;"
 
 ### Coroutines 0.3
 
-- [Documentation](/coroutines/docs/0.3/)
+- [Scala Coroutines Guide](/coroutines/docs/0.3/)
 - [API](http://storm-enroute.com/apidocs/coroutines/0.3/api/)
