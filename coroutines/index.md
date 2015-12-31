@@ -17,9 +17,10 @@ that introduces first-class polymorphic coroutines.
 
 *Coroutines* are a language abstraction that generalizes subroutines
 (i.e. procedures, methods or functions).
-Unlike a subroutine, which is invoked once, and executes until it completed,
-a coroutine can at any point during its execution pause execution
+Unlike a subroutine, which is invoked once and executes until it completed,
+a coroutine can pause execution
 and yield control back to the caller, or another coroutine.
+The caller can then resume the coroutine when appropriate.
 Coroutines have a number of use cases, including but not limited to:
 
 - collection iterators
