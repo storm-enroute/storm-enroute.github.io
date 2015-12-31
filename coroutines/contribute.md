@@ -45,17 +45,10 @@ Make sure to read the [contributor's guide](/dev/contribute/) first!
 
 ### License
 
-Available [here](https://raw.githubusercontent.com/storm-enroute/macrogl/master/LICENSE).
+Available
+[here](https://raw.githubusercontent.com/storm-enroute/coroutines/master/LICENSE).
 
 <span id="licensebox"></span>
 
 <script src="/resources/js/setlicense.js">_</script>
-<script src="/resources/js/setlicense-macrogl.js">_</script>
-
-
-### Recent build outputs
-
-<ul id="build-list"></ul>
-<script>
-  setMacroGLBuilds("#build-list")
-</script>
+<script src="/resources/js/setlicense-coroutines.js">_</script>
