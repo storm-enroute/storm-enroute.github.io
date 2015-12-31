@@ -9,6 +9,8 @@ logostyle: "color: #5f5f5f;"
 ---
 
 
+![Scala Coroutines](/resources/images/coroutines-512-xmas.png)
+
 Coroutines is a library-level extension for the Scala programming language
 that introduces first-class polymorphic coroutines.
 
