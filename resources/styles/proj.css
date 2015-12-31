@@ -817,6 +817,11 @@ a:focus, a:active {
   outline: none;
 }
 
+table {
+  border: 1px solid #f5f5f5;
+  background-color: #ddd;
+}
+
 table.docs-tip {
   background-color: #eee;
   border: 1px solid #9ab8ef;

@@ -21,7 +21,7 @@ by submitting a **minimal**, **standalone**, **reproducible** and
 This has several advantages:
 
 - **Minimal:** the bug report contains the minimum snippet of code that triggers
-  the bug. It is easier and faster to understand the cause of the bug.
+  the bug. This makes it easier and faster to understand the cause of the bug.
 - **Standalone:** the error report does not require any external dependencies, and the
   code can be run directly (modulo imports, unless relevant to the bug).
 - **Reproducible:** the bug should be reproducible between different runs if possible.
