@@ -45,7 +45,7 @@ projects =
 
   coroutines: new Project(
     "Coroutines",
-    "/resources/images/coroutines-128-xmas.png",
+    "/resources/images/coroutines-128-xmas-pale.png",
     new LiveService(
       "https://travis-ci.org/storm-enroute/coroutines",
       "https://travis-ci.org/storm-enroute/coroutines.svg?branch=master"),

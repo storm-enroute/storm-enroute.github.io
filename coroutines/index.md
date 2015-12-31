@@ -1,5 +1,5 @@
 ---
-layout: projsimplepage
+layout: projmainpage
 projectname: Scala Coroutines
 projectpath: coroutines
 logoname: coroutines-128-xmas.png
@@ -8,16 +8,14 @@ permalink: /coroutines/index.html
 logostyle: "color: #5f5f5f;"
 ---
 
-![ ](/resources/images/coroutines-512-xmas.png)
 
-[README.md on GitHub](https://github.com/storm-enroute/coroutines/blob/master/README.md)
+Coroutines is a library-level extension for the Scala programming language
+that introduces first-class polymorphic coroutines.
 
-<span id="readmebox"></span>
+CI service         | Status | Description
+-------------------|--------|------------
+Travis             | [![Build Status](https://travis-ci.org/storm-enroute/coroutines.png?branch=master)](https://travis-ci.org/storm-enroute/coroutines) | Testing only
+Drone              | [![Build Status](http://ci.storm-enroute.com:443/api/badges/storm-enroute/coroutines/status.svg)](http://ci.storm-enroute.com:443/storm-enroute/coroutines) | Testing, docs, and snapshot publishing
+Maven              | [![Maven Artifact](https://img.shields.io/maven-central/v/com.storm-enroute/coroutines_2.11.svg)](http://mvnrepository.com/artifact/com.storm-enroute/coroutines_2.11) | Coroutines artifact on Maven
 
-<script>
-  setContent(
-    "readmebox",
-    "https://api.github.com/repos/storm-enroute/coroutines/contents/README.md",
-    null,
-    "md")
-</script>
+
