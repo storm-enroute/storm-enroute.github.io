@@ -825,6 +825,7 @@ table {
 table td {
   padding: 1px;
   margin: 1px;
+  border: 1px solid #f5f5f5;
 }
 
 table.docs-tip {
