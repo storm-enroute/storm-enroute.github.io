@@ -9,10 +9,11 @@ logostyle: "color: #5f5f5f;"
 ---
 
 
-To start using Scala Coroutines,
+Scala Coroutines are released since Scala 2.11.
+To start using them,
 you will need to add the official JAR to your project dependencies.
 Here we assume that you are using SBT,
-otherwise you can follow the guidelines on Maven:
+otherwise you can follow the guidelines on Maven.
 
 [![Maven Artifact](https://img.shields.io/maven-central/v/com.storm-enroute/coroutines_2.11.svg)](http://mvnrepository.com/artifact/com.storm-enroute/coroutines_2.11)
 
