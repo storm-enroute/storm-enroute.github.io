@@ -26,4 +26,19 @@ Consider the following definition of an identity lambda:
 
     val id = (x: Int) => x
 
+We call (i.e. invoke) the identity lambda `id` as follows:
+
+    id(7)
+
+When `id` is invoked, the following sequence of events occurs.
+First, the runtime allocates a location on the program stack to hold the parameter `x`.
+Then, the value of `x` is copied to this location.
+
+![ ](/resources/images/invoke.png)
+
+The `id` body then simply returns the value `x` back to the caller
+by copying it back to the appropriate location:
+
+![ ](/resources/images/invoke1.png)
+
 
