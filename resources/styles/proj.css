@@ -830,7 +830,7 @@ table td {
 
 table.docs-tip {
   background-color: #eee;
-  border: 1px solid #9ab8ef;
+  border: 1px solid #aaa;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -842,6 +842,7 @@ table.docs-tip {
 
 table.docs-tip td {
   padding: 4px;
+  border: 0px solid #eee;
 }
 
 table.docs-tip img {
