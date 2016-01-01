@@ -3,6 +3,7 @@ function setContent(contentboxname, url, logoname, contenttype, contentlink) {
   var contentbox = document.getElementById(contentboxname);
   // add link
   if (contentlink != null) {
+    console.log('setting link');
     var a = document.createElement("a");
     a.setAttribute("href", contentlink);
     a.innerHTML = "&#128279;";
