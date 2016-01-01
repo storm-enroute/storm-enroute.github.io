@@ -3,10 +3,13 @@ function setContent(contentboxname, url, logoname, contenttype, contentlink) {
   var contentbox = document.getElementById(contentboxname);
   // add link
   if (contentlink != null) {
+    var icon = document.createElement("img")
+    icon.setAttribute("src", "/resorces/images/link.png")
+    icon.setAttribute("style", "border: 1px dotted #aaa; background-color: #ccc;")
     var a = document.createElement("a");
-    a.innerHTML = "\u1f517";
+    a.appendChild(icon)
     a.setAttribute("href", contentlink);
-    a.setAttribute("style", "position: absolute; top: 10px; left: 500px;")
+    a.setAttribute("style", "position: absolute; top: 10px; left: 620px;")
     contentbox.parentNode.setAttribute("style", "position: relative;")
     contentbox.parentNode.appendChild(a);
   }
