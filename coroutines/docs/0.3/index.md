@@ -37,8 +37,29 @@ Then, the value of `x` is copied to this location.
 ![ ](/resources/images/invoke.png)
 
 The `id` body then simply returns the value `x` back to the caller
-by copying it back to the appropriate location:
+by copying it back to the appropriate location.
+After that, the invocation of `id` (i.e. an *instance* of the subroutine `id`)
+completes.
 
 ![ ](/resources/images/invoke1.png)
 
+Above, the caller of the `id` lambda (e.g. the main program) must suspend execution
+until `id` completes.
+After `id` returns control to the caller, the instance of the subroutine
+`id` no longer exists, so it does not make sense to refer to it.
+An invocation (i.e. *an instance of a subroutine*) is not a first-class object.
 
+By contrast, a coroutine invocation can suspend its execution before it completes,
+and later be resumed.
+For this reason, it makes sense to represent the coroutine invocation
+(i.e. a *coroutine instance*) as a first-class object
+that can be passed to and returned from functions,
+whose execution state can be retrieved,
+and which can be resumed when required.
+
+Let's see the simplest possible coroutine implementation -- an identity coroutine,
+which just returns the argument that is passed to it.
+Its definition is similar to that of an identity lambda,
+the only difference being the enclosing `coroutine` block:
+
+    val id = coroutine { (x: Int) => x }

@@ -15,9 +15,9 @@
    version="1.1"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="invoke1.svg"
-   inkscape:export-filename="/home/axel22/workspaces/scala/super-storm-enroute/storm-enroute.github.io/resources/images/invoke.png"
-   inkscape:export-xdpi="23.040001"
-   inkscape:export-ydpi="23.040001">
+   inkscape:export-filename="/home/axel22/workspaces/scala/super-storm-enroute/storm-enroute.github.io/resources/images/invoke1.png"
+   inkscape:export-xdpi="7.9319177"
+   inkscape:export-ydpi="7.9319177">
   <defs
      id="defs4">
     <marker
@@ -68,15 +68,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="149.28571"
-     inkscape:cy="971.18425"
+     inkscape:cx="960.71429"
+     inkscape:cy="735.51862"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1596"
-     inkscape:window-height="864"
+     inkscape:window-width="1600"
+     inkscape:window-height="900"
      inkscape:window-x="0"
-     inkscape:window-y="16"
+     inkscape:window-y="0"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -179,5 +179,44 @@
        id="path3910"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csc" />
+    <rect
+       y="316.94049"
+       x="1239.1842"
+       height="294.80905"
+       width="294.80905"
+       id="rect4784"
+       style="fill:none;stroke:#000000;stroke-width:13.84800339;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:41.54401016, 41.54401016;stroke-dashoffset:0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:13.84800339;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:41.54401016, 41.54401016;stroke-dashoffset:0"
+       id="rect4786"
+       width="294.80905"
+       height="294.80905"
+       x="1239.1842"
+       y="21.928528" />
+    <rect
+       y="-272.35718"
+       x="1239.1842"
+       height="294.80905"
+       width="294.80905"
+       id="rect4788"
+       style="fill:none;stroke:#000000;stroke-width:13.84800339;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:41.54401016, 41.54401016;stroke-dashoffset:0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:13.84800339;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4790"
+       width="294.80905"
+       height="294.80905"
+       x="1239.1842"
+       y="611.2262" />
+    <text
+       xml:space="preserve"
+       style="font-size:232.04286194px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1309.1372"
+       y="847.505"
+       id="text4792"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4794"
+         x="1309.1372"
+         y="847.505">X</tspan></text>
   </g>
 </svg>
