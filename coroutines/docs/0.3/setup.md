@@ -12,4 +12,4 @@ logostyle: "color: #5f5f5f;"
 TODO describe setup and deps
 
 In case you have all the dependencies,
-you can proceed immediately to the [next section](101/).
+you can proceed immediately to the [next section](../101/).
