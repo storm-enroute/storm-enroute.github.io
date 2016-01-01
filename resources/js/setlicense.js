@@ -1,9 +1,16 @@
 
-function setContent(contentboxname, url, logoname, contenttype) {
+function setContent(contentboxname, url, logoname, contenttype, contentlink) {
   var contentbox = document.getElementById(contentboxname);
+  // add link
+  if (contentlink) {
+    var a = document.createElement("a")
+    a.setAttribute("href", codelink)
+    a.innerHTML = "&#128279;"
+    contentbox.appendChild(a)
+  }
   $.get(url, function(data) {
     if (logoname != null) {
-      var icon = document.createElement('IMG');
+      var icon = document.createElement("img");
       icon.setAttribute("src", "/resources/images/" + logoname);
       icon.setAttribute("height", 48);
       contentbox.appendChild(icon);
@@ -27,7 +34,7 @@ function setContent(contentboxname, url, logoname, contenttype) {
 }
 
 function setLicense(url, logoname) {
-  setContent("licensebox", url, logoname, "txt");
+  setContent("licensebox", url, logoname, "txt", null);
 }
 
 function setMacroGLBuilds(boxid) {
