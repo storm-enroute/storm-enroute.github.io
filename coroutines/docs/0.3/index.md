@@ -93,10 +93,12 @@ instances, much like a lambda can be invoked more than once.
 <table class="docs-tip">
 <td><img src="/resources/images/warning.png"/></td>
 <td>
+
 A coroutine is **defined** once by passing a lambda literal
 to the special `coroutine` block.
 A coroutine is **invoked** by passing a coroutine invocation to the `call` keyword,
 which returns a fresh **coroutine instance**.
+
 </td>
 </table>
 
