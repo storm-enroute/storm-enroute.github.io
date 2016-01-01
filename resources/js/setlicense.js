@@ -5,11 +5,11 @@ function setContent(contentboxname, url, logoname, contenttype, contentlink) {
   if (contentlink != null) {
     var icon = document.createElement("img")
     icon.setAttribute("src", "/resources/images/link.png")
-    icon.setAttribute("style", "border: 1px dotted #aaa; background-color: #ccc;")
+    icon.setAttribute("class", "content-link")
     var a = document.createElement("a");
     a.appendChild(icon)
     a.setAttribute("href", contentlink);
-    a.setAttribute("style", "position: absolute; top: 10px; left: 620px;")
+    a.setAttribute("style", "position: absolute; top: 10px; left: 650px;")
     contentbox.parentNode.setAttribute("style", "position: relative;")
     contentbox.parentNode.appendChild(a);
   }

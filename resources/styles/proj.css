@@ -848,3 +848,13 @@ table.docs-tip td {
 table.docs-tip img {
   height: 32px;
 }
+
+.content-link {
+  border: 1px dotted #aaa;
+  background-color: #ccc;
+  filter: alpha(opacity=60);
+  opacity: 0.6; 
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
