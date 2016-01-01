@@ -9,7 +9,37 @@ logostyle: "color: #5f5f5f;"
 ---
 
 
-TODO describe setup and deps
+To start using Scala Coroutines,
+you will need to add the official JAR to your project dependencies.
+Here we assume that you are using SBT,
+otherwise you can follow the guidelines on Maven:
 
-In case you have all the dependencies,
+[![Maven Artifact](https://img.shields.io/maven-central/v/com.storm-enroute/coroutines_2.11.svg)](http://mvnrepository.com/artifact/com.storm-enroute/coroutines_2.11)
+
+
+### SBT
+
+Stable versions are released on Sonatype and Maven.
+You can add Scala Coroutines by adding the following to your project definition:
+
+    libraryDependencies ++= Seq(
+      "com.storm-enroute" %% "coroutines" % "0.3")
+
+Snapshot versions are released regularly on Sonatype:
+
+    resolvers ++= Seq(
+      "Sonatype OSS Snapshots" at
+        "https://oss.sonatype.org/content/repositories/snapshots",
+      "Sonatype OSS Releases" at
+        "https://oss.sonatype.org/content/repositories/releases"
+    )
+    libraryDependencies ++= Seq(
+      "com.storm-enroute" %% "coroutines" % "0.4-SNAPSHOT")
+
+To use coroutines in the code, import the `scala.coroutines` package,
+and you're all set:
+
+    import scala.coroutines._
+
+In case you have the dependencies configured,
 you can proceed immediately to the [next section](../101/).

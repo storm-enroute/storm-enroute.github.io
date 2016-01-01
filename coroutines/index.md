@@ -28,7 +28,7 @@ Coroutines have a number of use cases, including but not limited to:
 - cooperative multitasking
 - concurrency frameworks such as actors, async-await and dataflow networks
 - backtracking algorithms
-- continuations
+- capturing continuations
 - AI agents such as behavior trees
 
 To learn how to use coroutines, please see the Scala Coroutines Guide
