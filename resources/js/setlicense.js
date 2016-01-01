@@ -4,7 +4,7 @@ function setContent(contentboxname, url, logoname, contenttype, contentlink) {
   // add link
   if (contentlink != null) {
     var icon = document.createElement("img")
-    icon.setAttribute("src", "/resorces/images/link.png")
+    icon.setAttribute("src", "/resources/images/link.png")
     icon.setAttribute("style", "border: 1px dotted #aaa; background-color: #ccc;")
     var a = document.createElement("a");
     a.appendChild(icon)
