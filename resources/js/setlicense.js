@@ -6,7 +6,7 @@ function setContent(contentboxname, url, logoname, contenttype, contentlink) {
     var a = document.createElement("a");
     a.innerHTML = "\uD83D\uDD17";
     a.setAttribute("href", contentlink);
-    a.setAttribute("style", "position: absolute; left: 200px;")
+    a.setAttribute("style", "position: absolute; top: 0px; left: 200px;")
     contentbox.parentNode.setAttribute("style", "position: relative;")
     contentbox.parentNode.appendChild(a);
   }
