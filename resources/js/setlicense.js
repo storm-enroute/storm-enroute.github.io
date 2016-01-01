@@ -5,7 +5,8 @@ function setContent(contentboxname, url, logoname, contenttype, contentlink) {
   if (contentlink != null) {
     var a = document.createElement("a");
     a.setAttribute("href", contentlink);
-    a.innerHTML = "&#128279;";
+    a.setAttribute("style", "position: absolute; left: 200px;")
+    a.innerHTML = "\uD83D\uDD17";
     contentbox.parentNode.appendChild(a);
   }
   $.get(url, function(data) {
