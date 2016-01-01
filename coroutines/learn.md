@@ -18,5 +18,5 @@ You can find a list of releases and the respective documentation links below.
 
 ### Coroutines 0.3
 
-- [Scala Coroutines Guide](/coroutines/docs/0.3/)
+- [Scala Coroutines Guide](/coroutines/docs/0.3/101/)
 - [ScalaDoc API](http://storm-enroute.com/apidocs/coroutines/0.3/api/)
