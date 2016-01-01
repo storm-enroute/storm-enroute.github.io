@@ -4,7 +4,7 @@ function setContent(contentboxname, url, logoname, contenttype, contentlink) {
   // add link
   if (contentlink) {
     var a = document.createElement("a")
-    a.setAttribute("href", codelink)
+    a.setAttribute("href", contentlink)
     a.innerHTML = "&#128279;"
     contentbox.appendChild(a)
   }
