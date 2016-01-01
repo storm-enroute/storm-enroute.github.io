@@ -2,11 +2,11 @@
 function setContent(contentboxname, url, logoname, contenttype, contentlink) {
   var contentbox = document.getElementById(contentboxname);
   // add link
-  if (contentlink) {
-    var a = document.createElement("a")
-    a.setAttribute("href", contentlink)
-    a.innerHTML = "&#128279;"
-    contentbox.appendChild(a)
+  if (contentlink != null) {
+    var a = document.createElement("a");
+    a.setAttribute("href", contentlink);
+    a.innerHTML = "&#128279;";
+    contentbox.appendChild(a);
   }
   $.get(url, function(data) {
     if (logoname != null) {
@@ -22,7 +22,7 @@ function setContent(contentboxname, url, logoname, contenttype, contentlink) {
     } else if (contenttype == "md") {
       contentbox.innerHTML = markdown.toHTML(ltxt);
     } else if (contenttype == "raw") {
-      contentbox.innerHTML = ltxt
+      contentbox.innerHTML = ltxt;
     }
     // restore highlighting
     $(function() {
