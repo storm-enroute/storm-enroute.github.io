@@ -4,9 +4,10 @@ function setContent(contentboxname, url, logoname, contenttype, contentlink) {
   // add link
   if (contentlink != null) {
     var a = document.createElement("a");
+    a.innerHTML = "\uD83D\uDD17";
     a.setAttribute("href", contentlink);
     a.setAttribute("style", "position: absolute; left: 200px;")
-    a.innerHTML = "\uD83D\uDD17";
+    contentbox.parentNode.setAttribute("style", "position: relative;")
     contentbox.parentNode.appendChild(a);
   }
   $.get(url, function(data) {
