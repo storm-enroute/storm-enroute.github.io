@@ -1,5 +1,5 @@
 ---
-layout: projdefault
+layout: projdefaultnotitle
 projectname: Scala Coroutines
 projectpath: coroutines
 logoname: coroutines-64-xmas-pale.png
@@ -9,10 +9,14 @@ logostyle: "color: #5f5f5f;"
 ---
 
 
+## Coroutines 101
+
 A *coroutine* is a programming construct that can suspend its execution
 and resume execution later.
 *Subroutines* (i.e. functions, procedures or methods) are well known
 and available in most programming languages.
+For the purposes of this guide, we will jointly refer to functions, procedures, methods
+and lambdas as subroutines, despite their subtle differences.
 When a subroutine is called,
 its execution begins at the start of the subroutine definition,
 and finishes when the end of the subroutine is reached.
@@ -57,9 +61,14 @@ that can be passed to and returned from functions,
 whose execution state can be retrieved,
 and which can be resumed when required.
 
-Let's see the simplest possible coroutine implementation -- an identity coroutine,
+Let's see the simplest possible coroutine definition -- an *identity coroutine*,
 which just returns the argument that is passed to it.
 Its definition is similar to that of an identity lambda,
 the only difference being the enclosing `coroutine` block:
 
     val id = coroutine { (x: Int) => x }
+
+Although this particular coroutine `id` is semantically equivalent
+to the prior definition of the identity lambda `id`,
+its execution is slightly different.
+
