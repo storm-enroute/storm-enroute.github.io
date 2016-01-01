@@ -70,8 +70,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.24748737"
-     inkscape:cx="1905.8476"
-     inkscape:cy="810.05846"
+     inkscape:cx="1509.8678"
+     inkscape:cy="652.47467"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -219,13 +219,16 @@
        sodipodi:linespacing="125%"
        id="text3066"
        y="1024.6642"
-       x="428.29904"
+       x="359.60867"
        style="font-size:149.65463257px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
+       xml:space="preserve"
+       inkscape:export-filename="/home/axel22/workspaces/scala/super-storm-enroute/storm-enroute.github.io/resources/images/invoke3.png"
+       inkscape:export-xdpi="7.9319177"
+       inkscape:export-ydpi="7.9319177"><tspan
          id="tspan3070"
          y="1024.6642"
-         x="428.29904"
-         sodipodi:role="line">call</tspan></text>
+         x="359.60867"
+         sodipodi:role="line">apply</tspan></text>
     <path
        sodipodi:nodetypes="csc"
        inkscape:connector-curvature="0"
