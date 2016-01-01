@@ -93,12 +93,11 @@ instances, much like a lambda can be invoked more than once.
 <table class="docs-tip">
 <td><img src="/resources/images/warning.png"/></td>
 <td>
-
-A coroutine is **defined** once by passing a lambda literal
-to the special `coroutine` block.
-A coroutine is **invoked** by passing a coroutine invocation to the `call` keyword,
-which returns a fresh **coroutine instance**.
-
+A coroutine is <b>defined</b> once by passing a lambda literal
+to the special <code>coroutine</code> block.
+A coroutine is <b>invoked</b> by passing an invocation expression
+to the <code>call</code> keyword,
+which returns a fresh <b>coroutine instance</b>.
 </td>
 </table>
 
@@ -109,7 +108,7 @@ Also, note that we use the term *invocation* and *instance* interchangeably
 to refer to starting a coroutine.
 From the coroutine perspective, the two terms are one and the same.
 
-The complete example is shown below:
+The complete, standalone example snippet is shown below:
 
 <pre id="examplebox-1">
 </pre>
