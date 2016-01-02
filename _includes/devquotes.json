@@ -1,6 +1,6 @@
 [
   {
-    "text": "Always submit the pull requests to master -- EVE deploys snapshots from it automatically.",
+    "text": "Always submit the pull requests to master -- storm-enroute-bot deploys snapshots from it automatically.",
     "author": "",
     "description": "You should always merge or submit pull requests to the `master` branch. Once a project builds successfully and passes reviews, the EVE bot will perform tests and deploy a snapshot. This way the `master` branch almost always builds correctly and other projects can depend on it."
   },
@@ -8,5 +8,10 @@
     "text": "Create topic/XXX branches to implement new features.",
     "author": "",
     "description": "Once you are done working on the new feature in your `topic/XXX` branch you can merge it into the `master` branch. From there on it will be tested and merged further by the bot automatically."
+  },
+  {
+    "text": "Separate your pull requests into minimal, standalone, functional changesets.",
+    "author": "",
+    "description": "This makes it easier and faster to review the PRs. Large are likely to take long to review and merge."
   }
 ]

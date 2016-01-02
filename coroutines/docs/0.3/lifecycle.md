@@ -17,7 +17,7 @@ However, this is not entirely true.
 Even a pure function invocation needs to have at least some *execution state* --
 the current state of evaluating the expression that defines that function.
 Due to the fact that this state is *hidden* from the caller and cannot be observed,
-a pure function invocation is considered *stateless* in functional languages.
+a pure function invocation can be considered *stateless* in functional languages.
 
 Similar to a subroutine invocation,
 a coroutine invocation (i.e. a frame) also has its respective execution state.
@@ -35,9 +35,26 @@ In this section, we will see different ways of interacting with this state.
 
 After a coroutine instance is created with the `call` keyword,
 it does not immediately start executing.
+Instead, a newly created instance is in a suspended state,
+and must be resumed by calling the `resume` method on it.
+Consider the `katamari` coroutine,
+which yields the words of the theme song from the popular video game:
+
+    val katamari: Int ~~> (String, Int) = coroutine { (n: Int) =>
+      var i = 1
+      yieldval("naaaaaa")
+      while (i < n) {
+        yieldval("na")
+        i += 1
+      }
+      yieldval("Katamari Damacy!")
+      i
+    }
 
 
-## Exceptions
+
+
+## Exception handling
 
 
 
