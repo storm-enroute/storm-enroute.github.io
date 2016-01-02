@@ -124,14 +124,14 @@ adds strings to a buffer, and then concatenates those strings together.
 We can use the `drain` method to more concisely test the correctness of
 the `katamari` coroutine.
 
-  def drain(f: String <~> Int): String = {
-    val buffer = mutable.Buffer[String]()
-    while (f.resume) buffer += f.value
-    buffer.mkString(" ")
-  }
+    def drain(f: String <~> Int): String = {
+      val buffer = mutable.Buffer[String]()
+      while (f.resume) buffer += f.value
+      buffer.mkString(" ")
+    }
 
-  val theme = "naaaa na na na na na na na na Katamari Damacy!"
-  assert(drain(call(katamari(9))) == theme)
+    val theme = "naaaa na na na na na na na na Katamari Damacy!"
+    assert(drain(call(katamari(9))) == theme)
 
 The complete example is shown below.
 
