@@ -59,9 +59,26 @@ yields `String` values and
 returns an integer denoting how many words were yielded in total.
 
 Real Katamari connaisseurs will know which argument to pass when calling this coroutine!
-Below, we create a new `katamari` instance called `c`:
+Below, we create a new `katamari` instance called `c`, and then immediately resume it
+in order to get our first `"na"`:
 
     val c = call(katamari(9))
+    c.resume
+
+The method `resume` executes the coroutine until either reaching a `yieldval` statement,
+or the end of the coroutine.
+It returns a `Boolean` value denoting which of the two events happened --
+if `resume` returns `true`, then a `yieldval` statement suspended execution.
+We can additionally verify that a `yieldval` statement produced a value
+by calling the `hasValue` method.
+Unlike `resume`, calling the `hasValue` method does not change execution state.
+If `hasValue` returns `true`, we know that we can inspect the last yielded value
+by calling the `value` method.
+All this is shown in the following:
+
+    assert(c.resume)
+    assert(c.hasValue)
+    assert(c.value == "naaaa")
 
 The complete example is shown below.
 
