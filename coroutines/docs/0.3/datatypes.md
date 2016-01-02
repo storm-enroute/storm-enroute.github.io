@@ -75,7 +75,7 @@ before yielding `"batman!"`. Try to determine its type:
     }
 
 Hint: It has the suffix `_1` because its arity is 1.
-Its only argument has the type `Int`.
+Its single parameter has the type `Int`.
 It yields strings at every yield point, so the yield type is `String`.
 It does not return any value to the main program, so its return type is `Unit`.
 Therefore, the answer is `Coroutine._1[Int, String, Unit]`.
@@ -89,7 +89,7 @@ of the types of the expressions at all the yield points.
 </table>
 
 The identity coroutine seen earlier does not yield any values.
-The yield type the least upper bound of no types.
+Its yield type is the least upper bound of no types.
 Can you guess which type this is?
 
     val id = coroutine { (x: Int) => x }
@@ -102,8 +102,8 @@ So, the type of the identity coroutine is `Coroutine._1[Int, Nothing, Int]`.
 ## Types for syntactic sugar
 
 Names such as `Coroutine._0` and `Coroutine._1` are inconvenient and clumsy.
-Scala functions have a much nicer syntax `FunctionN` boilerplate -- for example,
-`Function1[List[Int], Int]` can be written as `List[Int] => Int`.
+Scala functions have a much nicer syntax that overcomes the `FunctionN` boilerplate --
+for example, `Function1[List[Int], Int]` can be written as `List[Int] => Int`.
 
 In this section,
 we will see similar syntactic sugar used to refer to Scala coroutine definitions.
@@ -112,9 +112,20 @@ both the types of the input parameters,
 the yield type and the return type.
 Nevertheless, we would like to retain the familiar arrow-like syntax.
 
-TODO finish
+The syntactic sugar translation rules are summarized in the following table.
+Type `Y` is the yield type,
+type `R` is the return type,
+and types `T1`, `T2`, and so on are input parameter types.
 
-Consider the following program.
+Full type                            | Syntactic sugar type
+-------------------------------------|--------------------------
+`Coroutine._0[Y, R]`                 | `~~~>[Y, R]`
+`Coroutine._1[T1, Y, R]`             | `T1 ~~> (Y, R)`
+`Coroutine._2[T1, T2, Y, R]`         | `(T1, T2) ~> (Y, R)`
+`Coroutine._3[T1, T2, T3, Y, R]`     | `(T1, T2, T3) ~> (Y, R)`
+
+To see an example of how the syntactic sugar types are used,
+consider the following program.
 
 <div>
 <pre id="examplebox-1">
@@ -128,3 +139,8 @@ Consider the following program.
     "raw",
     "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/Datatypes.scala");
 </script>
+
+
+## Coroutine instance types
+
+The type of a coroutine instance is surprisingly simple
