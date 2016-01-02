@@ -121,10 +121,10 @@ and otherwise can retrive the resulting value with `result`.
 <table class="docs-tip">
 <td><img src="/resources/images/warning.png"/></td>
 <td>
-If the coroutine yield control to the caller,
-you can retrieve the value it yielded by calling <code>value</code>.
-Otherwise, if the coroutine completed its execution,
-you can retrieve the resulting value by calling <code>result</code>.
+If the coroutine yields control to the caller,
+the last yielded value can be retrieved by calling <code>value</code>.
+Otherwise, if the coroutine completes its execution,
+the resulting value is retrieved by calling <code>result</code>.
 </td>
 </table>
 
