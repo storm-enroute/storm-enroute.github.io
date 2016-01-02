@@ -173,7 +173,7 @@ their type is `Int ~~> (Int, Unit)`.
 
 The type of a coroutine instance has a very simple set of types --
 since parameters were already passed to a coroutine instance,
-it does not need to encode their types.
+the instance does not need to encode their types.
 A coroutine instance object only needs to encode
 the yield type `Y` and the return type `R`.
 It is represented with the type `Coroutine.Frame[Y, R]`.
