@@ -208,16 +208,18 @@ Coroutines use a combination of Scala specialization
 and some extra logic to ensure that the yield type
 is always specialized, and thus avoid boxing.
 The only exception are some pathological cases when using
-coroutine arguments that are primitive values,
-and new coroutine frames are invoked extremely frequently
+coroutine arguments that are primitive values
+and new coroutine frames are created extremely frequently,
+or when you're using coroutines with a high arity
 (if you want to know the details, see the
 [API](http://storm-enroute.com/apidocs/coroutines/0.3/api/)
 to figure out which coroutine arities are specialized and how).
-If you are super-sensitive about performance,
-use the syntactic form only if you really need to
+If you are super-sensitive about performance
+and your coroutines are invoked with primitive values,
+use the syntactic sugar form only if you really need to
 abstract over different coroutine implementations,
 and rely on the type inferencer whenever you can.
+In most cases, however, you don't need to worry.
 
-In the next section, we will study the
-[lifecycle of a coroutine](../lifecycle/)
+In the next section, we will study the [lifecycle of a coroutine](../lifecycle/)
 more closely.
