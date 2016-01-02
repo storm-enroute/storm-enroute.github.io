@@ -106,6 +106,11 @@ We can instead call the `result` method to get the return value.
     assert(c.getValue == None)
     assert(c.result == 11)
 
+At this point we can double check that the coroutine ended
+with the `isCompleted` and `isLive` methods:
+
+    assert(c.isCompleted)
+    assert(!c.isLive)
 
 From all these different ways to interact with a coroutine,
 you might be overwhelmed, but don't worry!
