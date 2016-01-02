@@ -76,9 +76,57 @@ If `hasValue` returns `true`, we know that we can inspect the last yielded value
 by calling the `value` method.
 All this is shown in the following:
 
+    assert(c.resume) // moves the coroutine to the next yieldval
+    assert(c.hasValue) // asserts that the coroutine has a value
+    assert(c.value == "naaaa") // retrieves the preceding yielded value
+
+Additionally, we can call the `getValue` method that returns
+This method returns an object of type `Option[Y]`, where `Y` is the yield type.
+
+    for (i <- 1 until 9) {
+      assert(c.resume)
+      assert(c.getValue == Some("na"))
+    }
+
+Another way to retrieve a value after calling `resume` is with the `tryValue` method.
+This method returns a `Success` if the value is available,
+and a `Failure` if the execution ended or resulted in an exception (more on that soon).
+
     assert(c.resume)
-    assert(c.hasValue)
-    assert(c.value == "naaaa")
+    assert(c.tryValue == Success("Katamari Damacy!"))
+
+The last `resume` call will return `false`,
+because execution reaches the end of the coroutine.
+At this point, calling `getValue` returns `None`,
+and calling `value` throws an exception.
+This makes sense -- the coroutine did not yield any values this time.
+We can instead call the `result` method to get the return value.
+
+    assert(!c.resume)
+    assert(c.getValue == None)
+    assert(c.result == 11)
+
+
+From all these different ways to interact with a coroutine,
+you might be overwhelmed, but don't worry!
+The textbook method of extracting values from a coroutine is
+simple and super-convenient!
+To show this,
+we define the method `drain`,
+which takes a coroutine that emits strings,
+and, as long as `resume` returns `true`,
+adds strings to a buffer, and then concatenates those strings together.
+We can use the `drain` method to more concisely test the correctness of
+the `katamari` coroutine.
+
+  def drain(f: String <~> Int): String = {
+    val buffer = mutable.Buffer[String]()
+    while (f.resume) buffer += f.value
+    buffer.mkString(" ")
+  }
+
+  val theme = "naaaa na na na na na na na na Katamari Damacy!"
+  assert(drain(call(katamari(9))) == theme)
 
 The complete example is shown below.
 
