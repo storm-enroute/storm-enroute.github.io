@@ -114,8 +114,22 @@ with the `isCompleted` and `isLive` methods:
 
 From all these different ways to interact with a coroutine,
 you might be overwhelmed, but don't worry!
-The textbook method of extracting values from a coroutine is
-simple and super-convenient!
+Most of the time, you just need to remember that if `resume` returns `true`,
+you can retrieve the yielded value with `value`,
+and otherwise can retrive the resulting value with `result`.
+
+<table class="docs-tip">
+<td><img src="/resources/images/warning.png"/></td>
+<td>
+If the coroutine yield control to the caller,
+you can retrieve the value it yielded by calling <code>value</code>.
+Otherwise, if the coroutine completed its execution,
+you can retrieve the resulting value by calling <code>result</code>.
+</td>
+</table>
+
+The textbook method of extracting values from a coroutine is, in fact,
+simple and super-convenient.
 To show this,
 we define the method `drain`,
 which takes a coroutine that emits strings,
@@ -151,5 +165,73 @@ The complete example is shown below.
 
 ## Exception handling
 
+Coroutines can also raise exceptions.
+When an exception is raised inside the coroutine,
+it gets propagated as far as possible along the call stack,
+just like an ordinary exception would.
+If the exception propagation reaches the bounds of the coroutine instance,
+the exception is stored as part of the coroutine instance state,
+and the instance completes without a resulting value.
 
+To illustrate this, we consider the following definition
+of the `kaboom` coroutine.
 
+    case class TestException() extends Throwable
+
+    val kaboom = coroutine { (x: Int) =>
+      yieldval(x)
+      try {
+        sys.error("will be caught")
+      } catch {
+        case e: RuntimeException => yieldval("oops")
+      }
+      throw TestException()
+    }
+
+This coroutine starts by yielding its argument `x` back to the caller.
+Then, the coroutine raises an exception in a `try` block,
+which is successfully caught in the `catch` block.
+The coroutine then yields the value `"oops"`.
+Another exception of type `TestException` is then thrown,
+which is this time uncaught and terminates the coroutine.
+To verify that the `kaboom` coroutine executes as we expect,
+we run the following snippet:
+
+    val c = call(kaboom(5))
+    assert(c.resume)
+    assert(c.value == 5)
+    assert(c.resume)
+    assert(c.value == "oops")
+    assert(!c.resume)
+    assert(c.tryResult == Failure(TestException()))
+
+Above, the final `tryResult` call does not return a `Success` value,
+because the coroutine did not terminate normally.
+Instead, `tryResult` returns a `Failure` value
+that contains the uncaught exception.
+
+<table class="docs-tip">
+<td><img src="/resources/images/warning.png"/></td>
+<td>
+Every coroutine instance terminates by either producing a result,
+or raising an exception.
+The exception is not rethrown by the <code>resume</code> method,
+but is raised when calling the <code>result</code> method.
+The <code>tryResult</code> method can also be used to retrieve the exception.
+</td>
+</table>
+
+The complete example with exceptions is shown below.
+
+<div>
+<pre id="examplebox-1">
+</pre>
+</div>
+<script>
+  setContent(
+    "examplebox-1",
+    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/Lifecycle.scala",
+    null,
+    "raw",
+    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/Lifecycle.scala");
+</script>
