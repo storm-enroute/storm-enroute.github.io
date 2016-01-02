@@ -191,7 +191,7 @@ also have a syntactic sugar form:
     val c: Nothing <~> Int = call(twice(7))
 
 Here, the left arrow symbolizes the fact that values of the yield type
-are sent back to the caller (who originally passed in some parameters),
+are sent back to the caller (who originally passed some arguments),
 while the ordinary return type is written on the right hand side.
 
 
