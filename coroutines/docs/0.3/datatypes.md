@@ -119,7 +119,7 @@ and types `T1`, `T2`, and so on are input parameter types.
 Note that the arity-0 coroutine is a kind of a special case,
 and requires a triple-squiggly arrow syntax with square brackets.
 The arity-1 coroutine is also a bit special, and requires double-squiggly arrows.
-The arity-2 and above coroutines use a single squiggly arrow,
+The arity-2 and above coroutines use a single-squiggly arrow,
 and specify input parameters in the parameter list on the left,
 with yield and return types specified on the right.
 
@@ -190,8 +190,9 @@ also have a syntactic sugar form:
 
     val c: Nothing <~> Int = call(twice(7))
 
-Here, the left arrow symbolizes the fact that values of the yield type
-are sent back to the caller (who originally passed some arguments),
+Here, the `<` character in `<~>` symbolizes the fact that values of the yield type
+are sent back to the caller
+(who originally passed some arguments that were on the left of the arrow),
 while the ordinary return type is written on the right hand side.
 
 
