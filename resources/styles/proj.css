@@ -154,6 +154,12 @@ h3 {
   text-shadow: 1px 1px 1px #bababa;
 }
 
+h4 {
+  margin-top: 35px;
+  font-size: 15px;
+  text-shadow: 1px 1px 1px #bababa;
+}
+
 #wrap {
   /*background-image: url('/resources/images/content3.png');
   background-repeat: repeat;*/
@@ -858,4 +864,18 @@ table.docs-tip img {
   -webkit-border-radius: 2px;
   border-radius: 2px;
   padding: 2px;
+}
+
+div.toc span {
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+div.toc-panel {
+  border: solid 1px #ccc;
+  padding: 10px;
+  background-color: #eee;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
