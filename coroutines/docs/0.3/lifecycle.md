@@ -224,14 +224,14 @@ The <code>tryResult</code> method can also be used to retrieve the exception.
 The complete example with exceptions is shown below.
 
 <div>
-<pre id="examplebox-1">
+<pre id="examplebox-2">
 </pre>
 </div>
 <script>
   setContent(
-    "examplebox-1",
-    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/Lifecycle.scala",
+    "examplebox-2",
+    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/Exceptions.scala",
     null,
     "raw",
-    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/Lifecycle.scala");
+    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/Exceptions.scala");
 </script>
