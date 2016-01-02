@@ -214,8 +214,9 @@ that contains the uncaught exception.
 <td><img src="/resources/images/warning.png"/></td>
 <td>
 Every coroutine instance terminates by either producing a result,
-or raising an exception.
-The exception is not rethrown by the <code>resume</code> method,
+or by raising an exception.
+If the coroutine instance terminates with an exception,
+the exception is not rethrown by the <code>resume</code> method,
 but is raised when calling the <code>result</code> method.
 The <code>tryResult</code> method can also be used to retrieve the exception.
 </td>
