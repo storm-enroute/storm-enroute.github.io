@@ -1,0 +1,38 @@
+<div id="scroller" class="toc-panel">
+
+  <div class="toc"><span>Contents</span></div>
+
+  {% for pg in site.pages %}
+    {% if pg.partof == "getting-started" and pg.outof %}
+      {% assign totalPagesTour = pg.outof %}
+    {% endif %}
+  {% endfor %}
+
+  <h3><a href="/coroutines/">Scala Coroutines</a></h3>
+
+  <ul class="bullets">
+    <li><a href="/coroutines/">Home</a></li>
+    <li><a href="/coroutines/contribute/">Contribute</a></li>
+    <li><a href="/coroutines/discuss/">Discussion</a></li>
+  </ul>
+
+  <h3><a href="/coroutines/learn/">Getting Started Guide</a></h3>
+
+  {% if totalPagesTour %}
+  <ul class="bullets">
+    {% for i in (1..totalPagesTour) %}
+      {% for pg in site.pages %}
+        {% if pg.partof == "getting-started" and pg.num and pg.num == i and pg.coversion == page.coversion %}
+          <li><a href="{{ pg.url }}">{{ pg.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>
+  {% else %}
+    **ERROR**. Couldn't find the total number of pages in this set of tutorial articles. Have you declared the `outof` tag in your YAML front matter?
+  {% endif %}
+
+  <h3>Other</h3>
+
+
+</div>

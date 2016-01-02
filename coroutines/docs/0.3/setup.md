@@ -6,6 +6,10 @@ logoname: coroutines-64-xmas-pale.png
 title: Setup and Dependencies
 permalink: /coroutines/docs/0.3/setup/index.html
 logostyle: "color: #5f5f5f;"
+partof: getting-started
+num: 1
+outof: 4
+coversion: 0.3
 ---
 
 
