@@ -99,7 +99,7 @@ In Scala, the bottom type is called `Nothing`.
 So, the type of the identity coroutine is `Coroutine._1[Int, Nothing, Int]`.
 
 
-## Types for syntactic sugar
+## Syntactic sugar types
 
 Names such as `Coroutine._0` and `Coroutine._1` are inconvenient and clumsy.
 Scala functions have a much nicer syntax that overcomes the `FunctionN` boilerplate --
@@ -116,6 +116,12 @@ The syntactic sugar translation rules are summarized in the following table.
 Type `Y` is the yield type,
 type `R` is the return type,
 and types `T1`, `T2`, and so on are input parameter types.
+Note that the arity-0 coroutine is a kind of a special case,
+and requires a triple-squiggly arrow syntax with square brackets.
+The arity-1 coroutine is also a bit special, and requires double-squiggly arrows.
+The arity-2 and above coroutines use a single squiggly arrow,
+and specify input parameters in the parameter list on the left,
+with yield and return types specified on the right.
 
 Full type                            | Syntactic sugar type
 -------------------------------------|--------------------------
@@ -124,8 +130,30 @@ Full type                            | Syntactic sugar type
 `Coroutine._2[T1, T2, Y, R]`         | `(T1, T2) ~> (Y, R)`
 `Coroutine._3[T1, T2, T3, Y, R]`     | `(T1, T2, T3) ~> (Y, R)`
 
+Consider the following coroutine:
+
+    val rube = coroutine { (x: Int) =>
+      yieldval(x.toString)
+      List(x)
+    }
+
+It has the type `Coroutine._1[Int, String, List[Int]]`,
+or with a bit of syntactic sugar, just:
+
+    Int ~~> (String, List[Int])
+
 To see an example of how the syntactic sugar types are used,
 consider the following program.
+We want to implement a coroutine that yields a range of numbers,
+but implement it in two ways -- once using a while loop,
+and once using a do-while loop.
+The two coroutines `whileRange` and `doWhileRange`
+take an integer parameter, and yield the values of the range.
+The main program calls the generic testing method `assertEqualsRange`,
+which takes a generic implementation of a coroutine
+and checks that it is equal to the corresponding range.
+Since the two coroutines only yield values, and do not return values to the caller,
+their type is `Int ~~> (Int, Unit)`.
 
 <div>
 <pre id="examplebox-1">
@@ -143,4 +171,52 @@ consider the following program.
 
 ## Coroutine instance types
 
-The type of a coroutine instance is surprisingly simple
+The type of a coroutine instance has a very simple set of types --
+since parameters were already passed to a coroutine instance,
+it does not need to encode their types.
+A coroutine instance object only needs to encode
+the yield type `Y` and the return type `R`.
+It is represented with the type `Coroutine.Frame[Y, R]`.
+Consider the following coroutine `twice`:
+
+    val twice = coroutine { (x: Int) => 2 * x }
+
+The coroutine instance type is `Coroutine.Frame[Nothing, Int]`:
+
+    val c: Coroutine.Frame[Nothing, Int] = call(twice(7))
+
+This is lengthy, so coroutine instance (i.e. *frame*) types
+also have a syntactic sugar form:
+
+    val c: Nothing <~> Int = call(twice(7))
+
+Here, the left arrow symbolizes the fact that values of the yield type
+are sent back to the caller (who originally passed in some parameters),
+while the ordinary return type is written on the right hand side.
+
+
+### Summary
+
+We have learned about basic data types revolving around coroutines,
+and about syntactic sugar for expressing them more nicely.
+The syntactic sugar looks fancy, but it is somewhat of a hack.
+In a vast majority of cases,
+the performance of a coroutine captured in its sugared form
+is equal to the non-sugared form.
+Coroutines use a combination of Scala specialization
+and some extra logic to ensure that the yield type
+is always specialized, and thus avoid boxing.
+The only exception are some pathological cases when using
+coroutine arguments that are primitive values,
+and new coroutine frames are invoked extremely frequently
+(if you want to know the details, see the
+[API](http://storm-enroute.com/apidocs/coroutines/0.3/api/)
+to figure out which coroutine arities are specialized and how).
+If you are super-sensitive about performance,
+use the syntactic form only if you really need to
+abstract over different coroutine implementations,
+and rely on the type inferencer whenever you can.
+
+In the next section, we will study the
+[lifecycle of a coroutine](../lifecycle/)
+more closely.
