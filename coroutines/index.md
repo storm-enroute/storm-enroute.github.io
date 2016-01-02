@@ -23,12 +23,13 @@ and yield control back to the caller, or another coroutine.
 The caller can then resume the coroutine when appropriate.
 Coroutines have a number of use cases, including but not limited to:
 
-- collection iterators
+- data structure iterators
 - event-driven code without the inversion of control
 - cooperative multitasking
 - concurrency frameworks such as actors, async-await and dataflow networks
-- backtracking algorithms
+- expressing asynchrony, and better composition of asynchronous systems
 - capturing continuations
+- expressing backtracking algorithms
 - AI agents such as behavior trees
 
 To learn how to use coroutines, please see the Scala Coroutines Guide

@@ -12,14 +12,22 @@ logostyle: "color: #5f5f5f;"
 Scala Coroutines are *first-class*.
 That means that a coroutine definition is a value that can be passed to other
 functions and coroutines as arguments, much like ordinary function objects can.
-This property allows abstracting over implementations of a coroutine.
-In this part of the guide, we will learn about coroutine data types
-that make this possible.
+This property allows abstracting over implementations of a coroutine,
+as the user of the coroutine does not need to know anything
+about its concrete implementation.
+
+In a statically typed language,
+we need to give the values in our program
+some types before we can start using them.
+In this part of the guide,
+we will learn about data types
+that make first-class coroutines possible.
 
 
 ## Basic coroutine types
 
-A coroutine definition is defined by ...
+A `coroutine` declaration creates an object of type `Coroutine[T]`,
+where `T` is the type of values that the coroutine yields.
 
 
 ## Syntactic sugar

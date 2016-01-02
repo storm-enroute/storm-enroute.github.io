@@ -219,7 +219,7 @@
        sodipodi:linespacing="125%"
        id="text3066"
        y="1024.6642"
-       x="359.60867"
+       x="196.36618"
        style="font-size:149.65463257px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"
        inkscape:export-filename="/home/axel22/workspaces/scala/super-storm-enroute/storm-enroute.github.io/resources/images/invoke3.png"
@@ -227,8 +227,8 @@
        inkscape:export-ydpi="7.9319177"><tspan
          id="tspan3070"
          y="1024.6642"
-         x="359.60867"
-         sodipodi:role="line">apply</tspan></text>
+         x="196.36618"
+         sodipodi:role="line">resume</tspan></text>
     <path
        sodipodi:nodetypes="csc"
        inkscape:connector-curvature="0"
@@ -249,14 +249,14 @@
     <text
        xml:space="preserve"
        style="font-size:149.65463257px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="1733.9781"
+       x="1628.8768"
        y="1011.5213"
        id="text3080"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="1733.9781"
+         x="1628.8768"
          y="1011.5213"
-         id="tspan3082">apply</tspan></text>
+         id="tspan3082">resume</tspan></text>
     <rect
        y="316.94049"
        x="2833.5195"
