@@ -100,7 +100,7 @@ a thread does this with special coroutine operations.
 
 When looking for direct analogs of Scala coroutines in other languages,
 you should instead think of generators in Python, or enumerators in C#.
-Python generators allow defining subroutines that contain `yield` statements.
+Python allows defining subroutines that contain `yield` statements.
 Such subroutines are called *generators* -- after they are started,
 they can suspend, yield a value to the caller and later be resumed.
 This process does not involve any concurrency.
