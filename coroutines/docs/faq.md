@@ -147,7 +147,7 @@ In fact, Scala Async could be implemented relatively easily using Scala Coroutin
 Of the APIs and frameworks listed so far,
 Scala Delimited Continuations are by their nature the closest to Scala Coroutines.
 They are a general language abstraction used to modify the usual flow of the program.
-They can suspend a computation and capture the rest of the computation into a function.
+They can suspend a computation and express the rest of the computation as a function.
 
 However, Scala Delimited Continuations have several drawbacks:
 
