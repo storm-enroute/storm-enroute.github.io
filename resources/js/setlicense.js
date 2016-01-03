@@ -9,7 +9,7 @@ function setContent(contentboxname, url, logoname, contenttype, contentlink) {
     var a = document.createElement("a");
     a.appendChild(icon)
     a.setAttribute("href", contentlink);
-    a.setAttribute("style", "position: absolute; top: 10px; left: 650px;")
+    a.setAttribute("style", "position: absolute; top: 10px; left: 600px;")
     contentbox.parentNode.setAttribute("style", "position: relative;")
     contentbox.parentNode.appendChild(a);
   }

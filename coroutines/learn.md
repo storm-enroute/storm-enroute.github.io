@@ -15,6 +15,9 @@ Scala Coroutines releases come with API documentation and a detailed usage guide
 The usage guide is the best place to start if you haven't used Scala Coroutines before.
 You can find a list of releases and the respective documentation links below.
 
+For some general information and answers to questions frequently asked by users,
+please take a look at the [FAQ document](/coroutines/docs/faq/).
+
 
 ### Coroutines 0.3
 

@@ -8,7 +8,7 @@ permalink: /coroutines/docs/0.3/datatypes/index.html
 logostyle: "color: #5f5f5f;"
 partof: getting-started
 num: 3
-outof: 4
+outof: 20
 coversion: 0.3
 ---
 
