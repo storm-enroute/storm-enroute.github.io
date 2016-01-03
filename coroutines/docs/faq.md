@@ -76,7 +76,7 @@ Coroutines can (and are meant to, among other things) be used to
 implement concurrency primitives and concurrent programming frameworks.
 For example, Erlang-style actors without top-level-only receives,
 or Oz-style single-assignment variables whose reads suspend until an assignment,
-are both ideal candidates.
+are example use cases for which coroutines are ideal candidates.
 
 
 ### How do Scala Coroutines relate to goroutines in Go?
