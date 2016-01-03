@@ -95,7 +95,7 @@ a coroutine is just a chunk of executable computation that can occasionally susp
 much like a function is a chunk of executable computation that, once run, must execute
 until it completes.
 A coroutine can be started and resumed on any thread,
-but starting and resuming a thread is **explicit** --
+but starting and resuming the coroutine is **explicit** --
 a thread does this with special coroutine operations.
 
 When looking for direct analogs of Scala coroutines in other languages,
