@@ -30,6 +30,9 @@ for example producer-consumer concurrency, collection iterators,
 complex UI logic, asynchronous concurrent computations frameworks,
 or even continuations.
 
+Note that the Getting Started Guide in the [docs section](/coroutines/docs/)
+is the best place to learn all about Scala Coroutines.
+
 
 ### What is the concurrency model behind Scala Coroutines?
 
@@ -51,11 +54,17 @@ which makes things slower than most people imagine.
 
 Second,
 thread-driven concurrency decreases the amount of control a client has.
-If a coroutine were to 
+If a coroutine were to run on a separate thread,
+the caller would have no idea if the coroutine completed or was suspended,
+unless some sort of synchronization were employed.
 
-And Scala coroutines are used to express *asynchrony*.
-Note that concurrency implies asynchrony,
-but asynchrony does not imply concurrency
+Scala coroutines are primarily used to express *asynchrony*
+between several computations.
+Asynchrony is present in many systems, not just concurrent systems.
+For example, callbacks for user input events in a UI are asynchronous computations,
+but in most UIs, they execute on a single thread.
+Note that **concurrency implies asynchrony,
+but asynchrony does not imply concurrency**
 (if in doubt about this statement, just remember JavaScript and its execution model).
 
 
