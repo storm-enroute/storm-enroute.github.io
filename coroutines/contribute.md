@@ -12,7 +12,7 @@ logostyle: "color: #5f5f5f;"
 ## Bug Reports
 
 Please submit bug reports and feature requests at our
-[issue tracker at GitHub](https://github.com/storm-enroute/macrogl/issues).
+[issue tracker at GitHub](https://github.com/storm-enroute/coroutines/issues).
 We'll be happy to take a look!
 
 When submitting a bug report, you can help us fix the issue quicker
