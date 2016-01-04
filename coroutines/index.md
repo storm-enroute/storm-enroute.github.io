@@ -13,7 +13,7 @@ logostyle: "color: #5f5f5f;"
   height="256px"/>
 
 Scala Coroutines is a library-level extension for the Scala programming language
-that introduces first-class polymorphic coroutines.
+that introduces first-class coroutines.
 
 *Coroutines* are a language abstraction that generalizes subroutines
 (i.e. procedures, methods or functions).
