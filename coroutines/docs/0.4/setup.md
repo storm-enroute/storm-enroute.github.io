@@ -39,7 +39,7 @@ Snapshot versions are released regularly on Sonatype:
         "https://oss.sonatype.org/content/repositories/releases"
     )
     libraryDependencies ++= Seq(
-      "com.storm-enroute" %% "coroutines" % "0.4-SNAPSHOT")
+      "com.storm-enroute" %% "coroutines" % "0.5-SNAPSHOT")
 
 To use coroutines in the code, import the `scala.coroutines` package,
 and you're all set:

@@ -18,7 +18,7 @@ so does the need to separate it into independent software modules.
 This way, non-trivial software systems are more easily understood,
 tested and evolved.
 In programming languages,
-there are many different ways of achieving modularity.
+there are many different ways to achieve modularity.
 In object-oriented programming,
 a complex object usually contains multiple simpler objects,
 where each part implements a certain functionality.
@@ -32,12 +32,12 @@ We refer to this as *composition*,
 and say that programming abstractions *compose*
 if it is possible to create more complex abstractions from simpler ones.
 
-Scala coroutines support composition
+Scala coroutines compose
 in a similar way functions (i.e. subroutines) do.
 Code inside a coroutine can directly invoke another coroutine,
 as if it were a normal function call.
 This allows separating functionality across multiple simpler coroutines,
-and compose them together.
+and composing them together.
 In this section, we will see the details of how this works.
 
 
