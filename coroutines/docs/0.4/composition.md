@@ -88,7 +88,29 @@ we're just invoking it directly!
 Why is this allowed inside a coroutine,
 but it was not allowed in the regular program code?
 
-TODO complete
+The reason is that the coroutine *instance* is executing in a special environment
+where yielding is possible.
+This environment includes a special stack, as we saw in [Coroutine 101](../101/),
+which is used to store the local variables of the coroutine instance
+when a `yieldval` occurs.
+A coroutine instance can use this stack to seamlessly store
+the variables belonging to another coroutine and continue execution.
+If the code in the other coroutine also executes a `yieldval` statement,
+the coroutine instance stack will contain the local variables of both coroutines.
+
+Let's verify that this works -- we instantiate a list of optional integers,
+and start the `optionListElems` coroutine.
+We then verify that only non-`None` values are yielded:
+
+    val xs = Some(1) :: None :: Some(3) :: Nil
+    val c = call(optionListElems(xs))
+    assert(c.resume)
+    assert(c.value == 1)
+    assert(c.resume)
+    assert(c.value == 3)
+    assert(!c.resume)
+
+You can see the complete example below.
 
 <div>
 <pre id="examplebox-1">
