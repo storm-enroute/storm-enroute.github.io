@@ -41,7 +41,7 @@ and composing them together.
 In this section, we will see the details of how this works.
 
 
-## Starting a coroutine instance vs. calling a coroutine
+## Calling a coroutine directly
 
 In [Coroutines 101](../101/),
 we learned that normal program code cannot invoke a coroutine directly,
@@ -98,6 +98,17 @@ the variables belonging to another coroutine and continue execution.
 If the code in the other coroutine also executes a `yieldval` statement,
 the coroutine instance stack will contain the local variables of both coroutines.
 
+<table class="docs-tip">
+<td><img src="/resources/images/warning.png"/></td>
+<td>
+Code within the coroutine can call another coroutine directly,
+as if it were a normal function.
+The code within the second coroutine continues to execute within
+the <b>same coroutine instance</b>,
+and yields values back to the caller of `resume`.
+</td>
+</table>
+
 Let's verify that this works -- we instantiate a list of optional integers,
 and start the `optionListElems` coroutine.
 We then verify that only non-`None` values are yielded:
@@ -109,6 +120,28 @@ We then verify that only non-`None` values are yielded:
     assert(c.resume)
     assert(c.value == 3)
     assert(!c.resume)
+
+After the coroutine instance `c` yields values `1` and `3`,
+calling `resume` returns `false`, indicating that the coroutine terminated.
+This is consistent with what we expect -- the only `yieldval` statement
+exists in the `optionElems` coroutine, and it is called for the two `Some` objects.
+
+Taking a step back,
+we can see that this feature allows factoring out functionality
+across multiple coroutines.
+In the coroutine call stack,
+low-level coroutines yield values by traversing simpler data structures,
+and higher-level coroutines invoke them as needed.
+Composition is achieved through coroutine invocations.
+
+<table class="docs-tip">
+<td><img src="/resources/images/warning.png"/></td>
+<td>
+Note that if a directly invoked coroutine throws an exception,
+then the exception is propagated up to call stack until
+reaching the boundary of the coroutine instance.
+</td>
+</table>
 
 You can see the complete example below.
 
@@ -123,6 +156,43 @@ You can see the complete example below.
     null,
     "raw",
     "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/Composition.scala");
+</script>
+
+
+## Starting a coroutine instance vs. calling a coroutine
+
+Instead of invoking another coroutine directly,
+we might be tempted to start a new coroutine instance inside the coroutine,
+and then traverse its values with `resume` and `value`, as follows:
+
+    private val optionListElems = coroutine { (xs: List[Option[Int]]) =>
+      var curr = xs
+      while (curr != Nil) {
+        val c = call(optionElems(curr.head))
+        while (c.resume) yieldval(c.value)
+        curr = curr.tail
+      }
+    }
+
+There are also several downsides to this approach.
+First of all, this is **slower** than invoking the coroutine directly.
+Second, it is syntactically **less concise**.
+Finally, the implementation above does not propagate exceptions
+that are potentially raised in the nested coroutine instance `c`.
+
+Again, the complete example is shown below.
+
+<div>
+<pre id="examplebox-2">
+</pre>
+</div>
+<script>
+  setContent(
+    "examplebox-2",
+    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/CompositionCall.scala",
+    null,
+    "raw",
+    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/CompositionCall.scala");
 </script>
 
 
