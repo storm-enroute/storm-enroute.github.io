@@ -104,7 +104,7 @@ Python allows defining subroutines that contain `yield` statements.
 Such subroutines are called *generators* -- after they are started,
 they can suspend, yield a value to the caller and later be resumed.
 This process does not involve any concurrency.
-In C#, `yield return` and `yield break` statements in methods
+In C#, `yield return` and `yield break` statements
 define `IEnumerator` objects in almost exactly the same way.
 
 Goroutines are independent units of concurrency.
