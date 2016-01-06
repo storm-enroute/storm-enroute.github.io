@@ -15,7 +15,7 @@
    version="1.1"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="invoke4.svg"
-   inkscape:export-filename="/home/axel22/workspaces/scala/super-storm-enroute/storm-enroute.github.io/resources/images/invoke.png"
+   inkscape:export-filename="/home/axel22/workspaces/scala/super-storm-enroute/storm-enroute.github.io/resources/images/invoke4.png"
    inkscape:export-xdpi="7.9319177"
    inkscape:export-ydpi="7.9319177">
   <defs
@@ -214,71 +214,6 @@
        id="path4288"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csc" />
-    <rect
-       y="-139.64847"
-       x="1115.8805"
-       height="294.80905"
-       width="294.80905"
-       id="rect3114"
-       style="fill:none;stroke:#000000;stroke-width:13.84799957;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:41.544, 41.544;stroke-dashoffset:0" />
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:13.84799957;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:41.544, 41.544;stroke-dashoffset:0"
-       id="rect3116"
-       width="294.80905"
-       height="294.80905"
-       x="1507.3091"
-       y="-139.64847" />
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:13.84800339;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:41.54401016, 41.54401016;stroke-dashoffset:0"
-       id="rect3118"
-       width="294.80905"
-       height="294.80905"
-       x="1115.8805"
-       y="154.63724" />
-    <rect
-       y="154.63724"
-       x="1507.3091"
-       height="294.80905"
-       width="294.80905"
-       id="rect3120"
-       style="fill:none;stroke:#000000;stroke-width:13.84800339;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    <text
-       xml:space="preserve"
-       style="font-size:149.65463257px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="1402.9653"
-       y="642.73663"
-       id="text3122"
-       sodipodi:linespacing="125%"><tspan
-         id="tspan3124"
-         sodipodi:role="line"
-         x="1402.9653"
-         y="642.73663">optionListElems</tspan></text>
-    <rect
-       y="-139.64847"
-       x="1899.2483"
-       height="294.80905"
-       width="294.80905"
-       id="rect3126"
-       style="fill:none;stroke:#000000;stroke-width:13.84799957;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:41.544, 41.544;stroke-dashoffset:0" />
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:13.84800339;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="rect3128"
-       width="294.80905"
-       height="294.80905"
-       x="1899.2483"
-       y="154.63724" />
-    <text
-       sodipodi:linespacing="125%"
-       id="text3130"
-       y="369.71674"
-       x="1939.9771"
-       style="font-size:232.04286194px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       xml:space="preserve"><tspan
-         style="font-size:190.04286194px"
-         y="369.71674"
-         x="1939.9771"
-         id="tspan3132"
-         sodipodi:role="line">xs</tspan></text>
     <path
        sodipodi:nodetypes="csc"
        inkscape:connector-curvature="0"
