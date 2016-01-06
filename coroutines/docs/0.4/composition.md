@@ -13,7 +13,7 @@ coversion: 0.4
 ---
 
 
-As complexity of a system grows,
+As the complexity of a system grows,
 so does the need to separate it into independent software modules.
 This way, non-trivial software systems are more easily understood,
 tested and evolved.
@@ -51,7 +51,7 @@ Assume that we have a simple coroutine that yields
 the integers in an `Option[Int]` object.
 This coroutine will either yield a single integer, or none.
 
-    val optionElems = coroutine { (x: Int) =>
+    val optionElems = coroutine { (opt: Option[Int]) =>
       opt match {
         case Some(x) => yieldval(x)
         case None => // do nothing
@@ -105,7 +105,7 @@ Code within the coroutine can call another coroutine directly,
 as if it were a normal function.
 The code within the second coroutine continues to execute within
 the <b>same coroutine instance</b>,
-and yields values back to the caller of `resume`.
+and yields values back to the caller of <code>resume</code>.
 </td>
 </table>
 
@@ -179,6 +179,38 @@ First of all, this is **slower** than invoking the coroutine directly.
 Second, it is syntactically **less concise**.
 Finally, the implementation above does not propagate exceptions
 that are potentially raised in the nested coroutine instance `c`.
+This is not to say that starting a new coroutine instance (`call`)
+does not have its own use-cases.
+Starting a new coroutine instance is a different form of composition
+which achieves a *higher level of separation* between the two coroutines.
+For example, the newly started coroutine instance
+could be yielded back to the caller,
+who then decides what to do with it.
+The coroutine that started a new coroutine instance
+is under no obligation to complete it.
+On the other hand,
+a coroutine that invoked another coroutine directly
+can only continue executing after the nested coroutine completes --
+this is semantically exactly the same as a function call.
+
+If we take a look under the hood,
+we see that the difference between starting a coroutine instance (`call`)
+and invoking the coroutine directly
+is in the location where the nested code is execution.
+Shown graphically,
+starting a new coroutine instance looks as follows:
+
+![ ](/resources/images/invoke4.png)
+
+We can see that using `call` creates two coroutine instances in our program,
+each executing a different coroutine.
+
+By contrast,
+invoking a coroutine directly, on the existing coroutine instance,
+reuses the same stack.
+This is shown in the following figure.
+
+![ ](/resources/images/invoke5.png)
 
 Again, the complete example is shown below.
 
@@ -198,4 +230,12 @@ Again, the complete example is shown below.
 
 ## Summary
 
-TODO
+The most important concepts to remember from this section are the following:
+
+- A coroutine can invoke another coroutine directly --
+  this behaves in the same way that a function call would.
+- When invoked directly, the two coroutines share the same coroutine instance,
+  and the nested coroutine yields values back to the same caller of `resume`.
+- A direct invocation is different than starting a new coroutine instance with `call` --
+  the latter is a more relaxed form of composition.
+- In most situations, we want to use direct coroutine invocation inside a coroutine.

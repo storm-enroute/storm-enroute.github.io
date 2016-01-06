@@ -256,3 +256,6 @@ are the following:
   You can check the result value with `result`, `getResult` and `tryResult`.
 - A coroutine instance can complete normally, or with an exception,
   which is rethrown when calling `result` on an abnormally completed instance.
+
+In the next section,
+we will learn how to [make coroutine code more modular](../composition/).
