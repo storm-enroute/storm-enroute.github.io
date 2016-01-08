@@ -34,6 +34,14 @@ Note that the Getting Started Guide in the [docs section](/coroutines/docs/)
 is the best place to learn all about Scala Coroutines.
 
 
+### I don't want to read this guide of yours. Can you show me how this works?
+
+Sure
+
+
+But, you should really consider reading [The Guide](/coroutines/docs).
+
+
 ### What is the concurrency model behind Scala Coroutines?
 
 Short answer: there is no concurrency model whatsoever.
