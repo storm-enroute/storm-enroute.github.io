@@ -34,7 +34,7 @@ Note that the Getting Started Guide in the [docs section](/coroutines/docs/)
 is the best place to learn all about Scala Coroutines.
 
 
-### I don't want to read this guide of yours. Can you just show me how this works?
+### I don't want to read this silly guide of yours. Can you just show me how this works?
 
 Sure.
 
