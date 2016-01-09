@@ -37,7 +37,6 @@ is the best place to learn all about Scala Coroutines.
 ### I don't want to read this silly guide of yours. Can you just show me how this works?
 
 Sure.
-
 Here's a declaration of a coroutine that outputs the range
 of numbers from `0` to `n`:
 
