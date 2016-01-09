@@ -239,3 +239,6 @@ The most important concepts to remember from this section are the following:
 - A direct invocation is different than starting a new coroutine instance with `call` --
   the latter is a more relaxed form of composition.
 - In most situations, we want to use direct coroutine invocation inside a coroutine.
+
+In the [next section](../control-transfer/),
+we take a look at an alternative way of transferring control flow to another coroutine.
