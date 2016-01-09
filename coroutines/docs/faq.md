@@ -30,7 +30,7 @@ for example producer-consumer concurrency, collection iterators,
 complex UI logic, asynchronous concurrent computations frameworks,
 or even continuations.
 
-Note that the Getting Started Guide in the [docs section](/coroutines/docs/)
+Note that the Getting Started Guide in the [docs section](/coroutines/learn/)
 is the best place to learn all about Scala Coroutines.
 
 
@@ -63,7 +63,7 @@ And here's how to extract all the elements that this coroutine yields:
 
 Complete example is available
 [here](https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/FaqSimpleExample.scala).
-But, you should really consider reading [The Guide](/coroutines/docs) at some point.
+But, you should really consider reading [The Guide](/coroutines/learn) at some point.
 
 
 ### What is the concurrency model behind Scala Coroutines?
