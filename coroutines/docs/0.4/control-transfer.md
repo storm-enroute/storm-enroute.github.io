@@ -15,7 +15,7 @@ coversion: 0.4
 
 In structured programming,
 arbitrary, non-local control flow is generally forbidden.
-In fact, the negative aspects of statements such as `goto`
+In fact, negative aspects of statements such as `goto`
 have been criticized to the degree where
 they found themselves a place in the programming folklore.
 This reputation is largely deserved --
@@ -27,7 +27,7 @@ There are exceptions to this, of course (pun intended).
 Most prominent is the widespread adoption of exception-handling
 in many programing languages.
 Exception-handling allows non-local jumps in control flow,
-since an exception raised in one method,
+since an exception raised in one method
 may cause the control flow to continue in an arbitrary other method.
 Despite their perceived usage,
 exceptions can be problematic both from program readability
@@ -50,7 +50,7 @@ where control flow is no longer apparent from the code that we write,
 but is governed by a different part of the program.
 Therefore, we *need* non-local control flow to increase the readability of our programs.
 Second part of the answer is that
-coroutines do not enable unrestricted control flow.
+coroutines do not enable *unrestricted* control flow.
 Since control flow jumps in a coroutine invocation (i.e. a coroutine instance)
 are restricted to `yieldval` and `resume` pair,
 it is much easier to understand the control flow compared to something like `goto`.
@@ -64,15 +64,28 @@ to a different coroutine instance.
 
 ## Control transfer
 
+Transferring control to a different coroutine instance
+works with a special construct called `yieldto`.
+This construct takes a target *coroutine instance* (not coroutine),
+and continues executing 
+
+Consider the following example.
+Let's say that we have a coroutine `check` that can be periodically resumed
+to check if there are any errors in the program.
+The `check` coroutine yields a `Boolean` value,
+and assigns an error description to a global `error` variable.
+
     var error: String = ""
     val check: ~~~>[Boolean, Unit] = coroutine { () =>
       yieldval(true)
       error = "Total failure."
       yieldval(false)
     }
-    val checker = call(check())
+    val checker: Boolean <~> Unit = call(check())
 
-
+We then define another coroutine called `random`,
+which yields random `Double` values,
+but occasionally transfers control to `checker`.
 
     val random: ~~~>[Double, Unit] = coroutine { () =>
       yieldval(Random.nextDouble())
@@ -80,23 +93,33 @@ to a different coroutine instance.
       yieldval(Random.nextDouble())
     }
 
+Above, note that transferring control to an already completed coroutine instance
+is not legal, and results in an exception being raised
+in the coroutine that called `yieldto`.
+
+We can now test that this works as expected --
+we start the `random` coroutine and name the instance `r0`,
+and call `resume` and `hasValue`:
 
     val r0 = call(random())
     assert(r0.resume)
     assert(r0.hasValue)
 
-
+As expected, `resume` returns `true` and
+and `hasValue` returns `true`, as well, since `r0` yielded a value.
+However, on the next resume, coroutine reaches a `yieldto`:
 
     assert(r0.resume)
     assert(!r0.hasValue)
 
+This time, `resume` returns `true`, since `r0` is still live,
+but `hasValue` returns `false`, because,
+the coroutine instance `r0` did not yield a value.
 
+After this, `resume` and `hasValue` calls behave as expected.
 
     assert(r0.resume)
     assert(r0.hasValue)
-
-
-
     assert(!r0.resume)
     assert(!r0.hasValue)
 
@@ -141,7 +164,7 @@ setContent(
 
 ### Summary
 
-We have learned that:
+We learned that:
 
 - a coroutine instance can transfer control to another coroutine instance
   with a `yieldto` statement
