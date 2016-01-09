@@ -65,11 +65,11 @@ as the instance `c` did.
 <table class="docs-tip">
 <td><img src="/resources/images/warning.png"/></td>
 <td>
-A coroutine snapshot operation duplicates a coroutine instance.
+A coroutine instance snapshot operation duplicates a coroutine instance.
 This does not duplicate any other (global) objects that the coroutine
-is pointing to.
-Capturing a coroutine snapshot duplicates
-the state of the <b>local variables</b> on the coroutine stack,
+instance is pointing to.
+Capturing a coroutine instance snapshot duplicates
+the state of the <b>local variables</b> on the instance stack,
 and its execution state (i.e. program counter).
 It <b>does not</b> capture the state of the entire program runtime.
 </td>
