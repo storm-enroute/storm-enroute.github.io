@@ -29,12 +29,12 @@ in many programing languages.
 Exception-handling allows non-local jumps in control flow,
 since an exception raised in one method
 may cause the control flow to continue in an arbitrary other method.
-Despite their perceived usage,
+Despite their perceived usefulness,
 exceptions can be problematic both from program readability
 and programming language implementation viewpoint.
 For this reason,
-some programming languages are now stepping away from exceptions.
-Newer languages such as Rust and Go do not have exception handling.
+some programming languages are now stepping away from exceptions --
+newer languages such as Rust and Go do not have classic exception handling.
 
 Coroutines themselves are a language primitive that supports
 non-local control flow.
@@ -166,9 +166,13 @@ setContent(
 
 We learned that:
 
-- a coroutine instance can transfer control to another coroutine instance
-  with a `yieldto` statement
-- when control is transferred to another coroutine instance,
+- A coroutine instance can transfer control to another coroutine instance
+  with a `yieldto` statement.
+- When control is transferred to another coroutine instance,
   the original instance may not yield a value,
   so callers of `resume` must additionally call `hasValue`
-  to check if a value was yielded
+  to check if a value was yielded.
+
+In the [next part](../snapshots/),
+we will see how to capture a snapshot of a coroutine instance,
+and understand the additional expressiveness that snapshots ensure.
