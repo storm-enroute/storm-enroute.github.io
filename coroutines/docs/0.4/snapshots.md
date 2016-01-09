@@ -13,7 +13,25 @@ coversion: 0.4
 ---
 
 
-TODO write intro
+Although definitions of the two vary,
+coroutines and continuations are closely related.
+Typically, first-class continuations are functions that execute
+from the given position in the program.
+As such, it is possible to invoke the same continuation many times --
+each time, the execution continues from the point
+that the continuation function represents.
+
+Defined this way,
+first-class continuations are more expressive than standard coroutines.
+It is possible to implement coroutines using continuations,
+but it is not possible to express continuations using coroutines.
+The reason is that a continuation object can be resumed many times,
+whereas resuming a coroutine instance irreparably changes its state.
+
+To make such continuations and coroutines equally powerful abstractions,
+we need to add a straightforward extension to coroutines --
+namely, the *snapshot* operation on the coroutine instance.
+This part of the guide explains how to use capture coroutine snapshots.
 
 
 ## Capturing a snapshot
@@ -91,9 +109,66 @@ setContent(
 </script>
 
 
-## Example use-case
+## Example use-case: backtracking testing suite
 
-TODO write section
+The previous example was simple, but it did not feel like a real use-case.
+In this section,
+we will study 
+
+    class Cell {
+      var value = false
+    }
+
+    class Mock {
+      val get: ~~~>[Cell, Boolean] = coroutine { () =>
+        val cell = new Cell
+        yieldval(cell)
+        cell.value
+      }
+    }
+
+    def test[R](c: Cell <~> R): Try[R] = {
+      def test[R](c: Cell <~> R): Unit = {
+        if (c.resume) {
+          val cell = c.value
+          cell.value = true
+          test(c.snapshot)
+          cell.value = false
+          test(c)
+        }
+      }
+      test(c)
+      c.tryResult
+    }
+
+    class MyTestSuite extends TestSuite {
+      val myMockCondition = new Mock
+
+      val myAlgorithm = coroutine { (x: Int) =>
+        if (myMockCondition.get()) {
+          assert(2 * x == x + x)
+        } else {
+          assert(x * x / x == x)
+        }
+      }
+
+      assert(test(call(myAlgorithm(5))).isSuccess)
+      assert(test(call(myAlgorithm(0))).isFailure)
+    }
+
+<div>
+<pre id="examplebox-2">
+</pre>
+</div>
+<script>
+setContent(
+  "examplebox-2",
+  "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/MockSnapshot.scala",
+  null,
+  "raw",
+  "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/MockSnapshot.scala");
+</script>
+
 
 
 ### Summary
