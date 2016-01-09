@@ -3,7 +3,7 @@ layout: projdefaultcoroutines
 projectname: Scala Coroutines
 projectpath: coroutines
 logoname: coroutines-64-xmas-pale.png
-title: Coroutine snapshots
+title: Coroutine Snapshots
 permalink: /coroutines/docs/0.4/snapshots/index.html
 logostyle: "color: #5f5f5f;"
 partof: getting-started
