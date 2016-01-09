@@ -34,12 +34,36 @@ Note that the Getting Started Guide in the [docs section](/coroutines/docs/)
 is the best place to learn all about Scala Coroutines.
 
 
-### I don't want to read this guide of yours. Can you show me how this works?
+### I don't want to read this guide of yours. Can you just show me how this works?
 
-Sure
+Sure.
 
+Here's a declaration of a coroutine that outputs the range
+of numbers from `0` to `n`:
 
-But, you should really consider reading [The Guide](/coroutines/docs).
+    val range = coroutine { (n: Int) =>
+      var i = 0
+      while (i < n) {
+        yieldval(i)
+        i += 1
+      }
+    }
+
+And here's how to extract all the elements that this coroutine yields:
+
+    def extract(c: Int <~> Unit): Seq[Int] = {
+      var xs: List[Int] = Nil
+      while (c.resume) if (c.hasValue) xs ::= c.value
+      xs.reverse
+    }
+
+    val instance = call(range(10))
+    val elems = extract(instance)
+    assert(elems == 0 until 10)
+
+Complete example is available
+[here](https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/FaqSimpleExample.scala).
+But, you should really consider reading [The Guide](/coroutines/docs) at some point.
 
 
 ### What is the concurrency model behind Scala Coroutines?
