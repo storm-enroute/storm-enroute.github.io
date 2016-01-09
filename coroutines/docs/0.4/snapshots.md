@@ -69,9 +69,9 @@ A coroutine snapshot operation duplicates a coroutine instance.
 This does not duplicate any other (global) objects that the coroutine
 is pointing to.
 Capturing a coroutine snapshot duplicates
-the state of the **local variables** on the coroutine stack,
+the state of the <b>local variables</b> on the coroutine stack,
 and its execution state (i.e. program counter).
-It **does not** capture the state of the entire program runtime.
+It <b>does not</b> capture the state of the entire program runtime.
 </td>
 </table>
 
