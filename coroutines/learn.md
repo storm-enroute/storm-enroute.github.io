@@ -23,6 +23,7 @@ please take a look at the [FAQ document](/coroutines/docs/faq/).
 
 - [Scala Coroutines Guide](/coroutines/docs/0.3/101/)
 - [ScalaDoc API](http://storm-enroute.com/apidocs/coroutines/0.3/api/)
+- [Changelist](/coroutines/docs/0.3/changelist/)
 
 
 ### Coroutines 0.3
