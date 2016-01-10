@@ -28,7 +28,7 @@ but it is not possible to express continuations using coroutines.
 The reason is that a continuation object can be resumed many times,
 whereas resuming a coroutine instance irreparably changes its state.
 
-To make such continuations and coroutines equally powerful abstractions,
+To make continuations and coroutines equally powerful abstractions,
 we need to add a straightforward extension to coroutines --
 namely, the *snapshot* operation on the coroutine instance.
 This part of the guide explains how to use capture coroutine snapshots.
@@ -60,8 +60,11 @@ we call the `snapshot` method:
 
     val c2 = c.snapshot
 
-We can then continue invoking the coroutine instance operations on `c`,
-as we did before.
+Note that the `snapshot` method can only be called while the coroutine is suspended --
+but it is illegal to call `snapshot` on a coroutine that is currently executing.
+After this,
+we can continue invoking the coroutine instance operations on `c`,
+just like we did before.
 
     assert(c.resume)
     assert(c.value == 2)
@@ -84,12 +87,12 @@ as the instance `c` did.
 <td><img src="/resources/images/warning.png"/></td>
 <td>
 A coroutine instance snapshot operation duplicates a coroutine instance.
-This does not duplicate any other (global) objects that the coroutine
-instance is pointing to.
 Capturing a coroutine instance snapshot duplicates
 the state of the <b>local variables</b> on the instance stack,
 and its execution state (i.e. program counter).
-It <b>does not</b> capture the state of the entire program runtime.
+This does not duplicate any other (global) objects that the
+local variables are pointing to,
+and <b>does not</b> capture the state of the entire program runtime.
 </td>
 </table>
 
@@ -113,48 +116,90 @@ setContent(
 
 The previous example was simple, but it did not feel like a real use-case.
 In this section,
-we will study 
+we study how to implement a *backtracking* test suite,
+which enables tests that simultaneously
+execute different control paths in the test snippet.
+We will introduce special *mock* values,
+which, when used in an expression,
+execute the snippet from that point on with different values.
+
+Concretely, we will be able to write tests like this:
+
+    if (mock()) {
+      assert(2 * x == x + x)
+    } else {
+      assert(x * x / x == x)
+    }
+
+Above, when the coroutine reaches `myMockCondition.get()`,
+it will execute the remainder of the snippet twice --
+once with the value `true`, and once with the value `false`.
+
+Before we start,
+we introduce several helper classes.
+The `Cell` is just a placeholder for a `Boolean` value:
 
     class Cell {
       var value = false
     }
 
-    class Mock {
-      val get: ~~~>[Cell, Boolean] = coroutine { () =>
-        val cell = new Cell
-        yieldval(cell)
-        cell.value
+The `mock` coroutine creates a new `Cell` object,
+yields it to the caller,
+and resumes by returning the `value` from the caller:
+
+    val mock: ~~~>[Cell, Boolean] = coroutine { () =>
+      val cell = new Cell
+      yieldval(cell)
+      cell.value
+    }
+
+The `mock` coroutine allows suspending the computation
+and taking a parameter from the caller, as we will soon see.
+The `test` method is where the magic happens.
+It takes a coroutine instance that yields `Cell` objects,
+and checks if it can be resumed.
+If `resume` returns `false`,
+the test is checked to see if it ended in an exceptional state.
+If `resume` returns `true`,
+the last yielded `Cell` is obtained,
+and its value is set to `true`.
+The `test` method is then run recursively with `snapshot` of the current coroutine.
+After it returns, the same procedure repeats with the value `false`.
+
+    def test[R](c: Cell <~> R): Boolean = {
+      if (c.resume) {
+        val cell = c.value
+        cell.value = true
+        val res0 = test(c.snapshot)
+        cell.value = false
+        val res1 = test(c)
+        res0 && res1
+      } else c.hasResult
+    }
+
+If we take a look at the `mock` coroutine again,
+we will see that it will first return `true` and then `false`.
+We can use `mock` in a test coroutine to enable testing different
+control paths:
+
+    val myAlgorithm = coroutine { (x: Int) =>
+      if (mock()) {
+        assert(2 * x == x + x)
+      } else {
+        assert(x * x / x == x)
       }
     }
 
-    def test[R](c: Cell <~> R): Try[R] = {
-      def test[R](c: Cell <~> R): Unit = {
-        if (c.resume) {
-          val cell = c.value
-          cell.value = true
-          test(c.snapshot)
-          cell.value = false
-          test(c)
-        }
-      }
-      test(c)
-      c.tryResult
-    }
+The `myAlgorithm` coroutine can now be invoked with different values:
 
-    class MyTestSuite extends TestSuite {
-      val myMockCondition = new Mock
+    assert(test(call(myAlgorithm(5))))
+    assert(!test(call(myAlgorithm(0))))
 
-      val myAlgorithm = coroutine { (x: Int) =>
-        if (myMockCondition.get()) {
-          assert(2 * x == x + x)
-        } else {
-          assert(x * x / x == x)
-        }
-      }
-
-      assert(test(call(myAlgorithm(5))).isSuccess)
-      assert(test(call(myAlgorithm(0))).isFailure)
-    }
+For each of the invocations,
+both branches of `myAlgorithm` will be executed.
+The second invocation will return `false`,
+because the second branch will throw an exception for `x == 0`.
+The complete example is shown below.
 
 <div>
 <pre id="examplebox-2">
@@ -168,7 +213,6 @@ setContent(
   "raw",
   "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/MockSnapshot.scala");
 </script>
-
 
 
 ### Summary

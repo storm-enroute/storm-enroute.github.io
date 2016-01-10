@@ -42,13 +42,12 @@ It makes sense to ask:
 why would we use a primitive that enables non-local control flow?
 There are two parts to that answer --
 first of all, experience has shown that some programs *need* non-local control flow.
-As a response,
-we normally encode *callback chains* and implement *iterators*
-in the model that does not support unrestricted control flow.
-The consequence is a phenomenon called *inversion of control*,
-where control flow is no longer apparent from the code that we write,
+For example, we encode *callback chains* and implement *iterators*
+without unrestricted control flow.
+This results is a phenomenon called *inversion of control*,
+where behavior is not directly apparent from the code that we write,
 but is governed by a different part of the program.
-Therefore, we *need* non-local control flow to increase the readability of our programs.
+Non-local control flow can increase program readability.
 Second part of the answer is that
 coroutines do not enable *unrestricted* control flow.
 Since control flow jumps in a coroutine invocation (i.e. a coroutine instance)
@@ -175,4 +174,4 @@ We learned that:
 
 In the [next part](../snapshots/),
 we will see how to capture a snapshot of a coroutine instance,
-and understand the additional expressiveness that snapshots ensure.
+and learn how to use this operation.
