@@ -164,7 +164,7 @@ If `resume` returns `true`,
 the last yielded `Cell` is obtained,
 and its value is set to `true`.
 The `test` method is then run recursively with `snapshot` of the current coroutine.
-After it returns, the same procedure repeats with the value `false`.
+After it returns, the same procedure repeats with the value `false` in the `Cell`.
 
     def test[R](c: Cell <~> R): Boolean = {
       if (c.resume) {
@@ -179,8 +179,8 @@ After it returns, the same procedure repeats with the value `false`.
 
 If we take a look at the `mock` coroutine again,
 we will see that it will first return `true` and then `false`.
-We can use `mock` in a test coroutine to enable testing different
-control paths:
+We can use `mock` in a test coroutine to enable the testing
+of different control paths:
 
     val myAlgorithm = coroutine { (x: Int) =>
       if (mock()) {
