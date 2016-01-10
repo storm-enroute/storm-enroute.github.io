@@ -96,6 +96,12 @@ Above, note that transferring control to an already completed coroutine instance
 is not legal, and results in an exception being raised
 in the coroutine that called `yieldto`.
 
+Graphically, the control flow jump is as follows.
+Note that after `check` yields or completes,
+control is transferred back to the main program.
+
+![ ](/resources/images/invoke6.png)
+
 We can now test that this works as expected --
 we start the `random` coroutine and name the instance `r0`,
 and call `resume` and `hasValue`:
