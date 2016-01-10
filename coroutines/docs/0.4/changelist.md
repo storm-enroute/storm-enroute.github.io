@@ -11,7 +11,7 @@ coversion: 0.4
 ---
 
 
-Version {{ page.coversion }} changes:
+# Version {{ page.coversion }} changes
 
 - Added coroutine `snapshot` operation for capturing continuations.
 - Improved and extended the docs.
