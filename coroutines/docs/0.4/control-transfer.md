@@ -154,10 +154,10 @@ The complete example is shown below.
 <script>
 setContent(
   "examplebox-1",
-  "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/ControlTransfer.scala",
+  "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/org/examples/ControlTransfer.scala",
   null,
   "raw",
-  "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/ControlTransfer.scala");
+  "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/org/examples/ControlTransfer.scala");
 </script>
 
 

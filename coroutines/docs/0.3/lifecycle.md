@@ -160,10 +160,10 @@ The complete example is shown below.
 <script>
   setContent(
     "examplebox-1",
-    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/Lifecycle.scala",
+    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/org/examples/Lifecycle.scala",
     null,
     "raw",
-    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/Lifecycle.scala");
+    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/org/examples/Lifecycle.scala");
 </script>
 
 
@@ -235,8 +235,8 @@ The complete example with exceptions is shown below.
 <script>
   setContent(
     "examplebox-2",
-    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/Exceptions.scala",
+    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/org/examples/Exceptions.scala",
     null,
     "raw",
-    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/Exceptions.scala");
+    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/org/examples/Exceptions.scala");
 </script>

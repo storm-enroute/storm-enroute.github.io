@@ -152,10 +152,10 @@ You can see the complete example below.
 <script>
   setContent(
     "examplebox-1",
-    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/Composition.scala",
+    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/org/examples/Composition.scala",
     null,
     "raw",
-    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/Composition.scala");
+    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/org/examples/Composition.scala");
 </script>
 
 
@@ -221,14 +221,14 @@ Again, the complete example is shown below.
 <script>
   setContent(
     "examplebox-2",
-    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/CompositionCall.scala",
+    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/org/examples/CompositionCall.scala",
     null,
     "raw",
-    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/CompositionCall.scala");
+    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/org/examples/CompositionCall.scala");
 </script>
 
 
-## Summary
+### Summary
 
 The most important concepts to remember from this section are the following:
 

@@ -105,10 +105,10 @@ The complete snippet for this example is shown below.
 <script>
 setContent(
   "examplebox-1",
-  "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/Snapshot.scala",
+  "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/org/examples/Snapshot.scala",
   null,
   "raw",
-  "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/Snapshot.scala");
+  "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/org/examples/Snapshot.scala");
 </script>
 
 
@@ -208,10 +208,10 @@ The complete example is shown below.
 <script>
 setContent(
   "examplebox-2",
-  "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/MockSnapshot.scala",
+  "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/org/examples/MockSnapshot.scala",
   null,
   "raw",
-  "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/MockSnapshot.scala");
+  "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/org/examples/MockSnapshot.scala");
 </script>
 
 

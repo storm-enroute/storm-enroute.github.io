@@ -166,10 +166,10 @@ their type is `Int ~~> (Int, Unit)`.
 <script>
   setContent(
     "examplebox-1",
-    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/scala/examples/Datatypes.scala",
+    "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/org/examples/Datatypes.scala",
     null,
     "raw",
-    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/Datatypes.scala");
+    "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/org/examples/Datatypes.scala");
 </script>
 
 
