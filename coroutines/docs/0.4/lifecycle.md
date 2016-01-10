@@ -16,7 +16,7 @@ coversion: 0.4
 In functional programming,
 pure functions are functions whose return values are determined
 only by its input values.
-It is sometimes said that such function invocation cannot have any state.
+It is sometimes said that such a function invocation does not have any state.
 However, this is not entirely true.
 Even a pure function invocation needs to have at least some *execution state* --
 the current state of evaluating the expression that defines that function.
@@ -242,7 +242,7 @@ The complete example with exceptions is shown below.
 </script>
 
 
-## Summary
+### Summary
 
 Things to remember about the coroutine lifecycle
 and the respective lifecycle-related operations
