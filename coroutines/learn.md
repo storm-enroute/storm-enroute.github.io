@@ -37,6 +37,6 @@ please take a look at the [FAQ document](/coroutines/docs/faq/).
 Scala Coroutines were conceived and originally implemented by
 [Aleksandar Prokopec](https://github.com/axel22),
 inspired by C\#'s yield statements, Python's generators,
-and Scala Continuations.
+and Scala continuations.
 A full list of contributors can be found on
 [GitHub](https://github.com/storm-enroute/coroutines/graphs/contributors).
