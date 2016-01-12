@@ -30,3 +30,13 @@ please take a look at the [FAQ document](/coroutines/docs/faq/).
 
 - [Scala Coroutines Guide](/coroutines/docs/0.3/101/)
 - [ScalaDoc API](http://storm-enroute.com/apidocs/coroutines/0.3/api/)
+
+
+## Authors
+
+Scala Coroutines were conceived and originally implemented by
+[Aleksandar Prokopec](https://github.com/axel22),
+inspired by C\#'s `yield`, Python's generators,
+and Scala Continuations.
+A full list of contributors can be found on
+[GitHub](https://github.com/storm-enroute/coroutines/graphs/contributors).
