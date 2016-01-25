@@ -16,3 +16,9 @@ discuss feature requests, suggest improvements and send PRs,
 and care about user feedback.
 Join the discussion on
 [Google Groups](https://groups.google.com/forum/#!forum/scala-coroutines).
+
+## Gitter
+
+You can join
+[Scala Coroutines room at Gitter](https://gitter.im/storm-enroute/coroutines)
+for more casual discussion about Scala Coroutines.
