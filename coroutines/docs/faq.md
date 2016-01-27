@@ -170,7 +170,8 @@ Scala coroutines are more general means to express asynchrony
 (i.e. separate, independent computations) --
 this asynchrony may or may not involve concurrency
 (i.e. simultaneously executing, separate threads).
-In fact, Scala Async could be implemented relatively easily using Scala Coroutines.
+In fact, Scala Async could be implemented relatively easily using Scala Coroutines
+(see examples in tutorial to learn how).
 
 
 ### How do Scala Coroutines relate to Scala Delimited Continuations?
