@@ -41,8 +41,7 @@ and repeats the loop after the future yielded by `await` gets completed.
 Note that, for the sake of simplicity,
 the example does not do any exception handling,
 but that is a straightforward extension.
-
-The complete example is shown below.
+The code is shown below.
 
 <div>
 <pre id="examplebox-1">
