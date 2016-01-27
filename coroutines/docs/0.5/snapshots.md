@@ -225,3 +225,8 @@ To summarize, we learned the following:
 - A coroutine snapshot does not include duplicating any other objects that the
   coroutine instance is referring to -- the state of the runtime is not duplicated.
 - A coroutine may only be copied while it is suspended.
+
+Now that you understand the theory behind coroutines,
+you are ready to see more concrete usages.
+The rest of this tutorial will cover various examples
+of different coroutine use-cases.
