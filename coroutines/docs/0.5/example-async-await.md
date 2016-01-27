@@ -3,7 +3,7 @@ layout: projdefault
 projectname: Scala Coroutines
 projectpath: coroutines
 logoname: coroutines-64-xmas-pale.png
-title: Example -- Async-Await
+title: Example - Async-Await
 permalink: /coroutines/docs/0.5/example-async-await/index.html
 logostyle: "color: #5f5f5f;"
 partof: getting-started
