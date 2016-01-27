@@ -1,5 +1,5 @@
 ---
-layout: projdefaultcoroutines
+layout: projdefault
 projectname: Scala Coroutines
 projectpath: coroutines
 logoname: coroutines-64-xmas-pale.png
