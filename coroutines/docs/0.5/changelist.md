@@ -15,3 +15,4 @@ coversion: 0.5
 
 - Fixed bug with returning invoking concrete-return-type coroutines from within a
   generic coroutine.
+- Fixed a lot of hygiene problems in macros.
