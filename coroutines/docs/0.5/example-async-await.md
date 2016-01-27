@@ -1,5 +1,5 @@
 ---
-layout: projdefault
+layout: projdefaultcoroutines
 projectname: Scala Coroutines
 projectpath: coroutines
 logoname: coroutines-64-xmas-pale.png
@@ -12,6 +12,8 @@ outof: 20
 coversion: 0.5
 ---
 
+
+# {{ page.title }}
 
 The nice thing about coroutines is that
 they allow expressing logically connected statements as uninterrupted code,
