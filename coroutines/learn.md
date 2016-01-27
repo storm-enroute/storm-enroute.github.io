@@ -19,6 +19,13 @@ For some general information and answers to questions frequently asked by users,
 please take a look at the [FAQ document](/coroutines/docs/faq/).
 
 
+### Coroutines 0.5-SNAPSHOT
+
+- [Scala Coroutines Guide](/coroutines/docs/0.5/101/)
+- [ScalaDoc API](http://storm-enroute.com/apidocs/coroutines/0.5/api/)
+- [Changelist](/coroutines/docs/0.5/changelist/)
+
+
 ### Coroutines 0.4
 
 - [Scala Coroutines Guide](/coroutines/docs/0.4/101/)
