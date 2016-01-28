@@ -3,7 +3,7 @@ layout: projdefaultcoroutines
 projectname: Scala Coroutines
 projectpath: coroutines
 logoname: coroutines-64-xmas-pale.png
-title: Example -- Async-Await
+title: Example - Async-Await
 permalink: /coroutines/docs/0.5/example-async-await/index.html
 logostyle: "color: #5f5f5f;"
 partof: getting-started
@@ -12,6 +12,8 @@ outof: 20
 coversion: 0.5
 ---
 
+
+# {{ page.title }}
 
 The nice thing about coroutines is that
 they allow expressing logically connected statements as uninterrupted code,
@@ -26,17 +28,24 @@ The `await` coroutine uses a helper object of type `Cell[T]`,
 which is used to obtain the value of the awaited future.
 When `await` is [directly invoked](../composition),
 it yields a tuple of a cell object and the future object.
-After yielding, it returns the value `x` from the `Cell` object.
+After getting resumes,
+`await` returns the value `x` from the `Cell` object.
+This is a design pattern worth remembering,
+since it allows the owner of the coroutine instance
+to pass some value back into the coroutine.
 
 The `async` coroutine is slightly more complicated.
 It creates a promise `p`, then returns its future.
 Concurrently, in a future computation,
 it executes the following loop:
-it resumes the coroutine, and completes the promise `p` with the result
+it resumes the coroutine,
+and completes the promise `p` with the result
 if the coroutine completed.
 Otherwise, if the execution reached `await`,
-it uses the future/cell pair to install a callback,
+it uses the yielded future/cell pair to install a callback,
 and repeats the loop after the future yielded by `await` gets completed.
+Effectively, this separates the computation segments
+in the coroutine into a chain of asynchronous computations.
 
 Note that, for the sake of simplicity,
 the example does not do any exception handling,
