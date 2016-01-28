@@ -337,7 +337,6 @@ img.footer {
   padding: 20px;
 }
 
-
 .image-avatar {
   border: 1px solid #c0c0c0;
   -moz-border-radius: 5px;
@@ -436,22 +435,73 @@ table.summary tr td {
   padding: 5px;
 }
 
-table.summary {
-  margin: 20px;
-  margin-left: 30px;
-  background: #f3f3f3;
-  border: 1px solid #dedede;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-}
-
 table.summary tr td {
   padding: 5px;
 }
 
 table.projects {
-  background: #eee;
-  border: 1px solid #ccc;
+  background: #1d1d1d;
+  color: #ddd;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border-collapse: separate;
+  border-spacing: 0px 1px;
+
+  -moz-box-shadow: inset 1px 1px 1px 0px #222;
+  -webkit-box-shadow: inset 1px 1px 1px 0px #222;
+  box-shadow: inset 1px 1px 1px 0px #222;
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  border-bottom-right-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-left-radius: 6px;
+  border: 1px solid #333;
+  font-family: DroidSans;
+  font-style: normal;
+  text-align: center;
+  text-shadow: 1px 1px 3px #1a1a1a;
+}
+
+table.projects tr, ul.projects li {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  padding: 5px;
+  height: 100%;
+
+  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #2a2a2a), color-stop(1, #222) );
+  background: -moz-linear-gradient( center top, #2a2a2a 5%, #222 100% );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2a2a2a', endColorstr='#222');
+}
+
+ul.projects li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+table.projects tr:first-child td:first-child {
+  border-top-left-radius: 6px;
+}
+
+table.projects tr:first-child td:last-child {
+  border-top-right-radius: 6px;
+}
+
+table.projects tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+
+table.projects tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
 }
 
 table.projects tr.projects-title-row td {
@@ -460,16 +510,70 @@ table.projects tr.projects-title-row td {
 }
 
 table.projects tr td {
-  padding: 5px;
+  background: #222;
   text-align: center;
+  height: 100%;
+  vertical-align: middle;
+
+  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #2a2a2a), color-stop(1, #222) );
+  background: -moz-linear-gradient( center top, #2a2a2a 5%, #222 100% );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2a2a2a', endColorstr='#222');
 }
 
-table.projects tr:nth-child(even) {
-  background: #e8e8e8;
+table.projects tr td a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 0.25s;
+  z-index: 1;
+  color: #ddd;
+}
+
+table.projects tr td a:after {
+  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #444), color-stop(0.95, #252525) );
+  background: -moz-linear-gradient( center top, #444 5%, #252525 95% );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444', endColorstr='#252525');
+  z-index: 1;
+  opacity: 0;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.25s;
+}
+
+ul.projects a li {
+  color: #ddd;
+}
+
+ul.projects a:hover li {
+  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #444), color-stop(0.95, #252525) );
+  background: -moz-linear-gradient( center top, #444 5%, #252525 95% );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444', endColorstr='#252525');
+  transition: 0.25s;
+}
+
+table.projects tr td a:hover:after {
+  opacity: 0.8;
+}
+
+table.projects tr td a div {
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  line-height: 50px;
+  position: relative;
+  z-index: 3;
+}
+
+table.projects tr td a div * {
+  vertical-align: middle;
+  z-index: 3;
 }
 
 table.projects tr td.projects-name {
   vertical-align: middle;
 }
-
-

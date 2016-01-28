@@ -5,11 +5,13 @@ class Service
   constructor: (@url, @image_url) ->
 
   appendContent: (td) ->
-    a = document.createElement('a')
-    img = document.createElement('img')
+    a = document.createElement("a")
+    div = document.createElement("div")
+    img = document.createElement("img")
     img.setAttribute("src", this.image_url)
+    div.appendChild img
     a.href = this.url
-    a.appendChild img
+    a.appendChild div
     td.appendChild a
     td.setAttribute("class", "projects-content")
     td.serviceData = this
@@ -25,13 +27,14 @@ class LiveService extends Service
     this.appendContent(td)
 
 class Project
-  constructor: (@name, @image, @travis, @drone, @appveyor, @maven) ->
+  constructor: (@name, @image, @scm, @travis, @drone, @appveyor, @maven) ->
 
 
 projects =
   bundleboy: new Project(
     "Bundleboy",
     "/resources/images/bundleboy-mini-logo.png",
+    "https://github.com/storm-enroute/bundleboy",
     new LiveService(
       "https://travis-ci.org/storm-enroute/bundleboy",
       "https://travis-ci.org/storm-enroute/bundleboy.svg?branch=master"),
@@ -46,6 +49,7 @@ projects =
   coroutines: new Project(
     "Coroutines",
     "/resources/images/coroutines-128-xmas-pale.png",
+    "https://github.com/storm-enroute/coroutines",
     new LiveService(
       "https://travis-ci.org/storm-enroute/coroutines",
       "https://travis-ci.org/storm-enroute/coroutines.svg?branch=master"),
@@ -60,6 +64,7 @@ projects =
   macrogl: new Project(
     "MacroGL",
     "/resources/images/macrogl-96.png",
+    "https://github.com/storm-enroute/macrogl",
     new LiveService(
       "https://travis-ci.org/storm-enroute/macrogl",
       "https://travis-ci.org/storm-enroute/macrogl.svg?branch=master"),
@@ -74,6 +79,7 @@ projects =
   mecha: new Project(
     "Mecha",
     "/resources/images/mecha-logo-64.png",
+    "https://github.com/storm-enroute/mecha",
     new LiveService(
       "https://travis-ci.org/storm-enroute/mecha",
       "https://travis-ci.org/storm-enroute/mecha.svg?branch=master"),
@@ -88,6 +94,7 @@ projects =
   reactors: new Project(
     "Reactors.IO",
     "/resources/images/reactress-gradient.png",
+    "https://github.com/reactors-io/reactors",
     new LiveService(
       "https://travis-ci.org/reactors-io/reactors",
       "https://travis-ci.org/reactors-io/reactors.svg?branch=master"),
@@ -102,6 +109,7 @@ projects =
   scalameter: new Project(
     "ScalaMeter",
     "/resources/images/scalameter-logo-yellow.png",
+    "https://github.com/scalameter/scalameter",
     new LiveService(
       "https://travis-ci.org/scalameter/scalameter",
       "https://travis-ci.org/scalameter/scalameter.svg?branch=master"),
@@ -117,7 +125,8 @@ projects =
 
   code_examples: new Project(
     "Code Examples",
-    "/resources/images/code-repo.png",
+    "/resources/images/code-repo-dark.png",
+    "https://github.com/storm-enroute/examples",
     null,
     new LiveService(
       "http://ci.storm-enroute.com:443/storm-enroute/examples",
@@ -127,7 +136,8 @@ projects =
 
   scalameter_examples: new Project(
     "ScalaMeter Examples",
-    "/resources/images/code-repo.png",
+    "/resources/images/code-repo-dark.png",
+    "https://github.com/scalameter/scalameter-examples",
     new LiveService(
       "https://travis-ci.org/scalameter/scalameter-examples",
       "https://travis-ci.org/scalameter/scalameter-examples.svg?branch=master"),
@@ -153,15 +163,25 @@ setupCi = () ->
       tr = document.createElement("tr")
 
       imgtd = document.createElement("td")
+      a = document.createElement("a")
+      a.href = project.scm
+      div = document.createElement("div")
       img = document.createElement("img")
       img.setAttribute("src", project.image)
       img.setAttribute("height", "48")
-      imgtd.appendChild(img)
+      div.appendChild(img)
+      a.appendChild(div)
+      imgtd.appendChild(a)
       tr.appendChild(imgtd)
 
       nametd = document.createElement("td")
+      a = document.createElement("a")
+      a.href = project.scm
+      div = document.createElement("div")
       nametd.setAttribute("class", "projects-name")
-      nametd.appendChild(document.createTextNode(project.name))
+      div.appendChild(document.createTextNode(project.name))
+      a.appendChild(div)
+      nametd.appendChild(a)
       tr.appendChild(nametd)
 
       reloadService(tr, project.travis)
