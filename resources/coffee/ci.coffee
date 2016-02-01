@@ -213,7 +213,7 @@ setupCi = () ->
         td.serviceData.reloadContent(td)
 
   addServices()
-  setInterval(reloadServices, 1800 * 1000)
+  setInterval(reloadServices, 180 * 1000)
 
 
 setupCi()
