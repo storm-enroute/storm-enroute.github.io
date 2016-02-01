@@ -560,6 +560,10 @@ table.projects tr td a:hover:after {
   opacity: 0.8;
 }
 
+table.projects tr td a:active:after {
+  opacity: 1.0;
+}
+
 table.projects tr td a div {
   padding: 5px;
   padding-left: 8px;
