@@ -46,6 +46,21 @@ projects =
       "http://mvnrepository.com/artifact/com.storm-enroute/bundleboy_2.11",
       "https://img.shields.io/maven-central/v/com.storm-enroute/bundleboy_2.11.svg"))
 
+  chronodb: new Project(
+    "ChronoDB",
+    "/resources/images/coroutines-128-xmas-pale.png",
+    "https://github.com/storm-enroute/chrono-db",
+    new LiveService(
+      "https://travis-ci.org/storm-enroute/chrono-db",
+      "https://travis-ci.org/storm-enroute/chrono-db.svg?branch=master"),
+    new LiveService(
+      "http://ci.storm-enroute.com:443/storm-enroute/chrono-db",
+      "http://ci.storm-enroute.com:443/api/badges/storm-enroute/chrono-db/status.svg"),
+    null,
+    new Service(
+      "http://mvnrepository.com/artifact/com.storm-enroute/chrono-db_2.11",
+      "https://img.shields.io/maven-central/v/com.storm-enroute/chrono-db_2.11.svg"))
+
   coroutines: new Project(
     "Coroutines",
     "/resources/images/coroutines-128-xmas-pale.png",
