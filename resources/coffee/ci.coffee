@@ -48,7 +48,7 @@ projects =
 
   chronodb: new Project(
     "ChronoDB",
-    "/resources/images/coroutines-128-xmas-pale.png",
+    "/resources/images/code-repo-dark.png",
     "https://github.com/storm-enroute/chrono-db",
     new LiveService(
       "https://travis-ci.org/storm-enroute/chrono-db",
