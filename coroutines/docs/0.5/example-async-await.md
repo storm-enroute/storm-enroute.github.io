@@ -20,7 +20,7 @@ they allow expressing logically connected statements as uninterrupted code,
 even though control flow could be arbitrary.
 As such, one of their use-cases
 is implementing the Async/Await abstraction,
-normally available as a Scala plugin.
+normally available as a Scala macro library.
 
 The basic idea is the following -- there are two coroutine declarations.
 One is called `async`, and the other one is called `await`.
