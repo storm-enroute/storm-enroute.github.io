@@ -550,14 +550,14 @@ ul.projects a li {
 }
 
 ul.projects a:hover li {
-  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #444), color-stop(0.95, #252525) );
-  background: -moz-linear-gradient( center top, #444 5%, #252525 95% );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444', endColorstr='#252525');
+  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #555), color-stop(0.95, #252525) );
+  background: -moz-linear-gradient( center top, #555 5%, #252525 95% );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555', endColorstr='#252525');
   transition: 0.25s;
 }
 
 table.projects tr td a:hover:after {
-  opacity: 0.8;
+  opacity: 0.65;
 }
 
 table.projects tr td a:active:after {
