@@ -81,7 +81,8 @@ with a few housekeeping operations.
 There are two main reasons for this.
 First, any kind of concurrency involves synchronization between separate
 threads of control. Synchronization requires memory writes and barriers,
-which makes things slower than most people imagine.
+blocking and/or object allocations,
+and this makes things slower than most people imagine.
 
 Second,
 thread-driven concurrency decreases the amount of control a client has.
