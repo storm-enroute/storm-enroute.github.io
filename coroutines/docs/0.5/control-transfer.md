@@ -147,7 +147,7 @@ The following rule is important to remember.
 <td>
 Each <code>resume</code> may or may not actually <code>yield</code> a value.
 Therefore, if you use <code>resume</code> to control the coroutine,
-a <code>value</code> call **must be** preceded by a <code>hasValue</code> call.
+a <code>value</code> call <b>must be</b> preceded by a <code>hasValue</code> call.
 </td>
 </table>
 
