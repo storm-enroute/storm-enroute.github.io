@@ -146,8 +146,8 @@ The following rule is important to remember.
 <td><img src="/resources/images/warning.png"/></td>
 <td>
 Each <code>resume</code> may or may not actually <code>yield</code> a value.
-Therefore, a <code>value</code> call **must be**
-preceded by a <code>hasValue</code> call.
+Therefore, if you use <code>resume</code> to control the coroutine,
+a <code>value</code> call **must be** preceded by a <code>hasValue</code> call.
 </td>
 </table>
 
@@ -166,6 +166,52 @@ setContent(
   "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/org/examples/ControlTransfer.scala");
 </script>
 
+To reduce this boilerplate,
+there is a convenience combinator called `pull`.
+This combinator calls `resume` multiple times if it detects
+that no value was yielded.
+So, the following statement:
+
+    while (r1.resume) if (r1.hasValue) values += r1.value
+
+is equivalent to this one:
+
+    while (r1.pull) values += r1.value
+
+The `pull` combinator ensures that if it returned `true`,
+then `value` can be called.
+If `pull` returns `false`, then the coroutine is completed.
+
+<table class="docs-tip">
+<td><img src="/resources/images/warning.png"/></td>
+<td>
+If you use <code>pull</code> instead of <code>resume</code>,
+then calls to <code>value</code> do not need to be preceded
+with <code>hasValue</code>.
+</td>
+</table>
+
+We can now rewrite our earlier example as follows:
+
+<div>
+<pre id="examplebox-2">
+</pre>
+</div>
+<script>
+setContent(
+  "examplebox-2",
+  "https://api.github.com/repos/storm-enroute/coroutines/contents/src/test/scala/org/examples/ControlTransferWithPull.scala",
+  null,
+  "raw",
+  "https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/org/examples/ControlTransferWithPull.scala");
+</script>
+
+Note that this does not mean that the `resume` combinator is useless.
+You will typically use `resume` when writing cooperative multitasking code,
+where you care mostly about chunking the computation into small pieces
+and dynamically passing control between coroutines,
+but you do not have to retrieve values from the coroutine.
+
 
 ### Summary
 
@@ -177,6 +223,9 @@ We learned that:
   the original instance may not yield a value,
   so callers of `resume` must additionally call `hasValue`
   to check if a value was yielded.
+- To avoid the `hasValue` boilerplate, you can use the `pull` combinator
+  instead of `resume`. The `pull` combinator will call `resume` more than once
+  under-the-hood if it detects that `hasValue` returned `false`.
 
 In the [next part](../snapshots/),
 we will see how to capture a snapshot of a coroutine instance,
