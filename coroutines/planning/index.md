@@ -8,4 +8,3 @@ permalink: /coroutines/planning/index.html
 Feature planning, schedules and TODO items related to Scala Coroutines development.
 
 - [Release Plans](release/index.html)
-- [GSoC Projects](gsoc/index.html)
