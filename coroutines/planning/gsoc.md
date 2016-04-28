@@ -8,4 +8,4 @@ permalink: /coroutines/planning/gsoc/index.html
 ## 2016 - Jess Smith
 
 - Title: Implementation of Coroutine-Based Utilities
-- [Work Schedule](/coroutines/planning/schedules/jess.txt)
+- [Work Schedule](http://storm-enroute.com/docs/coroutines/devs/jess/index.md)
