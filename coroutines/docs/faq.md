@@ -61,7 +61,7 @@ And here's how to extract all the elements that this coroutine yields:
     assert(elems == 0 until 10)
 
 Complete example is available
-[here](https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/scala/examples/FaqSimpleExample.scala).
+[here](https://github.com/storm-enroute/coroutines/blob/master/src/test/scala/org/examples/FaqSimpleExample.scala).
 But, you should really consider reading [The Guide](/coroutines/learn) at some point.
 
 
