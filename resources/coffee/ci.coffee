@@ -114,9 +114,7 @@ projects =
     new LiveService(
       "https://travis-ci.org/reactors-io/reactors",
       "https://travis-ci.org/reactors-io/reactors.svg?branch=master"),
-    new LiveService(
-      "http://ci.storm-enroute.com:443/reactors-io/reactors",
-      "http://ci.storm-enroute.com:443/api/badges/reactors-io/reactors/status.svg"),
+    null,
     null,
     new Service(
       "http://mvnrepository.com/artifact/com.storm-enroute/reactors_2.11",
