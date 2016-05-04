@@ -26,6 +26,7 @@ class LiveService extends Service
       td.removeChild td.lastChild
     this.appendContent(td)
 
+
 class Project
   constructor: (@name, @image, @scm, @travis, @drone, @appveyor, @maven) ->
 
@@ -137,17 +138,6 @@ projects =
     new Service(
       "http://mvnrepository.com/artifact/com.storm-enroute/scalameter_2.11",
       "https://img.shields.io/maven-central/v/com.storm-enroute/scalameter_2.11.svg"))
-
-  code_examples: new Project(
-    "Code Examples",
-    "/resources/images/code-repo-dark.png",
-    "https://github.com/storm-enroute/examples",
-    null,
-    new LiveService(
-      "http://ci.storm-enroute.com:443/storm-enroute/examples",
-      "http://ci.storm-enroute.com:443/api/badges/storm-enroute/examples/status.svg"),
-    null,
-    null)
 
   scalameter_examples: new Project(
     "ScalaMeter Examples",
