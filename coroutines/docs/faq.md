@@ -81,7 +81,8 @@ with a few housekeeping operations.
 There are two main reasons for this.
 First, any kind of concurrency involves synchronization between separate
 threads of control. Synchronization requires memory writes and barriers,
-which makes things slower than most people imagine.
+blocking and/or object allocations,
+and this makes things slower than most people imagine.
 
 Second,
 thread-driven concurrency decreases the amount of control a client has.
@@ -107,7 +108,7 @@ Coroutines can (and are meant to, among other things) be used to
 implement concurrency primitives and concurrent programming frameworks.
 For example, Erlang-style actors without top-level-only receives,
 or Oz-style single-assignment variables whose reads suspend until an assignment,
-are example use cases for which coroutines are ideal candidates.
+are example use cases for which coroutines are ideal implementation primitives.
 
 
 ### How do Scala Coroutines relate to goroutines in Go?
