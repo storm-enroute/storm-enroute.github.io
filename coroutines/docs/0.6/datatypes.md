@@ -4,12 +4,12 @@ projectname: Scala Coroutines
 projectpath: coroutines
 logoname: coroutines-64-xmas-pale.png
 title: Coroutine Data Types
-permalink: /coroutines/docs/0.5/datatypes/index.html
+permalink: /coroutines/docs/0.6/datatypes/index.html
 logostyle: "color: #5f5f5f;"
 partof: getting-started
 num: 3
 outof: 20
-coversion: 0.5
+coversion: 0.6
 ---
 
 
@@ -216,7 +216,7 @@ coroutine arguments that are primitive values
 and new coroutine frames are created extremely frequently,
 or when you're using coroutines with a high arity
 (if you want to know the details, see the
-[API](http://storm-enroute.com/apidocs/coroutines/0.5-SNAPSHOT/api/)
+[API](http://storm-enroute.com/apidocs/coroutines/0.6/api/)
 to figure out which coroutine arities are specialized and how).
 If you are super-sensitive about performance
 and your coroutines are invoked with primitive values,

@@ -4,10 +4,10 @@ projectname: Scala Coroutines
 projectpath: coroutines
 logoname: coroutines-64-xmas-pale.png
 title: Changelist
-permalink: /coroutines/docs/0.5/changelist/index.html
+permalink: /coroutines/docs/0.6/changelist/index.html
 logostyle: "color: #5f5f5f;"
 partof: getting-started
-coversion: 0.5
+coversion: 0.6
 ---
 
 

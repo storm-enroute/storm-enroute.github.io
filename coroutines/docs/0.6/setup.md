@@ -4,12 +4,12 @@ projectname: Scala Coroutines
 projectpath: coroutines
 logoname: coroutines-64-xmas-pale.png
 title: Setup and Dependencies
-permalink: /coroutines/docs/0.5/setup/index.html
+permalink: /coroutines/docs/0.6/setup/index.html
 logostyle: "color: #5f5f5f;"
 partof: getting-started
 num: 1
 outof: 20
-coversion: 0.5
+coversion: 0.6
 ---
 
 
@@ -28,7 +28,7 @@ Stable versions are released on Sonatype and Maven.
 You can add Scala Coroutines by adding the following to your project definition:
 
     libraryDependencies ++= Seq(
-      "com.storm-enroute" %% "coroutines" % "0.5-SNAPSHOT")
+      "com.storm-enroute" %% "coroutines" % "0.6")
 
 Snapshot versions are released regularly on Sonatype:
 
@@ -39,7 +39,7 @@ Snapshot versions are released regularly on Sonatype:
         "https://oss.sonatype.org/content/repositories/releases"
     )
     libraryDependencies ++= Seq(
-      "com.storm-enroute" %% "coroutines" % "0.5-SNAPSHOT")
+      "com.storm-enroute" %% "coroutines" % "0.7-SNAPSHOT")
 
 To use coroutines in the code, import the `org.coroutines` package,
 and you're all set:
