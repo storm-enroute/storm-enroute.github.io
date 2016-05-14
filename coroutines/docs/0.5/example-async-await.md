@@ -50,7 +50,7 @@ in the coroutine into a chain of asynchronous computations.
 Note that, for the sake of simplicity,
 the example does not do any exception handling,
 but that is a straightforward extension.
-The code Ois shown below.
+The code is shown below.
 
 <div>
 <pre id="examplebox-1">
