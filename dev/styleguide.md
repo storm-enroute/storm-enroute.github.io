@@ -12,7 +12,7 @@ Repeated offenders will be asked to write Lint checkers for the rules that they
 have a habit of breaking.
 
 
-## File naming guidelines
+## Naming guidelines
 
 Every source file can contain symbols of a single package `x.y.z`,
 and must be placed into a source code subdirectory `x/y/z`.
@@ -42,6 +42,17 @@ declarations that must be outside an object, for compiler-specific reasons.
 
 In specific occasions, a file may declare a different subpackage within its
 body, but this is to be avoided.
+
+
+## Abbreviations
+
+Capitalize only the first letter of the abbreviation.
+This is easier to write than having uppercase everywhere.
+For example, if we have a debug API class, we call it:
+
+    class DebugApi {
+      // ...
+    }
 
 
 ## Line length
